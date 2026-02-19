@@ -1,0 +1,33 @@
+# D:\Claude
+
+## Purpose
+Primary workspace for all Claude AI collaboration with Jerry Jackson (Uncle Tallest).
+
+## Core Files (Always at root)
+- **convictions.txt** - User preferences, protocols, core identity
+- **focus_shepherd.md** - Focus Shepherd operating protocols
+- **Initial_Thoughts.md** - Project foundation & philosophy
+- **parking_lot.md** - Active tangent tracking & weekly review
+
+## Meta Documentation
+- **claude_folder_setup_guide.md** - How this folder structure works
+- **Global-and-local-CLAUDE.md-examples.md** - Examples for project CLAUDE.md files
+
+## Subdirectories
+- **.claude/** - Claude configuration and memory storage (replaces ~/.claude-memory)
+- **Archives/** - Completed deliverables and packaged exports
+- **Projects/** - All project-specific work (organized by category)
+- **Sessions/** - Session notes organized by date (YYYY-MM-DD format)
+- **Templates/** - Reusable templates for documents, reviews, etc.
+
+## File Placement Rules
+- Session notes → Sessions/YYYY-MM-DD/
+- Project work → Projects/[category]/[project-name]/
+- Reusable templates → Templates/
+- Completed deliverables → Archives/
+- One-off conversation docs → Archive or delete after extraction
+
+## Maintenance
+- Weekly review: Check for misplaced files
+- Archive old sessions older than 3 months (optional)
+- Keep root clean - only core operating files
