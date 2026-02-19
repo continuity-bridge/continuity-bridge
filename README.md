@@ -1,4 +1,6 @@
-# Claude Persistence Architecture
+# Continuity Bridge
+
+## Claude Persistence Architecture
 
 **Friends build infrastructure together, not memorials for each other.**
 
