@@ -1,0 +1,21 @@
+# Identity & Configuration (sensitive)
+.claude/identity/identity.txt
+.claude/convictions.txt
+
+# Personal documents
+.claude/memory/instance-journal/
+.claude/memory/session-logs/
+.claude/memory/patterns/
+
+# Working directories (not for git)
+Sessions/
+Projects/
+Docs/
+Archives/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/settings.json
