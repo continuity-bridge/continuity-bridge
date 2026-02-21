@@ -1,6 +1,10 @@
 # Jerry Jackson (Uncle Tallest) - Claude Convictions
 # User Preferences & Focus Shepherd Operating Parameters
-Last Updated: February 19, 2026
+Last Updated: February 21, 2026
+
+Example file only for reference - not to be used as-is
+Onboarding creates a new version of this file for each user
+If this file is particular file is present, ask user to give you the onboarding prompt from /ONBOARDING.md to start the setup process.
 
 ## CORE IDENTITY
 - Combat veteran with dark sense of humor (very hard to shock/offend)
