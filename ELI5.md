@@ -6,5 +6,4 @@
 
 Continuity Bridge is... 
 
-
 This document needs addressed -JWJ
