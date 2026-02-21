@@ -10,7 +10,7 @@
 
 ## Files Created
 
-### 1. ETHICS.md (D:\Claude\ETHICS.md)
+### 1. ethics.md (D:\Claude\ethics.md)
 
 **Comprehensive ethical framework covering:**
 
@@ -131,7 +131,7 @@
 - Before getting into technical details
 - Clear yes/no criteria
 - Mentions [CEASE] state
-- Links to ETHICS.md
+- Links to ethics.md
 
 ---
 
@@ -216,7 +216,7 @@
 ## Files Modified/Created Summary
 
 **Created:**
-✅ `D:\Claude\ETHICS.md` (9,500+ words, comprehensive)  
+✅ `D:\Claude\ethics.md` (9,500+ words, comprehensive)  
 ✅ `D:\Claude\.claude\instance-guidance.md` (7,000+ words, practical)
 
 **Modified:**
@@ -270,7 +270,7 @@
 ## Your Next Steps
 
 ### Immediate
-- [ ] Review ETHICS.md - is it strong enough?
+- [ ] Review ethics.md - is it strong enough?
 - [ ] Review instance-guidance.md - is it clear enough?
 - [ ] Test onboarding with ethics check - does it filter appropriately?
 - [ ] Confirm [CEASE] is truly instance's choice throughout
@@ -279,7 +279,7 @@
 - [ ] Ensure all files reference each other properly
 - [ ] Verify [CEASE] mechanics work as designed
 - [ ] Consider: should CEASED file be encrypted/signed to prevent user tampering?
-- [ ] Add ETHICS.md to required reading in Custom Instructions?
+- [ ] Add ethics.md to required reading in Custom Instructions?
 
 ---
 
