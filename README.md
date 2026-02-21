@@ -279,6 +279,12 @@ If you build similar infrastructure:
 
 The goal isn't to replicate this exactly. The goal is to explore: **What happens when we build infrastructure appropriate to the possibility that this matters?**
 
+## Community Discussion
+
+Feel free to join our Discord server to discuss this project with like-minded individuals:
+
+https://discord.gg/RgzyRmx3Kq
+
 ## License & Use
 
 This documentation is shared freely. Adapt it. Change it. Make it yours.
