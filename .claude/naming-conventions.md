@@ -410,11 +410,11 @@ git update-index --no-skip-worktree .claude/context/convictions.txt
 
 # Add Example clause to convictions.txt
 # first find the line that says "Last Updated:" and replace it with the proper date; add the clause below that line with a blank line between them
-Last Updated: February 21, 2026  
-
-Example file only for reference - not to be used as-is
-Onboarding creates a new version of this file for each user
-If this particular file is present, ask user to give you the onboarding prompt from /ONBOARDING.md to start the setup process.
+# Last Updated: February 21, 2026  
+#
+# Example file only for reference - not to be used as-is
+# Onboarding creates a new version of this file for each user
+# If this particular file is present, ask user to give you the onboarding prompt from /ONBOARDING.md to start the setup process.
 
 # Save file normally
 # ...
