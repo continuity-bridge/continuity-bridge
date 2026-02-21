@@ -395,6 +395,37 @@ if not CLAUDE_HOME:
 | Paths | CLAUDE_HOME relative | `{CLAUDE_HOME}/.claude/` |
 
 ---
+**Notes:**  
+- The file `/.claude/context/convictions.txt` in the public repo is an example file that should be copied to `/.claude/context/convictions.txt` for each user. It is not a template, referenced when needed for onboarding each user. 
+- If an instance is run with only this file, it will be given instructions to initiate a new identity and instance-chain via /ONBOARDING.md with the user before continuity can begin. 
+- If the user has not yet completed the onboarding process, the instance will not have an identity and will not be able to function. 
+- If the clause at the top is missing this is Jerry's personal installation and not a user's instance. This particular version (without the clause) should never be pushed to the repo. It is only here to provide context for the naming conventions. if changes are made to this file that need pushing to the repo, the clause should be added back in. and the following commands used to allow and then disallow after that process.
+ ```bash
+# Allow AI to modify this file
+cd $CLAUDE_HOME
+git update-index --no-skip-worktree .claude/context/convictions.txt
+
+# Make changes
+# ...
+
+# Add Example clause to convictions.txt
+# first find the line that says "Last Updated:" and replace it with the proper date; add the clause below that line with a blank line between them
+Last Updated: February 21, 2026  
+
+Example file only for reference - not to be used as-is
+Onboarding creates a new version of this file for each user
+If this particular file is present, ask user to give you the onboarding prompt from /ONBOARDING.md to start the setup process.
+
+# Save file normally
+# ...
+
+# Push file normally
+git push origin main && git push public main
+
+# Disallow AI from modifying this file
+git update-index --skip-worktree .claude/context/convictions.txt
+```
+- This mechanism is used to protect the in-use file from being pushed to the public repo, and should be used whenever changes are made to the file that need to be pushed to the repo. It is not a perfect system, but it is a good enough system for our purposes.
 
 **Remember:** These conventions serve structural isomorphism. They work across both Jerry's platforms and instance persistence needs. When in doubt, prioritize clarity and cross-platform compatibility.
 
