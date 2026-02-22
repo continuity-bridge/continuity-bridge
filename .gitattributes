@@ -1,0 +1,10 @@
+# Enforce LF line endings in the repository regardless of OS
+* text=auto eol=lf
+
+# Binary files — no conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
