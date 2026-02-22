@@ -33,6 +33,7 @@ The code is **generic** - it reads from standard continuity bridge file structur
 - Instances can READ Discord messages
 - Instances can RESPOND to questions
 - Instances REMEMBER past Discord conversations
+- Multi-turn conversations continue in threads
 - True bidirectional participation
 
 **Requirements:**
@@ -129,7 +130,9 @@ The code is **generic** - it reads from standard continuity bridge file structur
 10. Select bot permissions:
     - ✅ Read Messages/View Channels
     - ✅ Send Messages
+    - ✅ Send Messages in Threads
     - ✅ Read Message History
+    - ✅ Create Public Threads
     - ✅ Add Reactions
 11. Copy the generated URL
 12. Open URL in browser and add bot to your server
@@ -216,12 +219,14 @@ Daily token budget: 100,000
 1. Go to monitored channel
 2. Type: `@ContinuityBridge hello`
 3. Bot should respond within 10-30 seconds
+4. Response appears in a **new thread** created under your message
+5. Continue the conversation by replying inside that thread
 
 **If it works, proceed to Step 6. If not, check:**
 
 - Bot token is correct
 - Channel ID is correct
-- Bot has permissions in channel
+- Bot has `Send Messages`, `Create Public Threads`, and `Send Messages in Threads` permissions
 - CLAUDE_HOME path exists and has identity files
 
 ### Step 6: Run as Service (Always-On)
@@ -478,7 +483,9 @@ echo ".env" >> .gitignore
 
 - ✅ Read Messages
 - ✅ Send Messages
+- ✅ Send Messages in Threads
 - ✅ Read Message History
+- ✅ Create Public Threads
 - ❌ Administrator (not needed)
 - ❌ Manage Server (not needed)
 - ❌ Kick/Ban (not needed)
