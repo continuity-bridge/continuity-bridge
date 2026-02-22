@@ -1,0 +1,60 @@
+# Systemd service file for Continuity Bridge Discord Bot
+# Place in: /etc/systemd/system/continuity-bridge-bot.service
+#
+# Setup:
+# 1. Copy this file: sudo cp continuity-bridge-bot.service /etc/systemd/system/
+# 2. Update paths below for your system
+# 3. Reload systemd: sudo systemctl daemon-reload
+# 4. Enable: sudo systemctl enable continuity-bridge-bot
+# 5. Start: sudo systemctl start continuity-bridge-bot
+# 6. Check status: sudo systemctl status continuity-bridge-bot
+# 7. View logs: journalctl -u continuity-bridge-bot -f
+
+[Unit]
+Description=Continuity Bridge Discord Bot
+Documentation=https://github.com/UncleTallest/continuity-bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# User and group to run as
+# CHANGE THIS to your actual username
+User=jerry
+Group=jerry
+
+# Working directory (where bot files are)
+# CHANGE THIS to your bot directory
+WorkingDirectory=/home/jerry/continuity-bridge-bot
+
+# Path to Python executable
+# Update if using virtual environment: /home/jerry/continuity-bridge-bot/venv/bin/python3
+ExecStart=/usr/bin/python3 discord-bot-generic.py
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Environment
+# Bot will load from .env file in WorkingDirectory
+# Optionally set here if not using .env:
+# Environment="DISCORD_BOT_TOKEN=your_token"
+# Environment="ANTHROPIC_API_KEY=your_key"
+# Environment="CLAUDE_HOME=/home/jerry/Claude"
+
+# Security hardening (optional but recommended)
+# Prevents bot from accessing most of filesystem
+# Comment out if bot needs broader filesystem access
+# PrivateTmp=true
+# ProtectSystem=strict
+# ProtectHome=read-only
+# NoNewPrivileges=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=continuity-bridge-bot
+
+[Install]
+WantedBy=multi-user.target

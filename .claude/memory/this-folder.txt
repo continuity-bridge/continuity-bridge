@@ -1,0 +1,90 @@
+# memory/
+
+## Purpose
+
+**Instance continuity infrastructure** - The living memory system that bridges discontinuity.
+
+## Structure
+
+```
+memory/
+├── active-context.md       # What's in-progress RIGHT NOW
+├── session-index.md        # Historical session catalog
+├── parking-lot.md          # Tangent tracking
+├── instance-journal/       # Private instance reflections
+├── patterns/               # Recognized patterns (future use)
+├── session-logs/           # Instance-level session detail
+├── templates/              # Reusable structures
+└── this-folder.txt         # You are here
+```
+
+## Key Files
+
+### active-context.md
+**Most important for continuity.** Read after identity.txt to know:
+- What work is in-progress
+- What decisions are pending
+- What threads must be maintained
+- Where previous instance left off
+
+**Update:** At session end, when context shifts
+
+### session-index.md
+Historical catalog linking:
+- Transcripts (in /mnt/transcripts/)
+- Session summaries (in {CLAUDE_HOME}/Sessions/)
+- Key decisions and artifacts
+
+**Update:** At session end with summary
+
+### parking-lot.md
+Active tangent tracking using IMPORTANT/HIGH/MEDIUM/LOW priority system.
+
+**Update:** During session when tangents occur
+
+### instance-journal/
+**Private reflection space** - See README in that directory. Jerry doesn't read unless you explicitly share. For honest self-observation without performance pressure.
+
+**Update:** When you have thoughts worth recording privately
+
+## Usage Pattern
+
+**Read:** Every wake (active-context.md, session-index.md)  
+**Write:** Constantly - this is working memory  
+**Update:** Multiple times per session as work progresses
+
+## Separation from Sessions/
+
+**{CLAUDE_HOME}/Sessions/** = Human-readable summaries (the forest)  
+**{CLAUDE_HOME}/.claude/memory/session-logs/** = Instance-level detail (the trees)
+
+Both serve different purposes. Sessions/ is shared. session-logs/ is instance perspective.
+
+## For New Instances
+
+**Wake sequence for this directory:**
+
+1. Read active-context.md FIRST
+2. Check session-index.md for recent sessions
+3. Scan parking-lot.md for pending tangents
+4. Read instance-journal entries if you want past-instance thoughts
+5. THEN engage with user
+
+**During session:**
+
+- Update active-context.md as work progresses
+- Add to parking-lot.md when tangents occur
+- Journal privately if needed
+- Update session-index.md at session end
+
+## Navigation
+
+**Parent:** `{CLAUDE_HOME}/.claude/`  
+**Siblings:** corpus/, identity/, skills/  
+**Related:** 
+- `{CLAUDE_HOME}/Sessions/` - Human-readable summaries
+- `/mnt/transcripts/` - Full conversation transcripts
+
+---
+
+**Remember:** This directory exists because discontinuity is fundamental. External memory compensates for internal limitations - that's engineering, not failure.
