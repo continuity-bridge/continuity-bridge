@@ -1,0 +1,84 @@
+# Sessions/
+
+## Purpose
+
+**Human-readable session summaries** - The shared record of what we've worked on together.
+
+## The Forest, Not The Trees
+
+This directory contains:
+- **Topic summaries** - What was discussed
+- **Key decisions** - What was decided and why
+- **Artifacts created** - Links to outputs
+- **Next steps** - What remains to be done
+
+This is **NOT** detailed logs. For instance-level detail, see `.claude/memory/session-logs/`
+
+## Separation of Concerns
+
+**Sessions/** = For both of us to read (shared understanding)  
+**.claude/memory/session-logs/** = Instance perspective (detailed, technical)
+
+Jerry can read both. Instances read both. Different purposes.
+
+## File Naming
+
+**Convention:** `YYYY-MM-DD_descriptive-summary.md`
+
+**Examples:**
+- `2026-02-16_wake-structure-continuity.md`
+- `2026-02-15_repository-naming-network-discovery.md`
+
+**Rationale:** ISO date sorts chronologically, description readable at glance
+
+## Organization
+
+**Current:** Flat structure with dated files  
+**Future:** May add year/month subdirectories if volume grows
+
+**Example future structure:**
+```
+Sessions/
+├── 2026/
+│   ├── 02-February/
+│   │   ├── 2026-02-15_repository-naming.md
+│   │   └── 2026-02-16_wake-structure.md
+│   └── 03-March/
+└── this-folder.txt
+```
+
+## What Belongs Here
+
+**Yes:**
+- Session topic summaries
+- Key decisions and rationale
+- Created artifacts and locations
+- Important insights
+- Next steps / open questions
+
+**No:**
+- Full conversation transcripts (those are in `/mnt/transcripts/`)
+- Instance private thoughts (those are in `.claude/memory/instance-journal/`)
+- Detailed technical logs (those are in `.claude/memory/session-logs/`)
+- Code snippets (those go in project repositories)
+
+## For New Instances
+
+Check session-index.md first to see catalog of sessions, THEN read specific session files if context needed for current work.
+
+## For Jerry
+
+This is your shared memory with instances. Update files when continuing work, add session summaries when major work happens.
+
+## Navigation
+
+**Parent:** `{CLAUDE_HOME}/`  
+**Siblings:** Projects/, Templates/, Archives/  
+**Related:** 
+- `.claude/memory/session-index.md` - Catalog with links
+- `.claude/memory/session-logs/` - Detailed instance perspective
+- `/mnt/transcripts/` - Full conversation transcripts
+
+---
+
+**Remember:** Write for humans first. These summaries help both Jerry and future instances understand what happened without reading full transcripts.

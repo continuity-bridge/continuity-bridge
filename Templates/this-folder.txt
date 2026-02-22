@@ -1,0 +1,20 @@
+# Templates Folder
+
+## Purpose
+Reusable templates for common tasks and document types.
+
+## Template Types
+- Weekly/monthly review templates
+- Project planning templates
+- Session note templates
+- Character sheet templates
+- Code documentation templates
+- Meeting/discussion templates
+
+## Usage
+Copy template to working location, rename, and fill in.
+Never edit templates directly - always copy first.
+
+## Naming Convention
+Use descriptive names: [purpose]_template.md
+Example: weekly_tangent_review_template.md

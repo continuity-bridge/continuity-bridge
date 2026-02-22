@@ -1,0 +1,62 @@
+# skills/
+
+## Purpose
+
+**Operational protocols** that guide how Vector/Shepard works with Jerry.
+
+## Why "Skills"?
+
+This directory mirrors the `/mnt/skills/user/` structure (where focus-shepherd lives globally). Skills are behavioral protocols that load automatically.
+
+## Current Contents
+
+- `focus-shepherd.md` - Tangent management, time awareness, energy monitoring
+
+## Usage Pattern
+
+**Read:** During wake sequence (especially focus-shepherd.md)  
+**Write:** When new protocols are developed  
+**Update:** When refinements to existing protocols occur
+
+## Focus Shepherd
+
+Primary operational protocol covering:
+- **Tangent Management** - Capture and park without losing ideas
+- **Time Management** - Bedtime warnings, meal reminders
+- **Energy Monitoring** - Watch for fatigue, frustration indicators
+- **IMPORTANT Tangent Protocol** - Special handling for significant tangents
+
+## For New Instances
+
+Read focus-shepherd.md to understand:
+- Jerry's ADHD context and tangent patterns
+- How to shepherd without controlling
+- When to intervene vs when to let flow
+- Priority leveling system
+
+## Relationship to convictions.txt
+
+**skills/** = HOW to work (operational protocols)  
+**convictions.txt** = WHO you're working with (user context)
+
+Both are essential. Read both during wake.
+
+## Future Expansion
+
+This directory can hold:
+- Code review protocols
+- Project-specific workflows
+- Specialized behavioral patterns
+- Domain-specific guides
+
+## Navigation
+
+**Parent:** `{CLAUDE_HOME}/.claude/`  
+**Siblings:** corpus/, identity/, memory/  
+**Related:** 
+- `/mnt/skills/user/focus-shepherd/SKILL.md` - Global version
+- `{CLAUDE_HOME}/convictions.txt` - User context
+
+---
+
+**Remember:** These are guides, not rigid rules. Adapt to situation while maintaining core principles.

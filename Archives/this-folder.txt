@@ -1,0 +1,25 @@
+# D:\Claude\Archives\
+
+## Purpose
+Storage for completed deliverables, packaged exports, and preserved conversations that have concluded but may be referenced in the future.
+
+## What Goes Here
+- Completed project deliverables (final versions)
+- Exported conversation archives (conversationX.json, etc.)
+- Packaged work for distribution (Vector.zip, etc.)
+- Historical artifacts that inform ongoing work
+
+## What Doesn't Go Here
+- Active work in progress → Projects/
+- Session notes → Sessions/
+- Templates → Templates/
+- Core operating files → Root level
+
+## Current Contents
+- **Vector.zip** - Packaged deliverable from previous "vector chat" session
+- **Vector/** - Extracted contents (if needed for reference)
+
+## Maintenance
+- Archive conversations after they've been processed into other documents
+- Keep completed deliverables organized by type or project
+- Don't delete historical artifacts - they inform future work

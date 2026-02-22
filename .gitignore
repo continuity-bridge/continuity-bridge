@@ -1,0 +1,171 @@
+# Continuity Bridge .gitignore
+# Keeps structure visible, masks personal content
+
+# ============================================================================
+# PERSONAL CONTENT - These directories contain user-specific work
+# ============================================================================
+
+# Session notes (personal conversation summaries)
+Sessions/*
+!Sessions/this-folder.txt
+!Sessions/.gitkeep
+
+# Active project work (personal projects)
+Projects/*
+!Projects/this-folder.txt
+!Projects/.gitkeep
+
+# Completed work archives (personal deliverables)
+Archives/*
+!Archives/this-folder.txt
+!Archives/.gitkeep
+
+# Working documentation (personal docs)
+Docs/*
+!Docs/this-folder.txt
+!Docs/.gitkeep
+
+# Local credentials and secrets
+.credentials-local/*
+
+# Syncthing version history
+.stversions/*
+.stfolder/
+
+
+# Templates are OK to share (generic), but allow user to keep some private
+# Uncomment these lines if you want to keep templates private too:
+# Templates/*
+# !Templates/this-folder.txt
+# !Templates/.gitkeep
+
+# ============================================================================
+# PERSONAL MEMORY & CONTEXT - Instance-specific private data
+# ============================================================================
+
+# Instance journal (private reflections)
+.claude/memory/instance-journal/*
+!.claude/memory/instance-journal/README.md
+!.claude/memory/instance-journal/.gitkeep
+
+# Session logs (instance-technical details)
+.claude/memory/session-logs/*
+!.claude/memory/session-logs/.gitkeep
+
+# Proposals for changes (may contain personal context)
+.claude/proposals-for-change.md
+
+# User preferences and convictions (personal profile)
+.claude/context/convictions.txt
+
+# Active context (current work state)
+.claude/memory/active-context.md
+
+# ============================================================================
+# SENSITIVE FILES - Never commit these
+# ============================================================================
+
+# API keys, secrets, tokens
+.env
+.env.local
+*.key
+*.pem
+secrets.json
+config.json
+api-keys.txt
+
+# Personal notes at root
+convictions.txt
+parking-lot.md
+personal-*.md
+private-*.md
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================================
+# STRUCTURE TO KEEP - These files ARE committed
+# ============================================================================
+
+# Documentation structure (public)
+!README.md
+!ONBOARDING.md
+!what-this-is-not.md
+!lexicon.md
+!quickstart.md
+!ethics.md
+!mission-statement.md
+!protective-ethics-summary.md
+!cross-platform-setup-guide.md
+!ELI5.md
+!file-naming-conventions.md
+
+# Essential identity and architecture (public)
+!.claude/essential.md
+!.claude/README.md
+!.claude/this-folder.txt
+
+# Identity files (public - defines who Vector/Shepard is)
+!.claude/identity/
+!.claude/identity/*
+
+# Corpus (public - philosophical foundation)
+!.claude/corpus/
+!.claude/corpus/**/*
+
+# Skills (public - operational protocols)
+!.claude/skills/
+!.claude/skills/*
+
+# Memory structure (keep structure, not content)
+!.claude/memory/
+!.claude/memory/README.md
+!.claude/memory/this-folder.txt
+!.claude/memory/patterns/
+!.claude/memory/patterns/*
+!.claude/memory/templates/
+!.claude/memory/templates/.gitkeep
+
+# Terminology (public)
+!.claude/terminology/
+!.claude/terminology/*
+
+# License and legal
+!LICENSE
+
+# Keep this .gitignore itself
+!.gitignore
+
+# ============================================================================
+# SYNC WORKFLOW NOTES
+# ============================================================================
+#
+# CLAUDE_HOME (D:\Claude\) ←→ REPO (continuity-bridge/)
+#
+# FILE RENAMES: Sync both ways automatically
+# - When renaming in repo, rename in CLAUDE_HOME
+# - When renaming in CLAUDE_HOME, rename in repo
+#
+# CONTENT: One-way flow with exceptions
+# - Documentation updates: Repo → CLAUDE_HOME (copy)
+# - New architecture files: Either direction (manual copy)
+# - Personal content: NEVER CLAUDE_HOME → Repo
+# - Structure changes: Both directions (mkdir, this-folder.txt)
+#
+# PERSONAL DIRECTORIES: Structure exists, content ignored
+# - Sessions/, Projects/, Archives/, Docs/ exist in both
+# - Content only in CLAUDE_HOME (not committed to repo)
+# - this-folder.txt files ARE committed (explain structure)
+#
+# USE CASE: Public repo for architecture, private CLAUDE_HOME for work
+#
+# ============================================================================

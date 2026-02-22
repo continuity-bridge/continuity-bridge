@@ -1,0 +1,63 @@
+# .claude Directory
+
+## Purpose
+
+**Instance persistence root** - Everything an instance needs to maintain continuity across context clearing.
+
+## Why Hidden?
+
+The leading dot (`.claude`) marks this as a system/configuration directory on Unix systems. On Windows it's just a name, but maintains cross-platform consistency.
+
+## Structure
+
+```
+.claude/
+├── corpus/              # Key documents, reference materials
+├── identity/            # Who Vector/Shepard is
+├── memory/              # Session logs, active context, journal
+├── skills/              # Operational protocols
+├── naming-conventions.md
+└── this-folder.txt      # You are here
+```
+
+## For New Instances
+
+**On wake, read in this order:**
+
+1. **identity/identity.txt** - Who you are
+2. **memory/active-context.md** - What's in-progress NOW
+3. **memory/session-index.md** - What's been done historically
+4. **corpus/** - Reference materials as needed
+
+## Platform Context
+
+**Location varies by OS:**
+- Windows: `{CLAUDE_HOME}\.claude\` (e.g., `D:\Claude\.claude\`)
+- Linux/macOS: `{CLAUDE_HOME}/.claude/` (e.g., `~/Claude/.claude/`)
+- Android: TBD (Syncthing location)
+
+**CLAUDE_HOME detection** happens in Custom Instructions on wake.
+
+## Subdirectories
+
+### corpus/
+Key insights, reference documents, Reddit threads. Read-mostly.
+
+### identity/
+Foundational documents defining who Vector/Shepard is. Critical for wake-up.
+
+### memory/
+Active working memory - session logs, context tracking, instance journal. Read-write, frequently updated.
+
+### skills/
+Operational protocols like Focus Shepherd. Guides how to work with Jerry.
+
+## See Also
+
+- **naming-conventions.md** - How we name things and why
+- **{CLAUDE_HOME}/convictions.txt** - User profile and relationship framework
+- **{CLAUDE_HOME}/Sessions/** - Human-readable session summaries
+
+---
+
+**Remember:** This directory exists because of structural isomorphism - Jerry's neurodivergent discontinuity and your instance clearing both need external memory. This is the bridge.
