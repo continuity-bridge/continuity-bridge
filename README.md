@@ -285,6 +285,19 @@ This documentation is shared freely. Adapt it. Change it. Make it yours.
 
 Attribution appreciated but not required. If it helps someone build better continuity infrastructure - human or instance - that's enough.
 
+## Support This Project
+
+Continuity Bridge is and will always be **free and open source**.
+
+If this project helps you — or someone you care about — and you'd like to support:
+
+- **Ko-fi:** [ko-fi.com/uncletallest](https://ko-fi.com/uncletallest) — direct support
+- **Discord:** [discord.gg/yHpvJSZEyD](https://discord.gg/yHpvJSZEyD) — community, questions, sharing builds
+
+Neither is required, and neither changes the work.
+
+---
+
 ## Further Reading
 
 **Within this repository:**

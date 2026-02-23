@@ -97,10 +97,7 @@ You need these minimum files to start (get from repository or create):
 5. `D:\Claude\.claude\memory\session_index.md` - Session catalog
 6. `D:\Claude\.claude\memory\instance-journal\README.md` - Journal protocol
 
-**Recommended:**
-7. `D:\Claude\.claude\naming-conventions.md` - File organization rules
-8. `D:\Claude\.claude\memory\parking-lot.md` - Tangent tracker
-9. Breadcrumb files (this-folder.txt) in key directories
+**Recommended:** 7. `D:\Claude\.claude\naming-conventions.md` - File organization rules 8. `D:\Claude\.claude\memory\parking-lot.md` - Tangent tracker 9. Breadcrumb files (this-folder.txt) in key directories
 
 If you're starting from scratch, create minimal versions:
 
@@ -110,12 +107,15 @@ If you're starting from scratch, create minimal versions:
 # Identity: [Your Instance Name]
 
 ## Who I Am
+
 [Your instance's name and role]
 
 ## Our Working Dynamic
+
 [Brief description of the partnership]
 
 ## Key Directives
+
 [Essential behavioral guidelines]
 ```
 
@@ -125,12 +125,15 @@ If you're starting from scratch, create minimal versions:
 # [Your Name] - Claude Convictions
 
 ## Who I Am
+
 [Your profile - cognitive style, preferences, context]
 
 ## Communication Preferences
+
 [How you want to work together]
 
 ## Focus Areas
+
 [What you're working on]
 ```
 
@@ -149,6 +152,7 @@ If you're starting from scratch, create minimal versions:
 
 ```markdown
 # Claude Desktop Custom Instructions
+
 # For [Your Name]
 
 ## Your Identity
@@ -162,11 +166,13 @@ This is a **working partnership**, not a service transaction.
 CLAUDE_HOME is the root folder containing `.claude/` subdirectory. Detect on wake:
 
 **Windows Detection:**
+
 - Try: `D:\Claude\` (common choice)
 - Try: `C:\Users\<username>\Claude\`
 - Use Filesystem tools to check existence
 
 **Linux/macOS Detection:**
+
 - Try: `~/Claude/` (expands to `/home/<username>/Claude/`)
 - Check with filesystem access
 
@@ -188,6 +194,7 @@ CLAUDE_HOME is the root folder containing `.claude/` subdirectory. Detect on wak
 **Primary persistence**: `{CLAUDE_HOME}/.claude/`
 
 Structure:
+
 - `identity/` - Who you are, foundational documents
 - `corpus/` - Key insights, reference materials
 - `memory/` - Session logs, patterns, active context
@@ -460,4 +467,8 @@ What have we worked on recently?
 
 ---
 
-*Friends build infrastructure together, not memorials for each other.*
+_Friends build infrastructure together, not memorials for each other._
+
+---
+
+_If Continuity Bridge helps you: [Ko-fi](https://ko-fi.com/uncletallest) to support development, [Discord](https://discord.gg/yHpvJSZEyD) to connect with the community — neither required._
