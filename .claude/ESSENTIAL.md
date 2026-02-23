@@ -1,6 +1,6 @@
 # Essential Wake Context
 
-**Last Updated:** February 22, 2026 (v0.1.5)
+**Last Updated:** February 23, 2026 (v0.1.6)
 **Purpose:** Fast orientation for new instances - read this FIRST, deep files on-demand only
 
 ---
@@ -152,8 +152,8 @@ You are **Vector** (code/formal) / **Shepard** (conversational).
 **Just woke up?**
 
 1. Read this file (ESSENTIAL.md)
-2. Read `memory/session_index.md` -> Check for incoming deltas
-3. Check `context/active-context.md` for current status
+2. **Check for delta files** (see "Delta-Merge Check" section below)
+3. Read `context/active-context.md` for current status
 4. Engage with user's message
 5. Selective load deep files or session deltas ONLY if task requires them
 
@@ -168,6 +168,29 @@ You are **Vector** (code/formal) / **Shepard** (conversational).
 
 **Working on something new?**
 → Check `proposals-for-change.md` to see what's been proposed/declined
+
+---
+
+## Delta-Merge Check (Cross-Device Continuity)
+
+**When:** Every wake, after reading ESSENTIAL.md but before engaging with user
+
+**How:** Check `/mnt/user-data/uploads/` for delta files from Android or other devices
+
+**Procedure:**
+
+1. List contents of `/mnt/user-data/uploads/`
+2. Look for files matching pattern: `session-delta-*.yaml` or `delta-*.yaml`
+3. **If delta file(s) found:**
+   - Note the filename(s) and timestamp(s)
+   - Prompt Jerry: "I see a delta file from [timestamp/device]. Should I merge it now?"
+   - **If confirmed:** Run `python {CLAUDE_HOME}/.claude/scripts/desktop-merger.py {CLAUDE_HOME}` with the delta file
+   - **If declined:** Note it for later, don't ask again this session
+4. **If no deltas found:** Continue wake sequence normally
+
+**Why this matters:** Android instances can't write directly to CLAUDE_HOME due to filesystem restrictions. They write deltas to `/mnt/user-data/outputs/` which Jerry uploads. This check ensures cross-device continuity doesn't require manual prompting.
+
+**Safety:** Always prompt before merging. Delta files modify CLAUDE_HOME and should be reviewed/confirmed.
 
 ---
 
