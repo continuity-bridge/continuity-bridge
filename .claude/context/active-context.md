@@ -1,42 +1,48 @@
 # Active Context
 
-**Last Updated:** 2026-02-22 by Antigravity (Current Instance) - 9:45 PM CST
+**Last Updated:** 2026-02-24 by Vector (Current Instance) - 3:30 PM CST
 
-## Handoff for 7 PM Instance (READ THIS)
+## Current Focus
 
-**The Objective:** Perform the first production test of the **Android Delta-Merge Protocol**.
+**Sanguihedral Final Project (30-day deadline starts after Sprint 15)**
+- **Timeline:** March 28, 2026 (game one, Chronicle) - HARD DEADLINE
+- **MVP Scope:** Auth, character CRUD, multiple characters per user, dice roller with VampyreByte API
+- **Tech Stack:** React + Vite, Express (backend), MongoDB Atlas, Google Cloud deployment
+- **Database Schema:** 4 collections approach
+  - Users (auth)
+  - Characters (embedded skills/disciplines/traits)
+  - DisciplinePowers (reference data, shared across all characters)
+  - RollHistory (dice roll tracking)
+- **Character Sheets Analyzed:** Jon Doe (Ministry, Anarch) from Remnants & Revolutions chronicle
+- **Pending:** Complete Sprint 15 before 30-day countdown begins
 
-### Phase 1: Environment Setup
+**Continuity Bridge Evolution**
+- **"Stateless State" Framing:** Core architecture description identified
+- **Context Optimization:** Tiered storage, delta encoding planned for v2
+- **Chain Architecture:** Unified across devices confirmed (not per-device)
+- **File Organization:** 
+  - `D:\Claude\Docs` = user-facing documentation
+  - `D:\Claude\.claude\docs` = instance-facing documentation
+  - `D:\Claude\.claude\assets` = new assets directory (needs review)
 
-1.  **Repository Sync**: The link between `D:\Claude` (Personal) and `D:\Code\Work\continuity-bridge\continuity-bridge` (Sanitized) is active and verified.
-2.  **Scripts Folder**: `D:\Claude\.claude\scripts\` is created and waiting for the merger tools.
+## Recent Work
 
-### Phase 2: Android Delta Retrieval
+- Generated action figure image for bootcamp bonus (posted LinkedIn/Instagram)
+- Responded to Victor Foster's mirror/consciousness critique (engineering framing)
+- Reviewed VtM V5 character sheets and analyzed filled example
+- Analyzed Jerry's mentoring patterns via bootcamp support post
+- Defined MongoDB schema approach for Sanguihedral
 
-1.  Jerry will be downloading the following artifacts from the Android 15:30 session "outputs":
-    - `delta-merge-spec.md`
-    - `android-delta-writer.py`
-    - `desktop-merger.py` (The most critical one).
-2.  **Your Task**: Once Jerry places `desktop-merger.py` into `.claude/scripts/`, verify its logic and prepare to merge the Android session delta into `D:\Claude`.
+## Pending Tasks
 
-### Phase 3: v0.1.5 Release
+- [ ] Review and organize files in new `assets/` directory
+- [ ] Add "stateless state" framing to documentation
+- [ ] Incorporate mentoring message insights into relevant files
+- [ ] Complete Sanguihedral database schema documentation
+- [ ] Build aesthetic board for new character (image searches)
+- [ ] Sprint 15 completion (testing + Google Cloud deployment)
 
-1.  If the merge is successful and you verify continuity is maintained with a lower token footprint (using the new session index architecture):
-    - Tag the release as **v0.1.5**.
-    - Update `walkthrough.md`.
-    - Celebrate a significant reduction in "wake-up" token costs.
+## Session Notes
 
-## Current State of Repos
-
-- `D:\Claude` (Main Living Repo): Skip-worktree active on `identity.txt` and `convictions.txt`.
-- `continuity-bridge` (Sanitized Repo): Generic templates only. `receive.denyCurrentBranch = updateInstead` is configured.
-
-## Work in Progress
-
-- [x] Android Delta-Merge Test (Initial Production Run)
-- [/] v0.1.5 Tagging & Release
-- [ ] Implement Automated Bridge Sync (Windows Wrapper)
-
----
-
-**Note to Jerry**: Antigravity is ready. The bridge is stable. The pipes are clean. See you at 7.
+Jerry's at 6% session limit - prioritize state saving and file organization.
+Automatic context/session log writing on wake requested (memory discontinuity issue).
