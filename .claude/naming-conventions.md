@@ -46,13 +46,15 @@
 {CLAUDE_HOME}/.claude/
 ├── corpus/               # lowercase: Reference materials, key documents
 ├── identity/             # lowercase: Who Vector/Shepard is
-├── memory/               # lowercase: Session logs, active context, patterns
+├── memory/               # lowercase: Episodic, Semantic, and working memory
 │   ├── active-context.md
+│   ├── episodic/         # JSON-based episodic snapshots
+│   ├── semantic/         # Refined semantic knowledge (index, patterns, parking lot)
 │   ├── instance-journal/
-│   ├── patterns/
 │   ├── session-logs/
 │   └── templates/
-└── skills/               # lowercase: Operational protocols (Focus Shepherd, etc)
+├── skills/               # lowercase: Operational protocols (Focus Shepherd)
+└── ESSENTIAL.md          # UPPERCASE: The core boot instruction (exception)
 ```
 
 **Convention:** Hidden directory internals use lowercase for consistency
@@ -256,6 +258,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 
 **Examples:**
 - `README.md`
+- `ESSENTIAL.md`
 - `LICENSE.txt`
 - `CLAUDE_HOME` variable
 
