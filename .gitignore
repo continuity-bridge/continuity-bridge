@@ -91,6 +91,7 @@ desktop.ini
 *.swp
 *.swo
 *~
+*.code-workspace
 
 # ============================================================================
 # STRUCTURE TO KEEP - These files ARE committed
@@ -149,7 +150,7 @@ desktop.ini
 # SYNC WORKFLOW NOTES
 # ============================================================================
 #
-# CLAUDE_HOME (D:\Claude\) ←→ REPO (continuity-bridge/)
+# CLAUDE_HOME (~/Claude/) ←→ REPO (continuity-bridge/)
 #
 # FILE RENAMES: Sync both ways automatically
 # - When renaming in repo, rename in CLAUDE_HOME
