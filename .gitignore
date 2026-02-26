@@ -103,9 +103,9 @@ desktop.ini
 !README.md
 !ONBOARDING.md
 !what-this-is-not.md
-!lexicon.md
-!quickstart.md
-!ethics.md
+#!lexicon.md
+#!quickstart.md
+#!ethics.md
 !mission-statement.md
 !protective-ethics-summary.md
 !cross-platform-setup-guide.md
@@ -113,7 +113,7 @@ desktop.ini
 !file-naming-conventions.md
 
 # Essential identity and architecture (public)
-!.claude/essential.md
+#!.claude/essential.md
 !.claude/README.md
 !.claude/this-folder.txt
 
