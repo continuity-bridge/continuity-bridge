@@ -1,3 +1,6 @@
-(?i)/.credentials-local
 (?i).stfolder
+(?i).stversions
+(?i).sync-conflict-*
 (?i).stignore
+(?i).credentials-local
+(?i).git

@@ -31,6 +31,8 @@ Docs/*
 # Syncthing version history
 .stversions/*
 .stfolder/
+.stignore
+*.sync-conflict-*
 
 
 # Templates are OK to share (generic), but allow user to keep some private
