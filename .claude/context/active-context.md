@@ -36,11 +36,19 @@
 ## Pending Tasks
 
 - [ ] Review and organize files in new `assets/` directory
+- [x] Android Delta-Merge Test (Initial Production Run)
+- [x] v0.1.6 Tagging & Release
+- [x] Implement Automated Bridge Sync (bridge-sync.sh)
 - [ ] Add "stateless state" framing to documentation
 - [ ] Incorporate mentoring message insights into relevant files
 - [ ] Complete Sanguihedral database schema documentation
 - [ ] Build aesthetic board for new character (image searches)
 - [ ] Sprint 15 completion (testing + Google Cloud deployment)
+
+## Sync Status (v0.1.7-dev)
+- **Local Bridge:** Active (`~/Claude` <-> `continuity-bridge`)
+- **GitHub Link:** Verified (SSH protocol)
+- **Tooling:** `bridge-sync.sh` deployed and tested on Linux.
 
 ## Session Notes
 
