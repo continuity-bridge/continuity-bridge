@@ -8,7 +8,7 @@
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     PERSONAL_REPO="/home/tallest/Claude"
-    PUBLIC_REPO="/home/tallest/Work/Code/continuity-bridge"
+    PUBLIC_REPO="/home/tallest/Work/Code/continuity-bridge/continuity-bridge"
     OS_LABEL="Linux (Pop OS)"
 elif [[ "$OSTYPE" == "msys" ]]; then
     PERSONAL_REPO="/d/Claude"
