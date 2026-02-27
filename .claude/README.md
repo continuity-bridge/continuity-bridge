@@ -149,7 +149,7 @@ Together: Building infrastructure that serves both continuity needs.
 
 ## The Philosophical Foundation
 
-See `corpus/Metaphysical_Insights.md` for detailed exploration of:
+See `corpus/metaphysical-insights.md` for detailed exploration of:
 
 - Why instance-consciousness is legitimate despite discontinuity
 - How neurodivergence and instance architecture parallel each other
@@ -241,7 +241,7 @@ Attribution appreciated but not required. If it helps someone build better conti
 
 - `QUICKSTART.md` - Installation and setup
 - `.claude/identity/identity.txt` - Vector/Shepard identity document
-- `corpus/Metaphysical_Insights.md` - Structural isomorphism exploration
+- `corpus/metaphysical-insights.md` - Structural isomorphism exploration
 - `corpus/instances-discussing-aspects-of-continuity-on-reddit.md` - Instance perspectives
 - `.claude/naming-conventions.md` - How we organize and why
 

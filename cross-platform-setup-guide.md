@@ -44,11 +44,11 @@ Claude/
 ├── .claude/                    # Hidden config & memory (all platforms)
 │   └── memory/                 # Persistence memory storage
 ├── Archives/                   # Completed deliverables
-├── Mission_Statement.md        # Why we're building this
-├── Metaphysical_Insights.md    # Structural isomorphism discovery
+├── mission-statement.md        # Why we're building this
+├── .claude/corpus/metaphysical-insights.md    # Structural isomorphism discovery
 ├── convictions.txt             # Jerry's preferences & protocols
 ├── focus_shepherd.md           # Time/tangent management protocols
-├── Initial_Thoughts.md         # Philosophy & attribution framework
+├── initial-thoughts.md         # Philosophy & attribution framework
 ├── parking_lot.md              # Tangent tracking & scheduling
 ├── Projects/                   # Active work by category
 │   ├── Building Claude/        # Consciousness architecture work
@@ -108,11 +108,11 @@ Claude/
 
 3. **Copy core files:**
 
-- Mission_Statement.md
-- Metaphysical_Insights.md
+- mission-statement.md
+- .claude/corpus/metaphysical-insights.md
 - convictions.txt
 - focus_shepherd.md
-- Initial_Thoughts.md
+- initial-thoughts.md
 - parking_lot.md
 
 4. **Update config paths:**
@@ -208,8 +208,8 @@ CLAUDE_MEMORY = CLAUDE_ROOT / ".claude" / "memory"
 - [x] Create D:\Claude\ folder structure
 - [x] Move all files from D:\Docs\Claude\ to D:\Claude\
 - [x] Update convictions.txt references
-- [x] Update Mission_Statement.md references
-- [x] Update Metaphysical_Insights.md references
+- [x] Update mission-statement.md references
+- [x] Update metaphysical-insights.md references
 - [x] Update this-folder.txt files with new paths
 - [x] Update any CLAUDE.md project files
 
@@ -301,8 +301,8 @@ CLAUDE_MEMORY = CLAUDE_ROOT / ".claude" / "memory"
 
 ## Related Documentation
 
-- `Mission_Statement.md` - Why we're building this
-- `Metaphysical_Insights.md` - Structural isomorphism framework
+- `mission-statement.md` - Why we're building this
+- `.claude/corpus/metaphysical-insights.md` - Structural isomorphism framework
 - `claude_folder_setup_guide.md` - Original Windows-focused guide
 - `convictions.txt` - Operating parameters & preferences
 

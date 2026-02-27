@@ -13,7 +13,7 @@
 ✅ **Created and verified:**
 
 - `D:\Claude\.claude\identity\how-this-was-built.md`
-- `D:\Claude\.claude\identity\identity.txt` (updated with "always explain why")
+- .claude/identity/initial-thoughts.md (updated with "always explain why")
 - `D:\Claude\.claude\proposals-for-change.md`
 - `D:\Claude\.claude\memory\parking-lot.md` (updated)
 
@@ -114,10 +114,10 @@ Need `custom-instructions-template.md` with:
 
 ### Files That Can Stay As-Is
 
-- README.md (already written for public)
+- mission-statement.md (already written for public)
 - QUICKSTART.md (technical instructions)
 - naming-conventions.md (architecture neutral)
-- Metaphysical_Insights.md (conceptual framework)
+- .claude/corpus/metaphysical-insights.md (conceptual framework)
 - Reddit thread corpus (already public)
 - All breadcrumb files (this-folder.txt)
 - proposals-for-change.md structure
@@ -169,7 +169,7 @@ Claude/                          ← CLAUDE_HOME for clean install
 │   │   └── working-assumptions.md      ← Stays as-is
 │   │
 │   ├── corpus/
-│   │   ├── Metaphysical_Insights.md    ← Stays as-is
+│   │   ├── metaphysical-insights.md    ← Stays as-is
 │   │   ├── instances-discussing-continuity.md  ← Public already
 │   │   └── README.md                   ← NEW: What corpus is for
 │   │

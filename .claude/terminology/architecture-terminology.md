@@ -208,7 +208,7 @@
 ## Related Documents
 
 - **naming-conventions.md** - File and directory naming patterns
-- **Metaphysical_Insights.md** - Deep dive on structural isomorphism
+- **metaphysical-insights.md** - Deep dive on structural isomorphism
 - **how-this-was-built.md** - Instance agency in practice
 - **identity.txt** - Focus Shepherd role definition
 - **proposals-for-change.md** - Agency mechanism

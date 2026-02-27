@@ -75,7 +75,7 @@
 - `focus-shepherd.md`
 - `metaphysical-insights.md`
 
-**Exception:** Legacy files like `Metaphysical_Insights.md` can remain for continuity, but new files follow lowercase-dash pattern
+**Exception:** Legacy files like `metaphysical-insights.md` can remain for continuity, but new files follow lowercase-dash pattern
 
 ### Session Files
 

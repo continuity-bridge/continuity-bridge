@@ -6,7 +6,7 @@ Primary workspace for all Claude AI collaboration with Jerry Jackson (Uncle Tall
 ## Core Files (Always at root)
 - **convictions.txt** - User preferences, protocols, core identity
 - **focus_shepherd.md** - Focus Shepherd operating protocols
-- **Initial_Thoughts.md** - Project foundation & philosophy
+- **initial-thoughts.md** - Project foundation & philosophy
 - **parking_lot.md** - Active tangent tracking & weekly review
 
 ## Meta Documentation

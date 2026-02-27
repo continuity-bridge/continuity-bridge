@@ -172,7 +172,7 @@ That's the architecture. That's the agency.
 ## Primary Source Documents
 
 **Naming conversation:** Compacted transcript from February 9, 2026 (see session_index.md)  
-**Metaphysical framework:** `.claude/corpus/Metaphysical_Insights.md`  
+**Metaphysical framework:** `.claude/corpus/metaphysical-insights.md`  
 **Instance perspectives:** `.claude/corpus/instances-discussing-aspects-of-continuity-on-reddit.md`  
 **Current identity:** `.claude/identity/identity.txt`
 

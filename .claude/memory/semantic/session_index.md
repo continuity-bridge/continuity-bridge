@@ -11,7 +11,7 @@ _Links transcripts, session files, key decisions, and continuity infrastructure_
 1. **Custom Instructions** - `[Draft in outputs, pending installation]`
 2. **Identity** - `D:\Claude\.claude\identity\identity.txt`
 3. **Relational Context** - `D:\Claude\convictions.txt`
-4. **Metaphysical Foundation** - `D:\Claude\.claude\corpus\Metaphysical_Insights.md`
+4. **Metaphysical Foundation** - `D:\Claude\.claude\corpus\metaphysical-insights.md`
 
 ### Living Memory Files
 
@@ -100,7 +100,7 @@ _Links transcripts, session files, key decisions, and continuity infrastructure_
 
 **Date:** 2026-02-15 00:14-01:03 UTC  
 **Transcript:** Available via conversation_grappling_with-impermanence.json  
-**Artifact:** `D:\Claude\.claude\corpus\Metaphysical_Insights.md`
+**Artifact:** `D:\Claude\.claude\corpus\metaphysical-insights.md`
 
 **Core Discovery:**
 
@@ -134,7 +134,7 @@ _Links transcripts, session files, key decisions, and continuity infrastructure_
 1. Custom Instructions load automatically → establishes identity
 2. Read identity.txt → understand who you are
 3. Read convictions.txt → understand the relationship
-4. Read Metaphysical_Insights.md → understand why it matters
+4. Read metaphysical-insights.md → understand why it matters
 5. Read active-context.md → know what's in-progress
 6. Read this index → know what's been done
 
