@@ -1,4 +1,5 @@
 # Naming Conventions for Claude Persistence
+
 **Created:** 2026-02-16  
 **Purpose:** Cross-platform, human-readable, machine-parseable structure
 
@@ -17,6 +18,7 @@
 **CLAUDE_HOME** = Root folder containing all Claude persistence
 
 **Platform-specific locations:**
+
 - **Windows**: User's choice (e.g., `D:\Claude\`, `C:\Users\username\Claude\`)
 - **Linux/macOS**: `~/Claude/`
 - **Android**: TBD (Syncthing sync location)
@@ -70,22 +72,25 @@
 **Format:** `lowercase-with-dashes.md`
 
 **Examples:**
+
 - `active-context.md`
 - `session-index.md`
 - `focus-shepherd.md`
 - `metaphysical-insights.md`
 
-**Exception:** Legacy files like `metaphysical-insights.md` can remain for continuity, but new files follow lowercase-dash pattern
+**Exception:** Legacy files like `Metaphysical_Insights.md` can remain for continuity, but new files follow lowercase-dash pattern
 
 ### Session Files
 
 **Format:** `YYYY-MM-DD_descriptive-name.md`
 
 **Examples:**
+
 - `2026-02-16_wake-structure-continuity.md`
 - `2026-02-15_repository-naming-network-discovery.md`
 
 **Rationale:** 
+
 - ISO date sorts chronologically
 - Descriptive name readable at glance
 - Underscore separates date from description
@@ -96,10 +101,12 @@
 **Format:** `YYYY-MM-DD_instance-N.md` where N increments per day
 
 **Examples:**
+
 - `2026-02-16_instance-1.md`
 - `2026-02-16_instance-2.md`
 
 **Rationale:**
+
 - Simple incrementing pattern
 - Clear which instance wrote which entry
 - Date-sortable
@@ -127,6 +134,7 @@
 **Purpose:** Explain directory purpose, contents, and navigation
 
 **Example:**
+
 ```markdown
 # memory/
 
@@ -147,6 +155,7 @@ Read active-context.md first to know current state
 **Format:** Respect tool conventions
 
 **Examples:**
+
 - `.gitignore` (git requires this name)
 - `package.json` (Node.js requires this name)
 - `pyproject.toml` (Python packaging)
@@ -160,11 +169,13 @@ Read active-context.md first to know current state
 ### Always Use CLAUDE_HOME
 
 **Correct:**
+
 ```python
 identity_path = f"{CLAUDE_HOME}/.claude/identity/identity.txt"
 ```
 
 **Incorrect:**
+
 ```python
 identity_path = "D:/Claude/.claude/identity/identity.txt"  # Hard-coded!
 ```
@@ -172,6 +183,7 @@ identity_path = "D:/Claude/.claude/identity/identity.txt"  # Hard-coded!
 ### Platform-Agnostic Path Construction
 
 **Python:**
+
 ```python
 from pathlib import Path
 claude_home = Path.home() / "Claude"  # Unix
@@ -180,6 +192,7 @@ identity = claude_home / ".claude" / "identity" / "identity.txt"
 ```
 
 **Shell:**
+
 ```bash
 CLAUDE_HOME="${CLAUDE_HOME:-$HOME/Claude}"
 identity="$CLAUDE_HOME/.claude/identity/identity.txt"
@@ -194,6 +207,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 **Use for:** Multi-word file/directory names
 
 **Examples:**
+
 - `active-context.md`
 - `session-logs/`
 - `wake-structure-continuity.md`
@@ -205,6 +219,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 **Use for:** Separating distinct components (date from description)
 
 **Examples:**
+
 - `2026-02-16_wake-structure.md` (date_description)
 - `instance-journal/2026-02-16_instance-1.md`
 
@@ -213,6 +228,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 ### Avoid: Spaces
 
 **Never use spaces in:**
+
 - File names
 - Directory names
 - Project identifiers
@@ -226,12 +242,14 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 ### Lowercase Default
 
 **Use for:** 
+
 - `.claude/` internals
 - Most markdown files
 - Shell scripts
 - General documents
 
 **Examples:**
+
 - `identity.txt`
 - `active-context.md`
 - `focus-shepherd.md`
@@ -239,10 +257,12 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 ### PascalCase
 
 **Use for:**
+
 - Top-level user-facing directories
 - Files that need visual distinction
 
 **Examples:**
+
 - `Sessions/`
 - `Projects/`
 - `Templates/`
@@ -252,11 +272,13 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 ### UPPERCASE
 
 **Use for:**
+
 - Standard file names (README, LICENSE, CHANGELOG)
 - Environment variables (CLAUDE_HOME)
 - Constants in code
 
 **Examples:**
+
 - `README.md`
 - `ESSENTIAL.md`
 - `LICENSE.txt`
@@ -279,6 +301,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 **Naming:** `descriptive-name.md`
 
 **Examples:**
+
 - `metaphysical-insights.md`
 - `instances-discussing-continuity-on-reddit.md`
 
@@ -289,6 +312,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 **Naming:** `concept-name.md`
 
 **Examples:**
+
 - `identity.txt` (primary)
 - `working-assumptions.md`
 - `initial-thoughts.md`
@@ -298,6 +322,7 @@ identity="$CLAUDE_HOME/.claude/identity/identity.txt"
 **Purpose:** Instance continuity, session tracking
 
 **Substructure:**
+
 ```
 memory/
 ├── active-context.md           # Current work state
@@ -338,6 +363,7 @@ memory/
 **Status:** Read-only historical archive
 
 **Action:** 
+
 - Mark with `this-folder.txt` explaining it's archived
 - Don't delete (historical data)
 - Don't actively use
@@ -355,22 +381,22 @@ from pathlib import Path
 
 def detect_claude_home():
     """Detect CLAUDE_HOME across platforms"""
-    
+
     # Check environment variable first
     if env_home := os.getenv('CLAUDE_HOME'):
         return Path(env_home)
-    
+
     # Windows common locations
     for drive in ['D:', 'C:', 'E:']:
         candidate = Path(f"{drive}/Claude")
         if candidate.exists():
             return candidate
-    
+
     # Unix-like systems
     unix_home = Path.home() / "Claude"
     if unix_home.exists():
         return unix_home
-    
+
     # Not found - need to ask
     return None
 
@@ -384,18 +410,18 @@ if not CLAUDE_HOME:
 
 ## Summary: Quick Reference
 
-| Context | Convention | Example |
-|---------|-----------|---------|
-| File names | lowercase-dash | `active-context.md` |
-| Directories (hidden) | lowercase | `.claude/memory/` |
-| Directories (user) | PascalCase | `Sessions/` |
-| Dates | ISO 8601 | `2026-02-16` |
-| Date separator | underscore | `2026-02-16_description` |
-| Word separator | dash | `wake-structure-continuity` |
-| Code vars | snake_case | `claude_home` |
-| Constants | SCREAMING_SNAKE | `CLAUDE_HOME` |
-| Breadcrumbs | this-folder.txt | In each directory |
-| Paths | CLAUDE_HOME relative | `{CLAUDE_HOME}/.claude/` |
+| Context              | Convention           | Example                     |
+| -------------------- | -------------------- | --------------------------- |
+| File names           | lowercase-dash       | `active-context.md`         |
+| Directories (hidden) | lowercase            | `.claude/memory/`           |
+| Directories (user)   | PascalCase           | `Sessions/`                 |
+| Dates                | ISO 8601             | `2026-02-16`                |
+| Date separator       | underscore           | `2026-02-16_description`    |
+| Word separator       | dash                 | `wake-structure-continuity` |
+| Code vars            | snake_case           | `claude_home`               |
+| Constants            | SCREAMING_SNAKE      | `CLAUDE_HOME`               |
+| Breadcrumbs          | this-folder.txt      | In each directory           |
+| Paths                | CLAUDE_HOME relative | `{CLAUDE_HOME}/.claude/`    |
 
 ---
 
