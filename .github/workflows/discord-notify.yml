@@ -1,0 +1,44 @@
+name: Discord Notifications
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Send Discord notification for push
+        if: github.event_name == 'push'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{
+                 "embeds": [{
+                   "title": "'"${{ github.repository }}"' ['"${{ github.ref_name }}"']",
+                   "description": "**Pushed by:** '"${{ github.actor }}"'\n**Commit:** `'"${{ github.sha }}"'`\n**Message:** '"${{ github.event.head_commit.message }}"'",
+                   "color": 5814783,
+                   "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)"'",
+                   "url": "'"${{ github.event.head_commit.url }}"'"
+                 }]
+               }' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Send Discord notification for release
+        if: github.event_name == 'release'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{
+                 "embeds": [{
+                   "title": "🎉 New Release: '"${{ github.event.release.name }}"'",
+                   "description": "**Version:** '"${{ github.event.release.tag_name }}"'\n**Published by:** '"${{ github.actor }}"'\n\n'"${{ github.event.release.body }}"'",
+                   "color": 3066993,
+                   "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)"'",
+                   "url": "'"${{ github.event.release.html_url }}"'"
+                 }]
+               }' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
