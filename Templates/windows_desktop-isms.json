@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "platform_id": "windows_desktop",
+  "note": "Example configuration for Windows desktop systems",
+  
+  "paths": {
+    "claude_home": "D:\\Claude",
+    "working_dir": "D:\\Claude",
+    "vault": "D:\\Claude\\.credentials-local"
+  },
+  
+  "constants": {
+    "platform": "windows",
+    "shell": "powershell",
+    "user_profile": "C:\\Users\\<username>",
+    "drive": "D:"
+  },
+  
+  "services": {
+    "ollama_endpoint": "http://localhost:11434"
+  },
+  
+  "storage": {
+    "strategy": "direct_write",
+    "note": "Assumes MCP filesystem access or local execution"
+  },
+  
+  "customization_notes": {
+    "paths": "Update drive letter if you use C:\\ or another drive",
+    "user_profile": "Replace <username> with your Windows username",
+    "shell": "Change to 'cmd' if you prefer Command Prompt",
+    "ollama": "Update endpoint if running Ollama on different host/port",
+    "path_separators": "Windows uses backslashes - keep them escaped in JSON (\\\\)"
+  }
+}
