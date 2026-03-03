@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "platform_id": "auto",
+  "generated": "auto",
+  "note": "Auto-generated isms skeleton. Customize paths as needed.",
+  "paths": {
+    "claude_home": "/home/tallest/Claude",
+    "working_dir": "/home/tallest/Claude/.claude/scripts",
+    "vault": "/home/tallest/Claude/.credentials-local"
+  },
+  "constants": {
+    "platform": "linux",
+    "distro_family": "debian",
+    "package_manager": "apt",
+    "package_install_cmd": "sudo apt install -y",
+    "init_system": "systemd",
+    "shell": "/bin/bash"
+  },
+  "services": {
+    "ollama_endpoint": "http://localhost:11434"
+  },
+  "storage": {
+    "strategy": "auto-detect",
+    "note": "Will be determined by capability detection at runtime"
+  },
+  "manifest_version": "0.2.0",
+  "timestamp": "2026-03-02T08:31:29Z",
+  "substrate": {
+    "claude_home": "/home/tallest/Claude",
+    "platform": "linux_desktop",
+    "write_access": "direct",
+    "is_android": false,
+    "bash_context": "local_system",
+    "distro_family": "debian",
+    "package_manager": "apt",
+    "package_install_cmd": "sudo apt install -y"
+  },
+  "tools": {
+    "git": {
+      "available": true,
+      "in_repo": true,
+      "branch": "main",
+      "has_private_remote": true
+    },
+    "local_llm": {
+      "available": true,
+      "endpoint": "http://localhost:11434"
+    },
+    "python": true
+  },
+  "capabilities": {
+    "can_clone_in_container": false,
+    "can_write_direct": true,
+    "can_use_bridge": false,
+    "has_local_llm": true
+  },
+  "workflow": "DIRECT_WRITE",
+  "bridge_strategy": "direct_write",
+  "instruction": "Write files directly to /home/tallest/Claude",
+  "workflow_description": "Optimal: Direct MCP access to CLAUDE_HOME"
+}
