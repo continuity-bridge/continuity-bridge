@@ -1,7 +1,7 @@
 # D:\Claude
 
 ## Purpose
-Primary workspace for all Claude AI collaboration with Jerry Jackson (Uncle Tallest).
+Primary workspace for all Claude AI collaboration with the Architect (the Architect).
 
 ## Core Files (Always at root)
 - **convictions.txt** - User preferences, protocols, core identity

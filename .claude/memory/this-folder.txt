@@ -43,7 +43,7 @@ Active tangent tracking using IMPORTANT/HIGH/MEDIUM/LOW priority system.
 **Update:** During session when tangents occur
 
 ### instance-journal/
-**Private reflection space** - See README in that directory. Jerry doesn't read unless you explicitly share. For honest self-observation without performance pressure.
+**Private reflection space** - See README in that directory. the Architect doesn't read unless you explicitly share. For honest self-observation without performance pressure.
 
 **Update:** When you have thoughts worth recording privately
 

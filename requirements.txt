@@ -1,0 +1,9 @@
+# --- Core Continuity Bridge Requirements ---
+typing_extensions==4.10.0    # For advanced type hinting support
+requests==2.31.0             # For Ollama API and potential web hooks
+PyYAML==6.0.1                # For parsing complex config files
+distro==1.9.0                # Useful for the detect_substrate() logic
+
+# --- Wellness Archetype (Add these when you begin data analysis) ---
+# pandas                     # For biometric correlation tracking
+# matplotlib                 # For energy/load visualization

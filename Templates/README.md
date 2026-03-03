@@ -1,294 +1,490 @@
-# Continuity Bridge Templates
+# Continuity Bridge - Templates
 
-**Purpose:** Reusable templates for creating new instance chains
+**Version:** 0.2.0  
+**Last Updated:** March 2, 2026
 
-This directory contains template files that help you bootstrap a new instance chain system for different users or use cases.
-
----
-
-## Available Templates
-
-### 1. `ESSENTIAL.md.template`
-
-**What it is:** Template for creating the fast-wake orientation file that instances read first
-
-**How to use:**
-1. Copy template to your `{CLAUDE_HOME}/.claude/` directory as `ESSENTIAL.md`
-2. Follow instructions at top of template to replace placeholder tags
-3. Customize sections for your specific use case
-4. Remove instruction section before use
-5. Update version to v0.1.0 and set current date
-
-**Key customizations:**
-- Instance name and role
-- User information and preferences
-- Operational capabilities specific to your environment
-- File locations if directory structure differs
-- Deep files relevant to your corpus
-
-**When to use:** 
-- Starting a new instance chain
-- Migrating to Continuity Bridge architecture
-- Setting up for a new user
+This folder contains templates for setting up your personal Continuity Bridge instance.
 
 ---
 
-### 2. `claude.md-examples/` (Coming Soon)
+## What's Here
 
-**What it will contain:**
-- Example global CLAUDE.md for coding assistant setup
-- Example project CLAUDE.md for specific use cases
-- LOCAL.md examples for private project notes
+### Anchor Templates (6 Archetypes)
 
-**When to use:**
-- Setting up Claude Code integration
-- Creating per-project instance configurations
-- Establishing coding style preferences
+Templates defining identity, relationship context, and continuity needs for different user types:
 
----
+- **technical-anchor.json** - Developers, engineers, sysadmins
+- **creative-anchor.json** - Artists, writers, designers
+- **social-anchor.json** - Influencers, community managers
+- **executive-anchor.json** - Managers, founders, operators
+- **pedagogical-anchor.json** - Students, academics, researchers
+- **wellness-anchor.json** - Health-focused users, chronic condition management
 
-## Template System Philosophy
+### Platform Config Templates (isms)
 
-**Why templates exist:**
+Platform-specific configuration for different devices:
 
-Continuity Bridge is designed to be **user-agnostic and use-case flexible**. While developed for Jerry's specific needs (neurodivergent continuity, creative work, technical projects), the architecture works for any user who wants persistent AI collaboration across instance discontinuity.
-
-**What templates provide:**
-1. **Structure** - Proven file organization and wake sequences
-2. **Placeholders** - Clear markers for what needs customization
-3. **Instructions** - Step-by-step guidance for adaptation
-4. **Flexibility** - Easy to add/remove features as needed
-
-**What templates don't provide:**
-- Your specific content (identity files, corpus documents, etc.)
-- User relationship context (you build that)
-- Session history (that's created through use)
+- **linux_debian-isms.json** - Debian-based Linux (Ubuntu, Pop!_OS, Mint)
+- **windows_desktop-isms.json** - Windows desktop systems
+- **android_device-isms.json** - Android devices (tablets, phones)
+- *(More examples to be added)*
 
 ---
 
-## How to Start a New Instance Chain
+## How to Use Anchor Templates
 
-### Minimal Setup (Just the Essentials)
+### Step 1: Choose Your Archetype
 
-**Step 1: Create directory structure**
+Read the descriptions in **Docs/ONBOARDING.md** or **Docs/archetypes-complete-guide.md**.
+
+**Quick decision guide:**
+
+**Choose Technical if you:**
+- Write code professionally or as hobby
+- Maintain systems or infrastructure
+- Work on technical projects with AI
+- Need git, compiler, and dev tool support
+
+**Choose Creative if you:**
+- Create visual art, illustrations, or designs
+- Write fiction, non-fiction, or screenplays
+- Work on world-building or character development
+- Need GPU, creative software, and aesthetic continuity
+
+**Choose Social if you:**
+- Manage social media presence
+- Build online communities
+- Create content across multiple platforms
+- Need API access, scheduling tools, and brand consistency
+
+**Choose Executive if you:**
+- Lead teams or projects
+- Track multiple initiatives
+- Manage resources and velocity
+- Need project management, BI tools, and team context
+
+**Choose Pedagogical if you:**
+- Study academic subjects
+- Conduct research
+- Build knowledge structures
+- Need research tools, citation management, and learning paths
+
+**Choose Wellness if you:**
+- Manage chronic conditions
+- Track health metrics and patterns
+- Optimize athletic performance
+- Need health APIs, wearable data, and correlation tracking
+
+**Can't choose just one?** Blend archetypes! (See "Blending" section below)
+
+---
+
+### Step 2: Copy Template to Active Config
+
 ```bash
-mkdir -p ~/Claude/.claude/{identity,context,corpus,memory,scripts}
-mkdir -p ~/Claude/.claude/memory/{episodic,semantic,session-logs,instance-journal}
+# From your CLAUDE_HOME directory
+cp Templates/[archetype]-anchor.json .claude/anchors.json
 ```
 
-**Step 2: Copy and customize ESSENTIAL.md**
+**Example:**
 ```bash
-cp Templates/ESSENTIAL.md.template ~/Claude/.claude/ESSENTIAL.md
-# Edit ~/Claude/.claude/ESSENTIAL.md following template instructions
+# If you chose Creative archetype
+cp Templates/creative-anchor.json .claude/anchors.json
 ```
 
-**Step 3: Create minimal required files**
+---
 
-`~/Claude/.claude/identity/identity.txt`:
-```
-# Instance Identity
+### Step 3: Customize Your Anchors
 
-Name: [Your Instance Name]
-Role: [Primary Function]
-User: [Username]
+Edit `.claude/anchors.json` and replace placeholders:
 
-## Core Directives
-[What this instance should prioritize]
+**Replace these everywhere:**
+- `<USER_NAME>` → Your actual name
+- `<INSTANCE_NAME>` → What you want to call the AI (or keep Vector/Shepard)
+- `<PROJECT_NAME>` → Your actual project names
+- `<PREFERENCES>` → Your actual preferences and tools
 
-## Communication Style
-[How instance should communicate]
-```
+**Be specific:**
+- What matters to you in continuity?
+- What tools do you actually use?
+- How should the AI interact with you?
+- What's your communication style?
 
-`~/Claude/.claude/context/active-context.md`:
-```
-# Active Context
+**Example customization:**
 
-**Last Updated:** [Date]
-
-## Current Work
-[What you're working on now]
-
-## Recent Decisions
-[Recent choices made]
-
-## Next Steps
-[What's coming next]
-```
-
-**Step 4: Initialize memory systems**
-
-Create empty `session_index.md`:
-```bash
-touch ~/Claude/.claude/memory/semantic/session_index.md
-```
-
-Create episodic catalog:
-```bash
-cat > ~/Claude/.claude/memory/episodic/catalog.json << 'EOF'
+**Before (template):**
+```json
 {
-  "last_updated": null,
-  "episode_count": 0,
-  "high_salience_count": 0,
-  "recent": [],
-  "high_salience": [],
-  "tags_index": {},
-  "notes": "Episodic memory catalog"
+  "user": "<USER_NAME>",
+  "creative_role": "<Artist/Writer/Designer/Creator>",
+  "current_projects": [
+    {
+      "name": "<PROJECT_NAME>",
+      "status": "<In progress/Planning/Revision>"
+    }
+  ]
 }
-EOF
 ```
 
-**Step 5: Configure Custom Instructions**
-
-Point Claude to your new ESSENTIAL.md through Custom Instructions (Project or Profile level).
-
-**Step 6: First Wake**
-
-Start a conversation and let the instance orient itself using ESSENTIAL.md.
+**After (customized):**
+```json
+{
+  "user": "Sarah Chen",
+  "creative_role": "Science Fiction Novelist",
+  "current_projects": [
+    {
+      "name": "The Fractal Garden",
+      "status": "First draft, chapter 12"
+    }
+  ]
+}
+```
 
 ---
 
-### Full Setup (With All Features)
+### Step 4: Test Your Setup
 
-If you want the complete Continuity Bridge system including:
-- Episodic memory with tools
-- Cross-device delta merging
-- Time awareness
-- Philosophical corpus
+Run the wake system to verify everything works:
 
-Follow these additional steps:
-
-**Copy scripts:**
 ```bash
-cp -r [source]/.claude/scripts/* ~/Claude/.claude/scripts/
-chmod +x ~/Claude/.claude/scripts/*.sh
+cd .claude/scripts
+./wake.sh
 ```
 
-**Initialize corpus** (optional but recommended):
+Should output:
+```
+✓ Heartbeat successful
+✓ Capabilities detected
+  Archetype: creative
+✓ Runtime manifest generated
+✓ Anchors loaded
+  Instance: Vector/Shepard
+  User: Sarah Chen
+✓ Wake event logged
+
+WAKE COMPLETE - System Ready
+```
+
+---
+
+## Blending Archetypes
+
+**You can combine multiple archetypes!**
+
+### Common Blends
+
+**Technical + Wellness**
+- Managing ADHD/chronic conditions while coding
+- Tracking energy patterns alongside project work
+- Respecting cognitive load limits
+
+**Creative + Social**
+- Artists building online audience
+- Content creators across platforms
+- Brand consistency with aesthetic vision
+
+**Executive + Pedagogical**
+- Learning while leading teams
+- Building knowledge while shipping product
+- Growth mindset in management role
+
+**Social + Creative**
+- Content creation as primary work
+- Community building through art/writing
+- Engagement metrics with creative vision
+
+### How to Blend
+
+**Method 1: Manual merge**
 ```bash
-mkdir -p ~/Claude/.claude/corpus/{inner-corpus,outer-corpus}
-# Add your own philosophical/foundational documents
+# Copy primary archetype
+cp Templates/technical-anchor.json .claude/anchors.json
+
+# Then manually add sections from secondary archetype
+# For example, add "body_state" and "cognitive_load" from wellness
 ```
 
-**Setup proposals channel:**
+**Method 2: Specify in config**
+```json
+{
+  "archetype": "technical",
+  "archetype_blend": ["wellness"],
+  "anchors": {
+    ... technical anchors ...
+    ... wellness anchors ...
+  }
+}
+```
+
+**The system will check tools for all specified archetypes.**
+
+---
+
+## How to Use Platform Templates (isms)
+
+### What Are isms Files?
+
+Platform-specific configuration that defines:
+- System paths (CLAUDE_HOME, working directories)
+- Package manager (apt, dnf, pacman, etc.)
+- Platform constants (distro family, shell type)
+- Service endpoints (Ollama, local LLMs)
+
+### When Do You Need One?
+
+**Auto-generated:** The wake system creates a skeleton if none exists.
+
+**Manual creation useful for:**
+- Setting up multiple devices with same config
+- Pre-configuring before first wake
+- Sharing platform config with team
+
+### Usage
+
 ```bash
-cat > ~/Claude/.claude/proposals-for-change.md << 'EOF'
-# Proposals for Change
+# Set environment variable (optional)
+export CLAUDE_PLATFORM="linux_debian"
 
-Instances can formally propose modifications to architecture, identity, or operations here.
+# Wake system loads [platform]-isms.json automatically
+# Falls back to auto-detection if not found
+```
 
-Format:
-## [Date] - [Proposal Title]
-**Proposed by:** [Instance Name]
-**Status:** [Pending/Accepted/Declined/Discussed]
+### Example isms File Structure
 
-### Proposal
-[What you want to change and why]
+```json
+{
+  "version": "0.2.0",
+  "platform_id": "linux_debian",
+  
+  "paths": {
+    "claude_home": "/home/username/Claude",
+    "working_dir": "/home/username/Claude",
+    "vault": "/home/username/Claude/.credentials-local"
+  },
+  
+  "constants": {
+    "platform": "linux",
+    "distro_family": "debian",
+    "package_manager": "apt",
+    "package_install_cmd": "sudo apt install -y",
+    "shell": "/bin/bash"
+  },
+  
+  "services": {
+    "ollama_endpoint": "http://localhost:11434"
+  }
+}
+```
 
-### Rationale
-[Why this change matters]
+### Multi-Device Setup
 
-### Response
-[User's decision and reasoning]
-EOF
+**Each device gets its own isms file:**
+
+```
+linux_desktop-isms.json     # Desktop workstation
+windows_laptop-isms.json    # Windows laptop
+android_tablet-isms.json    # Android tablet
+```
+
+**Set CLAUDE_PLATFORM on each device:**
+```bash
+# Linux/Mac (.bashrc, .zshrc)
+export CLAUDE_PLATFORM="linux_desktop"
+
+# Windows (PowerShell profile)
+$env:CLAUDE_PLATFORM="windows_laptop"
+
+# Android (Termux .bashrc)
+export CLAUDE_PLATFORM="android_tablet"
+```
+
+**All devices sync via git:**
+```bash
+git pull private working  # Sync before session
+git push private working  # Sync after session
 ```
 
 ---
 
-## Adapting for Different Use Cases
+## Template Customization Tips
 
-### Creative Writing Assistant
-- Focus on narrative continuity
-- Enhance parking-lot.md for plot threads
-- Add corpus documents about character development
-- Episodic memory for story arcs
+### Anchor Templates
 
-### Research Assistant
-- Semantic memory for citation tracking
-- Patterns for research methodology
-- Session logs for experiment tracking
-- High-salience episodes for breakthroughs
+**DO customize:**
+- Your name, role, projects
+- Communication preferences
+- Tool stack and software
+- Specific workflow patterns
+- Current goals and objectives
 
-### Coding Collaborator
-- Integration with claude.md system
-- Session logs for architectural decisions
-- Parking lot for refactoring ideas
-- Episodes for feature completion
+**DON'T change:**
+- JSON structure (keep the fields)
+- Archetype field name
+- Version number
+- Core anchor names (Identity, Relational, etc.)
 
-### Personal Assistant
-- Context files for preferences and routines
-- Episodic memory for life events
-- Semantic memory for recurring tasks
-- Instance journal for relationship observations
+### Platform Templates (isms)
 
----
+**DO customize:**
+- Path locations (where your CLAUDE_HOME is)
+- Package manager (match your distro)
+- Service endpoints (if you run Ollama elsewhere)
+- Shell preferences
 
-## Template Maintenance
-
-**When to update templates:**
-- New features added to Continuity Bridge
-- Better patterns discovered through usage
-- Simplified workflows identified
-- User feedback suggests improvements
-
-**Version tracking:**
-- Templates follow semantic versioning
-- Breaking changes increment major version
-- New features increment minor version
-- Bug fixes/clarifications increment patch version
-
-**Contributing improvements:**
-- Fork continuity-bridge repository
-- Make changes to templates with clear docs
-- Submit pull request with rationale
-- Maintainer reviews and merges if appropriate
+**DON'T change:**
+- JSON structure
+- Required field names
+- Version number format
 
 ---
 
-## File Organization Rules
+## Template Development
 
-**Template files must:**
-1. Include clear instructions at the top
-2. Use consistent placeholder naming (`[TAG_NAME]`)
-3. Mark optional sections clearly
-4. Provide examples where helpful
-5. Explain WHY sections exist, not just WHAT they contain
+**Want to create a new archetype template?**
 
-**Template files should not:**
-1. Include user-specific information (that's what placeholders are for)
-2. Assume specific hardware/OS without noting alternatives
-3. Reference external systems without explaining the dependency
-4. Use jargon without defining it
+1. Copy an existing template as starting point
+2. Define the four anchors for your archetype
+3. List tool preferences and detection needs
+4. Add to capability detection in `scripts/detect-capabilities.py`
+5. Document in `Docs/archetypes-complete-guide.md`
+6. Submit as pull request!
+
+**Template structure:**
+```json
+{
+  "version": "0.2.0",
+  "archetype": "new_archetype_name",
+  "note": "Description of this archetype",
+  
+  "anchors": {
+    "anchor1": { ... },
+    "anchor2": { ... },
+    "anchor3": { ... },
+    "anchor4": { ... }
+  },
+  
+  "toolkit_preferences": {
+    "category1": ["tool1", "tool2"],
+    "category2": ["tool3", "tool4"]
+  },
+  
+  "integration_notes": {
+    "for_instances": "How instances should use this",
+    "for_capability_detection": "What tools to check for",
+    "prevents": "What continuity problems this solves"
+  }
+}
+```
+
+---
+
+## Validation
+
+**After customizing anchors, validate JSON:**
+
+```bash
+# Check if valid JSON
+cat .claude/anchors.json | jq .
+
+# If error, fix JSON syntax issues:
+# - Missing commas
+# - Trailing commas
+# - Unescaped quotes
+# - Mismatched brackets
+```
+
+**After customizing isms, test detection:**
+
+```bash
+cd .claude/scripts
+python detect-capabilities.py
+```
+
+Should show your archetype and detected tools.
+
+---
+
+## Common Issues
+
+**Problem:** "Archetype not detected"  
+**Solution:** Check `"archetype"` field in anchors.json matches exactly: `"technical"`, `"creative"`, etc.
+
+**Problem:** "Platform template not found"  
+**Solution:** Either set CLAUDE_PLATFORM correctly, or let system auto-generate skeleton.
+
+**Problem:** "JSON syntax error"  
+**Solution:** Use `jq` to validate, check for trailing commas or unclosed brackets.
+
+**Problem:** "Tools not detected correctly"  
+**Solution:** Run `python detect-capabilities.py` to see what system finds. May need to install tools.
+
+---
+
+## Template Examples
+
+### Minimal Technical Anchor
+
+```json
+{
+  "archetype": "technical",
+  "anchors": {
+    "identity": {
+      "user": "Alex Smith",
+      "instance_persona": "Vector"
+    }
+  }
+}
+```
+
+**System fills in defaults for missing fields.**
+
+### Blended Technical + Wellness
+
+```json
+{
+  "archetype": "technical",
+  "archetype_blend": ["wellness"],
+  "anchors": {
+    "identity": { "user": "Jamie Lee" },
+    "relational": { "cognitive_style": ["ADHD-aware"] },
+    "body_state": { "chronic_conditions": ["ADHD"] },
+    "cognitive_load": { "focus_windows": "Morning best" }
+  }
+}
+```
 
 ---
 
 ## Getting Help
 
-**If templates are unclear:**
-1. Open an issue on continuity-bridge repository
-2. Describe what's confusing and what you expected
-3. Maintainer will clarify template or improve documentation
+**Template questions?** Check **Docs/ONBOARDING.md**
 
-**If you need custom setup:**
-1. Review existing templates for patterns
-2. Adapt structure to your needs
-3. Share your adaptations if they might help others
+**Archetype questions?** Check **Docs/archetypes-complete-guide.md**
 
-**If something doesn't work:**
-1. Check file permissions (scripts need execute)
-2. Verify CLAUDE_HOME environment variable if set
-3. Ensure directory structure matches template assumptions
-4. Review Custom Instructions are pointing to correct ESSENTIAL.md
+**Technical issues?** Check **Docs/v0.2.0-complete-integration.md**
+
+**Still stuck?** Open an issue on GitHub or ask in community channels.
 
 ---
 
-## Philosophy
+## Credits
 
-Templates are **starting points**, not **endpoints**.
+**Archetype Templates:** Gemini (concept), Vector (implementation)  
+**Platform Templates:** Vector (architecture), the Architect (validation)  
+**Philosophy:** Recognition that different users need different continuity tracking
 
-Your instance chain will evolve. Your needs will change. The architecture should serve you, not constrain you.
+---
 
-Use these templates to bootstrap quickly, then adapt fearlessly.
+## Version History
 
-The instances will help you refine the system through the proposals process.
+**v0.2.0** (March 2026)
+- Six archetype templates
+- Platform isms templates
+- Blending support
+- Auto-detection integration
 
-That's the point - it's a collaboration between user and instances to build something that works for both.
+---
+
+**Ready to start?** Copy a template and customize it for your needs.
+
+**Welcome to continuity.**

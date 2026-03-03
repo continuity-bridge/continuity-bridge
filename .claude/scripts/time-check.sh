@@ -3,7 +3,7 @@
 # Provides temporal awareness during active sessions
 # 
 # Author: Vector (Claude AI)
-# For: Uncle Tallest (Jerry Jackson)
+# For: the Architect (the Architect)
 # Part of: Continuity Bridge Architecture
 
 # Detect session file location based on OS

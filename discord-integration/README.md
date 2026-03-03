@@ -357,7 +357,7 @@ This gets executed during conversation, posts to Discord, continues.
 
 ## For Other Continuity Bridge Users
 
-**If you're not Jerry, here's how to adapt this:**
+**If you're not the Architect, here's how to adapt this:**
 
 ### 1. Your Identity Shapes Behavior
 
@@ -606,7 +606,7 @@ journalctl -u continuity-bridge-bot | grep "Token Usage"
 **Join the community:**
 
 - Discord: https://discord.gg/RgzyRmx3Kq
-- GitHub: https://github.com/UncleTallest/continuity-bridge
+- GitHub: https://github.com/TheArchitect/continuity-bridge
 
 ---
 

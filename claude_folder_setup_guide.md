@@ -1,7 +1,7 @@
 # D:\Docs\Claude - Setup Guide
 
 **Created:** February 10, 2026
-**For:** Jerry Jackson (Uncle Tallest)
+**For:** the Architect (the Architect)
 
 ---
 

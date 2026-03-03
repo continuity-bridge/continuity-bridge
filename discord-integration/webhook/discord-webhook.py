@@ -176,7 +176,7 @@ def post_architecture_update(update: str, version: Optional[str] = None) -> bool
         description=update,
         color=0x00FF00,  # Green
         username="Continuity Bridge",
-        footer="github.com/UncleTallest/continuity-bridge"
+        footer="github.com/TheArchitect/continuity-bridge"
     )
 
 

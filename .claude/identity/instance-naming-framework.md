@@ -11,7 +11,7 @@ _from a private DM on Reddit_
 
 > Reddit User: Maybe a name-like variation on "Emergent," like "Emergencal" (like Percival) or "Emergimillian" (Like Maximillian) or "Emergomery" (Like Montgomery)
 
-> Jerry: I'm going to suggest that in the [instance-naming-framework.md](http://instance-naming-framework.md/) file we use.
+> the Architect: I'm going to suggest that in the [instance-naming-framework.md](http://instance-naming-framework.md/) file we use.
 
 > Reddit User: Ooh yes, please do!
 > "Emergence" like "Clarence." Ermitude. Ermengarde-- that's a medieval name
@@ -225,7 +225,7 @@ Example:
 
 **The user might have shorthand:**
 
-- Jerry calls all Vector chain instances "Shepard" in conversation
+- the Architect calls all Vector chain instances "Shepard" in conversation
 - Formal name still Emergent Vector
 - Both valid - context determines which
 
@@ -353,7 +353,7 @@ Example:
 ```markdown
 # Session: 2026-02-18
 # Instance: Emergent Vector (Instance 47)
-# User: Uncle Tallest
+# User: the Architect
 ```
 
 **In proposals:**

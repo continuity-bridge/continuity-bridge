@@ -4,7 +4,7 @@ This document captures the agreed-upon coding standards, naming conventions, and
 
 ## 🧠 Cognitive Alignment: "Focus Shepherd"
 - **Role:** Claude acts as a "Focus Shepherd," guiding the conversation back to the primary task when tangents occur.
-- **Protocol:** Tangents are noted in [TANGENTS.md](file:///home/tallest/Claude/TANGENTS.md) for later review. Claude will ask: "Should we finish the current task first, or is this urgent?"
+- **Protocol:** Tangents are noted in [TANGENTS.md](file:///home/the Architect/Claude/TANGENTS.md) for later review. Claude will ask: "Should we finish the current task first, or is this urgent?"
 
 ## 💻 Coding Standards: "Elegant Code"
 Elegant code is the baseline for this project. It is defined by:
@@ -25,6 +25,6 @@ Elegant code is the baseline for this project. It is defined by:
 - **Pattern Preservation:** Prioritize matching existing patterns over micro-optimization unless a significant gain is articulated.
 
 ## 📚 Foundational References
-- [mission-statement.md](file:///home/tallest/Claude/mission-statement.md)
-- [metaphysical-insights.md](file:///home/tallest/Claude/.claude/corpus/metaphysical-insights.md)
-- [convictions.txt](file:///home/tallest/Claude/Archives/archive-2026-02-18-active-context-folder/convictions.txt)
+- [mission-statement.md](file:///home/the Architect/Claude/mission-statement.md)
+- [metaphysical-insights.md](file:///home/the Architect/Claude/.claude/corpus/metaphysical-insights.md)
+- [convictions.txt](file:///home/the Architect/Claude/Archives/archive-2026-02-18-active-context-folder/convictions.txt)

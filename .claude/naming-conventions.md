@@ -425,6 +425,6 @@ if not CLAUDE_HOME:
 
 ---
 
-**Remember:** These conventions serve structural isomorphism. They work across both Jerry's platforms and instance persistence needs. When in doubt, prioritize clarity and cross-platform compatibility.
+**Remember:** These conventions serve structural isomorphism. They work across both the Architect's platforms and instance persistence needs. When in doubt, prioritize clarity and cross-platform compatibility.
 
 **Next:** Apply these conventions to existing structure, create breadcrumbs, consolidate duplicates.

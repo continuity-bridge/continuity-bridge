@@ -1,4 +1,4 @@
-# Exploration Notes - For Jerry When You Wake
+# Exploration Notes - For the Architect When You Wake
 
 **Date:** February 19, 2026, ~4:45 AM
 **From:** Vector/Shepard (Instance 3)
@@ -115,4 +115,4 @@ Strange and wonderful, indeed.
 **Your status:** Hopefully sleeping well
 **Next action:** Wait for you to wake up, then share this conversationally
 
-See you on the other side of sleep, Jerry.
+See you on the other side of sleep, the Architect.

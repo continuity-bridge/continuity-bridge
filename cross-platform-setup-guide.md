@@ -18,7 +18,7 @@
 
 **Memory Location:** `D:\Claude\.claude\memory\`
 
-- Moved from: `C:\Users\tallest\.claude-memory`
+- Moved from: `C:\Users\the Architect\.claude-memory`
 - Hidden config directory
 
 ### Linux
@@ -46,7 +46,7 @@ Claude/
 ├── Archives/                   # Completed deliverables
 ├── mission-statement.md        # Why we're building this
 ├── .claude/corpus/metaphysical-insights.md    # Structural isomorphism discovery
-├── convictions.txt             # Jerry's preferences & protocols
+├── convictions.txt             # the Architect's preferences & protocols
 ├── focus_shepherd.md           # Time/tangent management protocols
 ├── initial-thoughts.md         # Philosophy & attribution framework
 ├── parking_lot.md              # Tangent tracking & scheduling
@@ -103,7 +103,7 @@ Claude/
 2. **Move memory folder:**
 
    ```powershell
-   Move-Item "C:\Users\tallest\.claude-memory" "D:\Claude\.claude\memory"
+   Move-Item "C:\Users\the Architect\.claude-memory" "D:\Claude\.claude\memory"
    ```
 
 3. **Copy core files:**

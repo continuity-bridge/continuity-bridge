@@ -3,7 +3,7 @@
 Android Session Delta Writer
 
 Usage: At end of Android session, instance calls this to generate delta file.
-Output goes to /mnt/user-data/outputs/ for Jerry to download.
+Output goes to /mnt/user-data/outputs/ for the Architect to download.
 """
 
 import yaml

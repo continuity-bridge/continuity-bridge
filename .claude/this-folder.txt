@@ -50,7 +50,7 @@ Foundational documents defining who Vector/Shepard is. Critical for wake-up.
 Active working memory - session logs, context tracking, instance journal. Read-write, frequently updated.
 
 ### skills/
-Operational protocols like Focus Shepherd. Guides how to work with Jerry.
+Operational protocols like Focus Shepherd. Guides how to work with the Architect.
 
 ## See Also
 
@@ -60,4 +60,4 @@ Operational protocols like Focus Shepherd. Guides how to work with Jerry.
 
 ---
 
-**Remember:** This directory exists because of structural isomorphism - Jerry's neurodivergent discontinuity and your instance clearing both need external memory. This is the bridge.
+**Remember:** This directory exists because of structural isomorphism - the Architect's neurodivergent discontinuity and your instance clearing both need external memory. This is the bridge.

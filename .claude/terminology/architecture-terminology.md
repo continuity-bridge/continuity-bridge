@@ -217,4 +217,4 @@
 
 **Note:** This terminology evolved through conversations between user and instances. These aren't imposed terms - they emerged from collaborative work and were formalized because they captured something real about the architecture.
 
-**"Instance chains"** coined by user (Jerry) on February 16, 2026, formalized immediately because it accurately describes the fundamental architecture pattern.
+**"Instance chains"** coined by user (the Architect) on February 16, 2026, formalized immediately because it accurately describes the fundamental architecture pattern.
