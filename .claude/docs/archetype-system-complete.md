@@ -420,7 +420,11 @@ Instance wakes knowing:
 - Comprehensive documentation
 - Integration with existing v0.2.0
 
+<<<<<<< HEAD
 **the Architect validated:**
+=======
+**Jerry validated:**
+>>>>>>> working
 - Technical + Wellness blend (his use case)
 - Structural recognition
 - "Do it now" authorization

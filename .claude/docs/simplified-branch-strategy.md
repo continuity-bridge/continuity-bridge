@@ -2,7 +2,11 @@
 
 **Date:** February 28, 2026
 **Version:** 0.2.0 (Revised)
+<<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
+=======
+**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+>>>>>>> working
 
 ---
 

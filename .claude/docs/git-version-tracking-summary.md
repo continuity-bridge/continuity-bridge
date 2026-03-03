@@ -2,7 +2,11 @@
 
 **Date:** February 28, 2026
 **Session:** Android Testing & Architecture Design
+<<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
+=======
+**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+>>>>>>> working
 
 ---
 
@@ -39,7 +43,11 @@ Git's UI changes frequently across versions. Commands that work on one machine f
 - Provides fallback strategies
 - Includes table of old→new command mappings
 
+<<<<<<< HEAD
 **Use Case:** the Architect reads this when confused about which git command to use on which machine.
+=======
+**Use Case:** Jerry reads this when confused about which git command to use on which machine.
+>>>>>>> working
 
 ---
 
@@ -269,7 +277,11 @@ Use legacy commands in scripts
 
 ## Benefits Realized
 
+<<<<<<< HEAD
 **For the Architect:**
+=======
+**For Jerry:**
+>>>>>>> working
 - Clear guide to which commands work where
 - No more "why doesn't git switch work?" confusion
 - Version-specific gotchas documented once
@@ -357,7 +369,11 @@ Git's UI instability is now documented and tracked. Two-part solution (human doc
 
 **The elegance:** Version tracking is declarative (in -isms file) rather than discovered (by trial-and-error at runtime). Instance knows capabilities before attempting operations.
 
+<<<<<<< HEAD
 **the Architect's request:** "It would help if the UI didn't change so often."
+=======
+**Jerry's request:** "It would help if the UI didn't change so often."
+>>>>>>> working
 **Our response:** Can't fix git's design, but we can document and adapt to it systematically.
 
 Problem understood. Problem addressed. Ready to implement.

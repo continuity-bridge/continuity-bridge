@@ -271,7 +271,11 @@ Claude/                          # CLAUDE_HOME (root)
 **Private files unchanged:**
 - Your personal .claude/anchors.json still has your details
 - Internal docs in .claude/docs/ not affected
+<<<<<<< HEAD
 - Code attribution still "the Architect"
+=======
+- Code attribution still "Uncle Tallest"
+>>>>>>> working
 
 ---
 

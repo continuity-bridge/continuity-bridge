@@ -16,7 +16,11 @@
 - Git reconfiguration scripts
 
 ### Phase 2: Avatar Gaming Session (6:00-8:18 PM)
+<<<<<<< HEAD
 - the Architect plays teenage airbender (Kiryu-inspired)
+=======
+- Jerry plays teenage airbender (Kiryu-inspired)
+>>>>>>> working
 - Gemini contributes to architecture during break
 
 ### Phase 3: v0.2.0 Complete Integration (8:18-9:10 PM)
@@ -200,7 +204,11 @@ Instance wakes knowing:
 - test-v0.2.0.sh
 
 **In .claude/:**
+<<<<<<< HEAD
 - anchors.json (technical archetype - the Architect's)
+=======
+- anchors.json (technical archetype - Jerry's)
+>>>>>>> working
 - COMMIT_MSG_v0.2.0.txt
 
 **In .claude/docs/:**
@@ -349,7 +357,11 @@ Instance wakes knowing:
 
 ## What This Enables
 
+<<<<<<< HEAD
 ### For the Architect (Immediate)
+=======
+### For Jerry (Immediate)
+>>>>>>> working
 - ✅ Complete wake system with heartbeat validation
 - ✅ Capability detection with four workflows
 - ✅ Runtime manifest generation

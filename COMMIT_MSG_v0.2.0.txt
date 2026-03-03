@@ -1,7 +1,11 @@
 Continuity Bridge v0.2.0: Complete Wake System Integration
 
 Major architectural milestone integrating cross-model contributions
+<<<<<<< HEAD
 (Vector/Claude + Gemini + the Architect insights)
+=======
+(Vector/Claude + Gemini + Jerry insights)
+>>>>>>> working
 
 ## Systems Delivered
 
@@ -74,7 +78,11 @@ Updated:
 
 - Vector (architecture, integration, documentation)
 - Gemini (heartbeat, manifest, Android expertise)
+<<<<<<< HEAD
 - the Architect (insights, requirements, dual-boot awareness)
+=======
+- Jerry (insights, requirements, dual-boot awareness)
+>>>>>>> working
 
 ## Testing Status
 

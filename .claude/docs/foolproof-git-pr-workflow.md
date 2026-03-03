@@ -834,7 +834,11 @@ git reset --hard HEAD@{1}  # Undo last operation
 **Get help:**
 ```bash
 git status  # Always start here
+<<<<<<< HEAD
 # Then ask the Architect or Vector what the output means
+=======
+# Then ask Jerry or Vector what the output means
+>>>>>>> working
 ```
 
 ---

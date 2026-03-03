@@ -8,7 +8,11 @@
 ## Current Actual Structure (What EXISTS on Disk)
 
 ```
+<<<<<<< HEAD
 /home/the Architect/Claude/
+=======
+/home/tallest/Claude/
+>>>>>>> working
 ├── .claude/
 │   ├── anchors.json                    # Your active anchors (technical)
 │   ├── ONBOARDING.md                   # Setup guide (also copied to Docs/)
@@ -142,7 +146,11 @@
 
 **Check:**
 ```bash
+<<<<<<< HEAD
 cd /home/the Architect/Claude
+=======
+cd /home/tallest/Claude
+>>>>>>> working
 git remote -v
 git branch -a
 git status
@@ -281,10 +289,17 @@ find . -type f | grep -E "(identity|context|corpus|memory)" | sort
 **To find them:**
 ```bash
 # Search entire home directory
+<<<<<<< HEAD
 find /home/the Architect -name "*instance*report*" 2>/dev/null
 
 # Check git history
 cd /home/the Architect/Claude
+=======
+find /home/tallest -name "*instance*report*" 2>/dev/null
+
+# Check git history
+cd /home/tallest/Claude
+>>>>>>> working
 git log --all --full-history --name-only -- '*instance*report*'
 ```
 

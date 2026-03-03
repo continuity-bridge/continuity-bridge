@@ -2,7 +2,11 @@
 
 **Date:** February 28, 2026
 **Session:** Android Architecture Design
+<<<<<<< HEAD
 **Participants:** the Architect (the Architect) & Vector (Shepard)
+=======
+**Participants:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+>>>>>>> working
 
 ---
 
@@ -567,7 +571,11 @@ Once confident in git sync:
 
 ## Benefits Realized
 
+<<<<<<< HEAD
 ### For the Architect
+=======
+### For Jerry
+>>>>>>> working
 
 **Simpler:**
 - One branch to work on (`working`)
@@ -624,7 +632,11 @@ Once confident in git sync:
 
 ---
 
+<<<<<<< HEAD
 ## Files for the Architect to Review
+=======
+## Files for Jerry to Review
+>>>>>>> working
 
 **In `/mnt/user-data/outputs/`:**
 

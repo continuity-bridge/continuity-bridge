@@ -202,16 +202,21 @@ def main():
     
     args = parser.parse_args()
     
-    # Auto-detect storage if not provided
+    # Auto-detect storage if not provided: Android-first path list
     if args.storage:
         storage_path = args.storage
     else:
-        # Try to find CLAUDE_HOME
         candidates = [
+<<<<<<< HEAD
             "/home/the Architect/Claude",
             "D:\\Claude",
             "/sdcard/Claude",
             os.path.expanduser("~/Claude"),
+=======
+            "/sdcard/Claude",           # Android (adb upload location) - PRIMARY
+            os.path.expanduser("~/Claude"),     # Linux (Persephone)
+            "D:\\Claude",               # Windows Dual Boot
+>>>>>>> working
             os.getcwd()
         ]
         

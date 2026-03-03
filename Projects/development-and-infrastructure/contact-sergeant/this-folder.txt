@@ -1,3 +1,0 @@
-Contact Sergeant is, first and foremost, a Google Contacts and Contact Groups management application that will eventually support more email providers than just Gmail.
-
-This folder is, first and foremost, for tracking all things Contact Sergeant.

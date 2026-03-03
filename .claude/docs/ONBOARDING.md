@@ -175,7 +175,11 @@ Pick the archetype that best matches how you work with AI:
 **You can mix archetypes!**
 
 Common blends:
+<<<<<<< HEAD
 - **Technical + Wellness:** Managing health while coding (the Architect's setup)
+=======
+- **Technical + Wellness:** Managing health while coding (Jerry's setup)
+>>>>>>> working
 - **Creative + Social:** Artists building audience
 - **Executive + Pedagogical:** Learning while leading
 - **Social + Creative:** Content creator focus
@@ -570,7 +574,11 @@ python .claude/scripts/ollama-hooks.py --suggest
 **Read if curious about the "why":**
 - `.claude/corpus/metaphysical-insights.md`
 - `.claude/corpus/the-room-that-worked.md`
+<<<<<<< HEAD
 - the Architect's belief system articulation
+=======
+- Jerry's belief system articulation
+>>>>>>> working
 
 ---
 

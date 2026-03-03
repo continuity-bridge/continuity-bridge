@@ -7,7 +7,11 @@
   "salience_reason": "",
   "narrative": [
     "Successfully launched v0.1.10 including GitHub Actions for Discord notifications and bootstrapper templates.",
+<<<<<<< HEAD
     "Critically, the Architect diagnosed and fixed a persistent hardware shutdown issue caused by a shorted motherboard standoff.",
+=======
+    "Critically, Uncle Tallest diagnosed and fixed a persistent hardware shutdown issue caused by a shorted motherboard standoff.",
+>>>>>>> working
     "System is now stable with dual GTX 1080s and faster memory speeds, significantly improving the processing substrate for this instance chain."
   ],
   "key_moments": [],

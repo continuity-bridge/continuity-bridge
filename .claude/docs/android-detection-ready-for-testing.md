@@ -109,7 +109,11 @@ git pull private working
 
 ```bash
 # On desktop
+<<<<<<< HEAD
 adb push /home/the Architect/Claude/.claude/scripts/detect-capabilities.py /sdcard/Claude/.claude/scripts/
+=======
+adb push /home/tallest/Claude/.claude/scripts/detect-capabilities.py /sdcard/Claude/.claude/scripts/
+>>>>>>> working
 
 # Then on Fire Tablet
 cd /sdcard/Claude/.claude/scripts

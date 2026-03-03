@@ -87,7 +87,11 @@ This means:
 ✓ Public key exists
 ✓ SSH config has github.com-continuity-bridge entry
 ✓ GitHub authentication successful
+<<<<<<< HEAD
   Authenticated as: the Architect
+=======
+  Authenticated as: tallest
+>>>>>>> working
 ✓ Git remote uses github.com-continuity-bridge
 
 Verification Complete!

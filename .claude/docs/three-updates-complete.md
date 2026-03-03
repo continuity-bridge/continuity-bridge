@@ -25,7 +25,11 @@
 - ✅ Substantial: Matches the philosophical weight
 - ✅ Not pompous: Describes actual role
 
+<<<<<<< HEAD
 **Code attribution stays:** "the Architect" for code comments (per existing convention)
+=======
+**Code attribution stays:** "Uncle Tallest" for code comments (per existing convention)
+>>>>>>> working
 
 **Private files unchanged:** Your personal anchors.json still has your actual details
 

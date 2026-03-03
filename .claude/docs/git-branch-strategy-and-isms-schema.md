@@ -2,7 +2,11 @@
 
 **Date:** February 28, 2026
 **Version:** 0.1.0
+<<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
+=======
+**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+>>>>>>> working
 
 ---
 
@@ -24,7 +28,11 @@ The `-isms` file in each branch declares that environment's capabilities, constr
 - Requires PR for updates
 - Never directly committed to
 
+<<<<<<< HEAD
 **`home`** (the Architect's primary Windows desktop)
+=======
+**`home`** (Jerry's primary Windows desktop)
+>>>>>>> working
 - Full filesystem access
 - All capabilities available
 - Primary development environment
@@ -39,7 +47,11 @@ The `-isms` file in each branch declares that environment's capabilities, constr
 **`linux_home`** (Linux workstations)
 - Full filesystem access
 - Standard Linux tooling
+<<<<<<< HEAD
 - Path: `~/Claude/.claude/` or `/home/the Architect/Claude/.claude/`
+=======
+- Path: `~/Claude/.claude/` or `/home/tallest/Claude/.claude/`
+>>>>>>> working
 
 **`win_home`** (Secondary Windows machines)
 - Full filesystem access
@@ -261,7 +273,11 @@ Examples:
     "os": "Windows",
     "architecture": "x86_64",
     "container": false,
+<<<<<<< HEAD
     "description": "the Architect's primary Windows desktop - full capabilities"
+=======
+    "description": "Jerry's primary Windows desktop - full capabilities"
+>>>>>>> working
   },
   
   "paths": {
@@ -269,7 +285,11 @@ Examples:
     "working_directory": "D:\\Claude",
     "outputs": "D:\\Claude\\outputs",
     "uploads": "D:\\Claude\\uploads",
+<<<<<<< HEAD
     "temp": "C:\\Users\\the Architect\\AppData\\Local\\Temp",
+=======
+    "temp": "C:\\Users\\tallest\\AppData\\Local\\Temp",
+>>>>>>> working
     "credentials": "D:\\Claude\\.credentials-local"
   },
   
@@ -372,12 +392,21 @@ Examples:
   },
   
   "paths": {
+<<<<<<< HEAD
     "claude_home": "/home/the Architect/Claude/.claude",
     "working_directory": "/home/the Architect/Claude",
     "outputs": "/home/the Architect/Claude/outputs",
     "uploads": "/home/the Architect/Claude/uploads",
     "temp": "/tmp",
     "credentials": "/home/the Architect/Claude/.credentials-local"
+=======
+    "claude_home": "/home/tallest/Claude/.claude",
+    "working_directory": "/home/tallest/Claude",
+    "outputs": "/home/tallest/Claude/outputs",
+    "uploads": "/home/tallest/Claude/uploads",
+    "temp": "/tmp",
+    "credentials": "/home/tallest/Claude/.credentials-local"
+>>>>>>> working
   },
   
   "tools": {
@@ -398,7 +427,11 @@ Examples:
     },
     "npm": {
       "available": true,
+<<<<<<< HEAD
       "path": "/home/the Architect/.npm-global/bin/npm",
+=======
+      "path": "/home/tallest/.npm-global/bin/npm",
+>>>>>>> working
       "version": "10.8.2"
     }
   },
@@ -1058,7 +1091,11 @@ For each branch:
 **Existing git backbone:**
 - Uses tool already central to architecture
 - No new dependencies
+<<<<<<< HEAD
 - Familiar workflow for the Architect
+=======
+- Familiar workflow for Jerry
+>>>>>>> working
 
 ---
 

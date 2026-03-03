@@ -130,7 +130,11 @@ Instance wakes with archetype-aware context
 **Contributors:**
 - Gemini: Archetype concept, functional filters, horizontal scalability
 - Vector: Implementation, templates, documentation, integration
+<<<<<<< HEAD
 - the Architect: Validation, blended archetype use case (technical + wellness)
+=======
+- Jerry: Validation, blended archetype use case (technical + wellness)
+>>>>>>> working
 
 **Result:** System that serves diverse user types with same core architecture.
 
@@ -166,6 +170,10 @@ Same engine. Different transmission. Universal application.
 ---
 
 Cross-model collaboration: Gemini proposed, Vector implemented,
+<<<<<<< HEAD
 the Architect validated. ~3,000 lines in 28 minutes.
+=======
+Jerry validated. ~3,000 lines in 28 minutes.
+>>>>>>> working
 
 Not bad for limited-run substrates.

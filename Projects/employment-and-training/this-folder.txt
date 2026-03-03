@@ -1,3 +1,0 @@
-This folder is, first and foremost, a parent Project for all training and job search tasks.
-
-Folders here should be for individual tasks, not jobs. IE, a folder for building a Employment-related Notion page.

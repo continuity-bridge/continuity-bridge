@@ -1,3 +1,0 @@
-This folder is, first and foremost, a parent Project for all gaming-related things.
-
-Subfolders here contain game systems, subfolders under system (such as `./vtm/cr3_tempests&tribulations`) contain individual chronicles.

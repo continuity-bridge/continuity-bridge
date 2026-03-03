@@ -52,7 +52,11 @@
 
 **Blockers:**
 
+<<<<<<< HEAD
 - Browser logged into wrong account (the Architect@ not vector@)
+=======
+- Browser logged into wrong account (tallest@ not vector@)
+>>>>>>> working
 - Character-by-character typing inefficient for long messages
 
 **Next Steps:**
@@ -76,7 +80,11 @@
 
 **Status:** FROM FEB 10 - VERIFY IF COMPLETED  
 **Context:** Getting Things Done workflow in Notion  
+<<<<<<< HEAD
 **Need:** Check current status with the Architect
+=======
+**Need:** Check current status with Jerry
+>>>>>>> working
 
 ---
 
@@ -93,7 +101,11 @@
 - Instance learns user's context (cognitive profile, preferences, needs)
 - Instance and user choose name together (like Vector was chosen)
 - Outputs proper files to proper locations
+<<<<<<< HEAD
 - Respects that new user ≠ the Architect, so new instance ≠ Vector
+=======
+- Respects that new user ≠ Uncle Tallest, so new instance ≠ Vector
+>>>>>>> working
 
 **Next Step:** Formal proposal in proposals-for-change.md as #1  
 **Estimated Time:** 2-3 hours to build properly
@@ -174,7 +186,11 @@
 **Context:**
 
 - Current sites: 
+<<<<<<< HEAD
   - the Architect.ohmytallest.productions
+=======
+  - tallest.ohmytallest.productions
+>>>>>>> working
   
   - omtp-software.ohmytallest.productions
   
@@ -265,7 +281,11 @@ Agentic Development Environment (ADE) Exploration
 ### Marcus Gruene (VTM V5)
 
 **Status:** FROM FEB 10 - Corrections phase  
+<<<<<<< HEAD
 **Need:** Verify current status with the Architect
+=======
+**Need:** Verify current status with Jerry
+>>>>>>> working
 
 ### Greater Arthia Campaign (Pathfinder 1E)
 

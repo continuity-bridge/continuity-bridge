@@ -348,3 +348,7 @@
 2026-03-02 08:21:32,095 - INFO - Discord relay service started
 2026-03-02 08:21:32,095 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-03-02 08:21:32,095 - INFO - Check interval: 2s
+2026-03-03 12:59:34,812 - INFO - Webhook URL loaded
+2026-03-03 12:59:34,838 - INFO - Discord relay service started
+2026-03-03 12:59:34,838 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-03-03 12:59:34,838 - INFO - Check interval: 2s

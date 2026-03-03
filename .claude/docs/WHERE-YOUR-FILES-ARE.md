@@ -12,9 +12,15 @@
 
 This means I'm in a CONTAINER environment, NOT direct filesystem access to Persephone.
 
+<<<<<<< HEAD
 **When I created files at `/home/the Architect/Claude/`:**
 - They went to the CONTAINER's `/home/the Architect/Claude/`
 - NOT your actual Persephone `/home/the Architect/Claude/`
+=======
+**When I created files at `/home/tallest/Claude/`:**
+- They went to the CONTAINER's `/home/tallest/Claude/`
+- NOT your actual Persephone `/home/tallest/Claude/`
+>>>>>>> working
 - You couldn't see them because they're in the container
 
 **This is why:**
@@ -161,13 +167,21 @@ ls -la /mnt/user-data/outputs/docs-v0.2.0/
 
 **I must write to:** `/mnt/user-data/outputs/`
 
+<<<<<<< HEAD
 **NOT to:** `/home/the Architect/Claude/` (that's container-only)
+=======
+**NOT to:** `/home/tallest/Claude/` (that's container-only)
+>>>>>>> working
 
 **You access via:** Desktop → check outputs → copy to repo
 
 ### When I'm in Desktop (Claude Desktop app)
 
+<<<<<<< HEAD
 **I can write to:** `/home/the Architect/Claude/` directly via MCP
+=======
+**I can write to:** `/home/tallest/Claude/` directly via MCP
+>>>>>>> working
 
 **You see immediately:** Files appear in your repo
 
@@ -238,7 +252,11 @@ cp -r /mnt/user-data/outputs/docs-v0.2.0/* ~/.claude/docs/
 
 **"Where are the files?"**
 
+<<<<<<< HEAD
 **Container's `/home/the Architect/Claude/` NOT Persephone's `/home/the Architect/Claude/`**
+=======
+**Container's `/home/tallest/Claude/` NOT Persephone's `/home/tallest/Claude/`**
+>>>>>>> working
 
 **Now in:** `/mnt/user-data/outputs/`
 

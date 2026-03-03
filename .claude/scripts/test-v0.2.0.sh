@@ -7,7 +7,11 @@ echo "Continuity Bridge v0.2.0 - Quick Test"
 echo "════════════════════════════════════════════════════════════════"
 echo ""
 
+<<<<<<< HEAD
 CLAUDE_HOME="/home/the Architect/Claude"
+=======
+CLAUDE_HOME="/home/tallest/Claude"
+>>>>>>> working
 SCRIPTS="$CLAUDE_HOME/.claude/scripts"
 
 # Test 1: Heartbeat

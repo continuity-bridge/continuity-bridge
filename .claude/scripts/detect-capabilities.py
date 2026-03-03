@@ -99,43 +99,44 @@ def get_git_info(path: Optional[str] = None) -> Dict:
     return {"available": True, "in_repo": False}
 
 
-def detect_platform() -> str:
-    """Detect platform type."""
-    # Android check FIRST (most specific)
-    if os.path.exists('/sdcard/Claude') or os.path.exists('/sdcard'):
-        return 'android'
+def detect_substrate() -> str:
+    """
+    Improved Multi-Indicator Substrate Detection.
+    Refined from Fire HD 8 testing (March 2026).
+    """
+    # 1. Android/Termux check (Most specific substrate)
+    android_indicators = [
+        os.path.exists('/system/bin/app_process'),      # Android system binary
+        os.path.exists('/sdcard'),                      # External storage mount
+        os.path.exists('/data/data/com.termux'),        # Termux app directory
+        'TERMUX_VERSION' in os.environ,                 # Termux env var
+        'ANDROID_ROOT' in os.environ                    # Android system root
+    ]
     
-    # Container check
+    if any(android_indicators):
+        return 'android_termux' #
+    
+    # 2. Container check (Restricted substrate)
     if os.path.exists('/home/claude'):
         return 'claude.ai_container'
     
-    # Windows check
+    # 3. Standard Platforms
     if os.name == 'nt':
         return 'windows'
     
-    # Linux desktop check
     if os.path.exists('/etc/os-release'):
-        try:
-            with open('/etc/os-release') as f:
-                content = f.read()
-                # Explicitly NOT Android (already checked above)
-                return 'linux_desktop'
-        except:
-            pass
+        return 'linux_desktop'
     
     return 'unknown'
 
+def detect_distro_family(substrate: str) -> str:
+    """
+    Detect Linux distribution family.
+    Now correctly prioritizes Android/Termux pkg manager.
+    """
+    if substrate == 'android_termux':
+        return "android" # Signals 'pkg' manager usage
 
-def detect_distro_family() -> str:
-    """
-    Detect Linux distribution family for package management.
-    
-    Families: debian, redhat, suse, arch, alpine, gentoo, android, other
-    """
-    # Android check FIRST (before /etc/os-release)
-    if os.path.exists('/sdcard/Claude') or os.path.exists('/sdcard'):
-        return "android"
-    
     if not os.path.exists('/etc/os-release'):
         return "unknown"
     
@@ -179,9 +180,13 @@ def get_package_manager(distro_family: str) -> Dict[str, str]:
 def detect_claude_home() -> str:
     """Find CLAUDE_HOME across platforms."""
     candidates = [
+<<<<<<< HEAD
         "/home/the Architect/Claude",
-        "D:\\Claude",
+=======
         "/sdcard/Claude",
+        "/home/tallest/Claude",
+>>>>>>> working
+        "D:\\Claude",
         os.path.expanduser("~/Claude"),
         os.getcwd()
     ]
@@ -217,37 +222,30 @@ def detect_environment() -> Dict:
     3. BRIDGE_ONLY - Outputs bridge, manual integration
     4. TEXT_ONLY - No write access, manual copy-paste
     """
-    
-    # Detect CLAUDE_HOME
+
     claude_home = detect_claude_home()
-    
-    # Test write access using Gemini's probe_write
     has_direct_write = probe_write(claude_home)
     has_bridge = probe_write("/mnt/user-data/outputs")
     
-    # Platform detection
-    platform = detect_platform()
-    is_android = os.path.exists("/sdcard") or \
-                 ("android" in os.uname().release.lower() if hasattr(os, 'uname') else False)
+    # Standardize on Substrate Nomenclature
+    substrate_type = detect_substrate()
+    is_android = (substrate_type == 'android_termux')
     
-    # Git and bash context
     git_info = get_git_info(claude_home)
     bash_context = detect_bash_context()
-    
-    # Local LLM (Gemini's contribution)
     local_llm = check_local_llm()
     
-    # Distro family (for Linux)
-    distro_family = detect_distro_family() if platform.startswith('linux') else None
+    # Corrected: Pass substrate_type to prevent argument mismatch
+    distro_family = detect_distro_family(substrate_type) if 'linux' in substrate_type or substrate_type == 'android_termux' else None
     package_info = get_package_manager(distro_family) if distro_family else {}
     
-    # Build manifest
+    # Build manifest with standardized Manifest Keys
     manifest = {
         "manifest_version": "0.2.0",
         "timestamp": None,  # Will be set by wake.sh
         "substrate": {
             "claude_home": claude_home,
-            "platform": platform,
+            "type": substrate_type,  # Changed from 'platform' to 'type'
             "write_access": "direct" if has_direct_write else \
                            ("bridge" if has_bridge else "none"),
             "is_android": is_android,
