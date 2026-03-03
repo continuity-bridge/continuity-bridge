@@ -154,7 +154,7 @@ These are in `.gitignore` for `public` remote:
 If reconfiguration fails:
 
 ```bash
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 ls -la .git/config.backup-*  # Find backup
 cp .git/config.backup-YYYYMMDD-HHMMSS .git/config
 git remote -v  # Verify restoration

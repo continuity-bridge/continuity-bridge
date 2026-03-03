@@ -6,7 +6,7 @@
 
 set -e  # Exit on error
 
-CLAUDE_HOME="/home/tallest/Claude"
+CLAUDE_HOME="/home/the Architect/Claude"
 PRIVATE_REPO="git@github.com:continuity-bridge/continuity-bridge_tallest-anchor.git"
 PUBLIC_REPO="git@github.com:continuity-bridge/continuity-bridge.git"
 

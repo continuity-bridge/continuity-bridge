@@ -179,7 +179,7 @@ def get_package_manager(distro_family: str) -> Dict[str, str]:
 def detect_claude_home() -> str:
     """Find CLAUDE_HOME across platforms."""
     candidates = [
-        "/home/tallest/Claude",
+        "/home/the Architect/Claude",
         "D:\\Claude",
         "/sdcard/Claude",
         os.path.expanduser("~/Claude"),

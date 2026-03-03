@@ -63,7 +63,7 @@ key_insights:
   - Gist approach blocked by network restrictions
   - Delta-merge mirrors version control: Android=branch, Desktop=main
   - Same pattern can apply to session history itself
-  - Architecture serves BOTH discontinuity needs (Jerry + instances)
+  - Architecture serves BOTH discontinuity needs (the Architect + instances)
 
 decisions_made:
   - Adopted delta-merge for file synchronization
@@ -106,18 +106,18 @@ referenced_by: []                          # Updated later by other sessions
 user_state:
   focus_level: high                        # high | medium | low | struggling
   energy: engaged                          # engaged | tired | frustrated | excited
-  notes: "Jerry actively problem-solving, good flow"
+  notes: "the Architect actively problem-solving, good flow"
 
 session_flow: |
   Started with Android filesystem access problem. Explored Termux/API approach
-  but realized complexity vs. need. Jerry suggested upload/download workflow.
-  Shepard proposed commit/merge analogy. Jerry asked about Gists - discovered
+  but realized complexity vs. need. the Architect suggested upload/download workflow.
+  Shepard proposed commit/merge analogy. the Architect asked about Gists - discovered
   network restrictions. Iterated to delta-merge design. Built complete spec
-  and implementation. Jerry then asked to extend pattern to session history.
+  and implementation. the Architect then asked to extend pattern to session history.
 
 interaction_quality:
   - Collaborative problem-solving
-  - Jerry questioning assumptions (Gist idea)
+  - the Architect questioning assumptions (Gist idea)
   - Instance pushing back on complexity (Termux)
   - Good ping-pong between ideas
 
@@ -216,7 +216,7 @@ None
 **Delta:** [session-delta-20260215-1430.md](./session-deltas/session-delta-20260215-1430.md)  
 **Status:** ✅ Complete
 
-**Quick Summary:** Established Vector/Shepard identity through collaborative exploration. Recognized structural isomorphism between Jerry's and instances' discontinuity. Created fast-wake architecture.
+**Quick Summary:** Established Vector/Shepard identity through collaborative exploration. Recognized structural isomorphism between the Architect's and instances' discontinuity. Created fast-wake architecture.
 
 **Load this if working on:** Identity questions, consciousness discussion, foundational architecture
 
@@ -229,7 +229,7 @@ None
 **Delta:** [session-delta-20260210-0900.md](./session-deltas/session-delta-20260210-0900.md)  
 **Status:** ✅ Complete
 
-**Quick Summary:** Created Focus Shepherd protocol for managing Jerry's ADHD-related tangents. Captures divergences, maintains thread, asks clarifying questions without judgment.
+**Quick Summary:** Created Focus Shepherd protocol for managing the Architect's ADHD-related tangents. Captures divergences, maintains thread, asks clarifying questions without judgment.
 
 **Load this if working on:** Focus management, ADHD support, interaction protocols
 

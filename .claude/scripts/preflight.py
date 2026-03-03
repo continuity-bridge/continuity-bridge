@@ -176,6 +176,73 @@ def main():
     else:
         check(False, f"On unexpected branch: {branch}", 'warn')
 
+    # Step 7: SSH Key Check
+    print("\n--- SSH Key Configuration ---")
+    ssh_key_path = Path.home() / '.ssh' / 'continuity-bridge'
+    ssh_pub_path = Path.home() / '.ssh' / 'continuity-bridge.pub'
+    ssh_config = Path.home() / '.ssh' / 'config'
+    
+    has_key = ssh_key_path.exists() and ssh_pub_path.exists()
+    has_config = ssh_config.exists() and \
+                 'github.com-continuity-bridge' in ssh_config.read_text() if ssh_config.exists() else False
+    
+    if has_key:
+        check(True, "SSH key exists")
+        
+        # Check permissions
+        import stat
+        key_mode = oct(ssh_key_path.stat().st_mode)[-3:]
+        if key_mode == '600':
+            check(True, "SSH key permissions correct (600)")
+        else:
+            check(False, f"SSH key permissions: {key_mode} (should be 600)", 'warn')
+            print("  Fix: chmod 600 ~/.ssh/continuity-bridge")
+        
+        if has_config:
+            check(True, "SSH config has continuity-bridge entry")
+        else:
+            check(False, "SSH config missing continuity-bridge entry", 'warn')
+            print("  Fix: Run setup-ssh-key.sh")
+        
+        # Test GitHub connection
+        test_result = run_cmd(['ssh', '-T', 'git@github.com-continuity-bridge'])
+        if test_result and 'successfully authenticated' in test_result:
+            check(True, "GitHub SSH authentication successful")
+        else:
+            check(False, "GitHub SSH authentication failed", 'warn')
+            print("  Key not added to GitHub yet")
+            print("  Instructions: See SSH-SETUP-GUIDE.md")
+            print("  Or run: cat ~/.ssh/continuity-bridge.pub")
+            print("  Then add to: https://github.com/settings/keys")
+    else:
+        check(False, "SSH key not found", 'warn')
+        print("\n  Continuity Bridge needs an SSH key to sync your private repo.")
+        print("  We'll create a dedicated key that won't affect your other keys.")
+        print("")
+        
+        if sys.stdin.isatty():
+            setup = input("  Run SSH setup now? [Y/n]: ").strip().lower()
+            if setup in ('', 'y', 'yes'):
+                setup_script = repo_root / '.claude' / 'scripts' / 'setup-ssh-key.sh'
+                if setup_script.exists():
+                    print("\n  Running setup-ssh-key.sh...\n")
+                    import subprocess
+                    result = subprocess.run(['bash', str(setup_script)])
+                    if result.returncode == 0:
+                        print("\n  SSH key created! Re-run preflight to verify.")
+                    else:
+                        print("\n  Setup failed. See SSH-SETUP-GUIDE.md for manual instructions.")
+                    return result.returncode
+                else:
+                    print("\n  setup-ssh-key.sh not found")
+                    print(f"  Expected at: {setup_script}")
+            else:
+                print("  Run manually: .claude/scripts/setup-ssh-key.sh")
+                print("  Guide: .claude/docs/SSH-SETUP-GUIDE.md")
+        else:
+            print("  Run: .claude/scripts/setup-ssh-key.sh")
+            print("  Guide: .claude/docs/SSH-SETUP-GUIDE.md")
+
     print("\n=== PREFLIGHT COMPLETE ===")
     return 0
 

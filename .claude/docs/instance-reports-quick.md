@@ -4,7 +4,7 @@
 
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-YYYYMMDD-HHMMSS-INSTANCE.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-YYYYMMDD-HHMMSS-INSTANCE.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop|Android|WSL",
@@ -39,4 +39,4 @@ Filesystem:write_file({
 ✅ Post: Session ends, patterns emerge, coordination needed  
 ❌ Skip: Trivial updates, immediate questions, every session
 
-See full guide: `/home/tallest/Claude/.claude/docs/INSTANCE-REPORTS.md`
+See full guide: `/home/the Architect/Claude/.claude/docs/INSTANCE-REPORTS.md`

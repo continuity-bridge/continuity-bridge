@@ -208,7 +208,7 @@ def main():
     else:
         # Try to find CLAUDE_HOME
         candidates = [
-            "/home/tallest/Claude",
+            "/home/the Architect/Claude",
             "D:\\Claude",
             "/sdcard/Claude",
             os.path.expanduser("~/Claude"),

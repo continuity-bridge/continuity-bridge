@@ -1,0 +1,14 @@
+Claude Projects Structure Report
+Generated: 2026-02-13 01:33:17
+
+=== PROJECTS ROOT ===
+D:\Docs\Claude\Projects
+
+=== CURRENT STRUCTURE ===
+Folder PATH listing for volume win-vault Volume serial number is A484-CDF7 D:\DOCS\CLAUDE\PROJECTS |   structure-report.txt |   structure.txt |    +---Building Claude |       Initial Thoughts.md |       this-folder.txt |        +---Development & Infrastructure |   |   this-folder.txt |   |    |   +---Contact Sergeant |   |   |   this-folder.txt |   |   |    |   |   +---Code |   |   \---Planning |   \---Sanguihedral |       |   this-folder.txt |       |    |       +---Code |       \---Planning +---Employment & Training |       Resume-Building.md |       this-folder.txt |        \---Game Systems & Gaming     |   this-folder.txt     |        +---pathfinder1e     |   \---greater-arthia     \---vtm         \---cr3_tempests&tribulations                 marcus-gruene-staff-fixes-convo.md                 
+
+=== MEMORY DIRECTORY ===
+C:\Users\the Architect\.claude-memory
+
+Folder PATH listing Volume serial number is 64BA-9E52 C:\USERS\TALLEST\.CLAUDE-MEMORY |   README.md |    +---active-context +---patterns +---session-logs \---templates
+

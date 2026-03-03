@@ -2,7 +2,7 @@
   "manifest_version": "0.2.0",
   "timestamp": null,
   "substrate": {
-    "claude_home": "/home/tallest/Claude",
+    "claude_home": "/home/the Architect/Claude",
     "platform": "linux_desktop",
     "write_access": "direct",
     "is_android": false,
@@ -32,6 +32,6 @@
   },
   "workflow": "DIRECT_WRITE",
   "bridge_strategy": "direct_write",
-  "instruction": "Write files directly to /home/tallest/Claude",
+  "instruction": "Write files directly to /home/the Architect/Claude",
   "workflow_description": "Optimal: Direct MCP access to CLAUDE_HOME"
 }

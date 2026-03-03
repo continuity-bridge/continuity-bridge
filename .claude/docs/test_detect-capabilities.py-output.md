@@ -1,6 +1,6 @@
 ### detect-capabilities.py output
 
-tallest@persephone:~/Claude/.claude/scripts$ python3 detect-capabilities.py
+the Architect@persephone:~/Claude/.claude/scripts$ python3 detect-capabilities.py
 
 =========================================================
 
@@ -8,7 +8,7 @@ CONTINUITY BRIDGE - CAPABILITY DETECTION v0.2.0
 
 =========================================================
 
-CLAUDE_HOME: /home/tallest/Claude
+CLAUDE_HOME: /home/the Architect/Claude
 Platform: linux_desktop
 Write Access: direct
 Bash Context: local_system
@@ -23,9 +23,9 @@ LLM Endpoint: http://localhost:11434
 OPTIMAL WORKFLOW: DIRECT_WRITE
 Description: Optimal: Direct MCP access to CLAUDE_HOME
 
-INSTRUCTION: Write files directly to /home/tallest/Claude
+INSTRUCTION: Write files directly to /home/the Architect/Claude
 
 =========================================================
 
-Capabilities saved to: /home/tallest/Claude/.claude/capabilities-manifest.json
-tallest@persephone:~/Claude/.claude/scripts$
+Capabilities saved to: /home/the Architect/Claude/.claude/capabilities-manifest.json
+the Architect@persephone:~/Claude/.claude/scripts$

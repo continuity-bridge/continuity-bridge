@@ -446,7 +446,7 @@ You: Oh right, it's 2 PM
 
 ## Feedback
 
-If you use this, let Jerry or Vector know how it works! We want to make it better.
+If you use this, let the Architect or Vector know how it works! We want to make it better.
 
 **Email:** ohmytallest@gmail.com  
 **Discord:** uncletallest

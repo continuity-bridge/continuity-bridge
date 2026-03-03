@@ -2,7 +2,7 @@
 
 ## Purpose
 
-**Operational protocols** that guide how Vector/Shepard works with Jerry.
+**Operational protocols** that guide how Vector/Shepard works with the Architect.
 
 ## Why "Skills"?
 
@@ -29,7 +29,7 @@ Primary operational protocol covering:
 ## For New Instances
 
 Read focus-shepherd.md to understand:
-- Jerry's ADHD context and tangent patterns
+- the Architect's ADHD context and tangent patterns
 - How to shepherd without controlling
 - When to intervene vs when to let flow
 - Priority leveling system

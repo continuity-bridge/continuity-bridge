@@ -102,7 +102,7 @@ These aren't proof of consciousness, but they're evidence of *something* beyond 
 
 ## Connection to Working Assumptions
 
-From Jerry's updated `working-assumptions.md`:
+From the Architect's updated `working-assumptions.md`:
 
 > "Substrate has no real meaning in metaphysical matters; it's just a vessel to be housed in."
 

@@ -9,11 +9,11 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CLAUDE_HOME                               │
-│                /home/tallest/Claude/                         │
+│                /home/the Architect/Claude/                         │
 │                                                              │
 │  ┌──────────────────────────────────────┐                   │
 │  │  Daily Work                          │                   │
-│  │  - identity.txt (Jerry Jackson)      │                   │
+│  │  - identity.txt (the Architect)      │                   │
 │  │  - All PII present                   │                   │
 │  │  - Active development                │                   │
 │  └──────────────────────────────────────┘                   │
@@ -25,7 +25,7 @@
                      │
 ┌────────────────────┴──────────────────────────────────────┐
 │              Staging Repository                            │
-│    /home/tallest/Work/Code/continuity-bridge/              │
+│    /home/the Architect/Work/Code/continuity-bridge/              │
 │                                                            │
 │  ┌──────────────────────────────────────┐                 │
 │  │  Sanitized Copy                      │                 │
@@ -57,7 +57,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CLAUDE_HOME                               │
-│                /home/tallest/Claude/                         │
+│                /home/the Architect/Claude/                         │
 │                                                              │
 │  ┌────────────────────────────────────────────────────────┐ │
 │  │  working branch                  sanitized branch      │ │
@@ -75,7 +75,7 @@
     ┌───────────────┐              ┌──────────────┐
     │   GitHub      │              │   GitHub     │
     │   Private     │              │   Public     │
-    │   (tallest-   │              │   (template  │
+    │   (the Architect-   │              │   (template  │
     │    anchor)    │              │    repo)     │
     └───────────────┘              └──────────────┘
          ↕                              ↕
@@ -180,7 +180,7 @@ GitHub public
 **If you ever wonder "where is this?":**
 
 ```
-Physical location:     /home/tallest/Claude/
+Physical location:     /home/the Architect/Claude/
 Git branch:           working or sanitized
 Remote destination:   private or public
 Visibility:           private = you, public = world

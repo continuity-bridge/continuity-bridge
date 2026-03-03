@@ -95,7 +95,7 @@ session_log:
 conflict_strategy: prompt                   # Options: prompt, skip, force
 notes: |
   If hashes don't match, desktop files have changed since Android read them.
-  Default to prompting Jerry for resolution.
+  Default to prompting the Architect for resolution.
 ```
 
 ## Operation Types Reference
@@ -155,7 +155,7 @@ Desktop instance should:
 2. **Validate delta**
    
    - Check hashes match current CLAUDE_HOME files
-   - If mismatch, flag conflict and prompt Jerry
+   - If mismatch, flag conflict and prompt the Architect
 
 3. **Apply operations**
    
@@ -194,7 +194,7 @@ Conflict detected:
 Actions:
 1. Show diff between Android's base and current
 2. Show what Android wants to change
-3. Ask Jerry: merge anyway, skip, or manual resolution?
+3. Ask the Architect: merge anyway, skip, or manual resolution?
 ```
 
 **Option 2: Skip**
@@ -203,7 +203,7 @@ Actions:
 - Log what was skipped
 - Preserve delta in conflicts/ folder
 
-**Option 3: Force** (only if Jerry explicitly requests)
+**Option 3: Force** (only if the Architect explicitly requests)
 
 - Apply changes anyway
 - Note in log that conflicts were overridden

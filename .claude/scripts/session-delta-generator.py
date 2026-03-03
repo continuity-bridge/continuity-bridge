@@ -271,19 +271,19 @@ def example_session_data():
         'user_state': {
             'focus_level': 'high',
             'energy': 'engaged',
-            'notes': 'Jerry actively problem-solving, good flow'
+            'notes': 'the Architect actively problem-solving, good flow'
         },
         
         'session_flow': (
             'Started with Android filesystem access problem. Explored Termux/API '
-            'approach but realized complexity. Jerry suggested upload/download '
+            'approach but realized complexity. the Architect suggested upload/download '
             'workflow. Instance proposed commit/merge analogy. Iterated to '
             'delta-merge design. Built complete spec and implementation.'
         ),
         
         'interaction_quality': [
             'Collaborative problem-solving',
-            'Jerry questioning assumptions',
+            'the Architect questioning assumptions',
             'Instance pushing back on complexity',
             'Good ping-pong between ideas'
         ],
@@ -327,5 +327,5 @@ if __name__ == '__main__':
             output_path='/mnt/user-data/outputs/'
         )
         print(f"Session delta written: {delta_path}")
-        print("\nIndex entry (for Jerry to merge on Desktop):")
+        print("\nIndex entry (for the Architect to merge on Desktop):")
         print(index_entry)

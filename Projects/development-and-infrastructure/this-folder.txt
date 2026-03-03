@@ -1,0 +1,1 @@
+This folder is, first and foremost, a parent Project for all active software development and planning.

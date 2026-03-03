@@ -1,0 +1,15 @@
+# Pathfinder 1E Campaign Work
+
+## Purpose
+Work related to Pathfinder 1st Edition campaigns and characters.
+
+## Subdirectories
+Each campaign gets its own folder (use lowercase-with-hyphens naming).
+
+## Contents
+- Character sheets
+- Campaign notes
+- World building documents
+- Session summaries
+- House rules
+- Maps and assets

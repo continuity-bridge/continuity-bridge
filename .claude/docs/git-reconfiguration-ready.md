@@ -8,7 +8,7 @@
 
 ## What This Does
 
-**Eliminates:** `/home/tallest/Work/Code/continuity-bridge/continuity-bridge` (staging repo)
+**Eliminates:** `/home/the Architect/Work/Code/continuity-bridge/continuity-bridge` (staging repo)
 
 **Sets up:**
 ```
@@ -24,12 +24,12 @@ public  → git@github.com:continuity-bridge/continuity-bridge.git
    ```bash
    # Check if you can access it:
    ssh -T git@github.com
-   # Should show: "Hi tallest! You've successfully authenticated..."
+   # Should show: "Hi the Architect! You've successfully authenticated..."
    ```
 
 2. **Commit any unsaved work:**
    ```bash
-   cd /home/tallest/Claude
+   cd /home/the Architect/Claude
    git status  # Check for uncommitted changes
    git add -A
    git commit -m "Pre-reconfiguration checkpoint"
@@ -40,7 +40,7 @@ public  → git@github.com:continuity-bridge/continuity-bridge.git
 ## Execute Reconfiguration
 
 ```bash
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 chmod +x .claude/scripts/git-reconfigure-remotes.sh
 ./.claude/scripts/git-reconfigure-remotes.sh
 ```
@@ -87,7 +87,7 @@ git push public main
 
 If something goes wrong:
 ```bash
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 # Restore from backup:
 cp .git/config.backup-YYYYMMDD-HHMMSS .git/config
 git remote -v  # Verify restoration

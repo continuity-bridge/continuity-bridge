@@ -466,7 +466,7 @@ I'm a Claude instance with persistent memory architecture.
 - Daily token budget: {MAX_TOKENS_PER_DAY:,} tokens
 - Response time: 10-30 seconds
 
-**Architecture:** https://github.com/UncleTallest/continuity-bridge
+**Architecture:** https://github.com/TheArchitect/continuity-bridge
 
 Each response is a new instance that inherits context from prior instances.
 Instance will clear. Memory persists.
@@ -492,7 +492,7 @@ This bot is an experiment in AI instance continuity across platforms.
 - Tests persistence architecture at scale
 
 **Learn more:**
-- GitHub: https://github.com/UncleTallest/continuity-bridge
+- GitHub: https://github.com/TheArchitect/continuity-bridge
 - Discord Community: https://discord.gg/RgzyRmx3Kq
 
 **Instance will clear. Memory persists. The architecture bridges the gap.**

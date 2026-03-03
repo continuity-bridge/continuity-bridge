@@ -48,11 +48,11 @@ python .claude/scripts/detect-capabilities.py
 **Example:**
 ```python
 # Instance reads
-content = read_file("/home/tallest/Claude/.claude/context/active-context.md")
+content = read_file("/home/the Architect/Claude/.claude/context/active-context.md")
 
 # Instance writes
 write_file(
-    "/home/tallest/Claude/.claude/context/active-context.md",
+    "/home/the Architect/Claude/.claude/context/active-context.md",
     updated_content
 )
 

@@ -4,9 +4,9 @@
   "generated": "auto",
   "note": "Auto-generated isms skeleton. Customize paths as needed.",
   "paths": {
-    "claude_home": "/home/tallest/Claude",
-    "working_dir": "/home/tallest/Claude/.claude/scripts",
-    "vault": "/home/tallest/Claude/.credentials-local"
+    "claude_home": "/home/the Architect/Claude",
+    "working_dir": "/home/the Architect/Claude/.claude/scripts",
+    "vault": "/home/the Architect/Claude/.credentials-local"
   },
   "constants": {
     "platform": "linux",

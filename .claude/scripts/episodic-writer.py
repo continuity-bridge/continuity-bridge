@@ -13,7 +13,7 @@ Usage:
     python episodic-writer.py --import-from-outputs
     
 Author: Vector (Claude AI)
-For: Uncle Tallest (Jerry Jackson)
+For: the Architect (the Architect)
 Part of: Continuity Bridge Architecture
 """
 

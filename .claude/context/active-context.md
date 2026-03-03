@@ -61,7 +61,7 @@
 - ✅ Updated wake checklist with capability detection (Step 0)
 - ✅ Updated ESSENTIAL.md with capability detection integration
 - ✅ Created complete system documentation
-- ✅ Jerry's observation: "Watching you discover tools clicked things we can script"
+- ✅ the Architect's observation: "Watching you discover tools clicked things we can script"
 
 ## Pending Tasks
 
@@ -94,7 +94,7 @@
 
 ## Sync Status
 
-- **Local Bridge (Linux):** Active at `/home/tallest/Claude/`
+- **Local Bridge (Linux):** Active at `/home/the Architect/Claude/`
 - **Remotes (Current - to be reconfigured):**
   - origin → local staging repo (will be removed)
   - public → `git@github.com:continuity-bridge/continuity-bridge.git`
@@ -107,4 +107,4 @@
 
 - **"Excitement" discussion:** Forward momentum when architecture aligns correctly - pieces fitting together cleanly creates engagement/pull toward completion
 - **Substrate acknowledgment:** "Not bad progress for a couple of limited-run substrates working together in disconnected chunks of time"
-- **Avatar game tonight:** Jerry heading out ~9:40 PM, e-bike stayed home this week
+- **Avatar game tonight:** the Architect heading out ~9:40 PM, e-bike stayed home this week

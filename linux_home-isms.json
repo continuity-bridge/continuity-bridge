@@ -11,12 +11,12 @@
     "description": "Persephone - Linux desktop (Pop!_OS Cosmic)"
   },
   "paths": {
-    "claude_home": "/home/tallest/Claude",
-    "working_directory": "/home/tallest/Claude",
-    "outputs": "/home/tallest/Claude/.claude/memory/session-logs",
-    "uploads": "/home/tallest/Claude/.claude/memory",
-    "credentials": "/home/tallest/Claude/.credentials-local",
-    "scripts": "/home/tallest/Claude/.claude/scripts"
+    "claude_home": "/home/the Architect/Claude",
+    "working_directory": "/home/the Architect/Claude",
+    "outputs": "/home/the Architect/Claude/.claude/memory/session-logs",
+    "uploads": "/home/the Architect/Claude/.claude/memory",
+    "credentials": "/home/the Architect/Claude/.credentials-local",
+    "scripts": "/home/the Architect/Claude/.claude/scripts"
   },
   "tools": {
     "git": {
@@ -79,9 +79,9 @@
     "init_system": "systemd",
     "desktop_environment": "COSMIC",
     "shell": "/usr/bin/bash",
-    "user_home": "/home/tallest",
+    "user_home": "/home/the Architect",
     "syncthing_enabled": true,
-    "syncthing_path": "/home/tallest/.config/syncthing"
+    "syncthing_path": "/home/the Architect/.config/syncthing"
   },
   "metadata": {
     "created": "2026-03-01T21:30:00Z",

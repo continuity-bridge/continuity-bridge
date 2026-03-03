@@ -280,45 +280,45 @@
 2026-02-27 21:06:30,800 - ERROR - Fatal error: [Errno 13] Permission denied: '/mnt/user-data'
 2026-02-27 21:06:41,065 - INFO - Webhook URL loaded
 2026-02-27 21:06:41,065 - INFO - Discord relay service started
-2026-02-27 21:06:41,065 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-27 21:06:41,065 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-27 21:06:41,065 - INFO - Check interval: 2s
 2026-02-27 21:13:41,797 - INFO - Webhook URL loaded
 2026-02-27 21:13:41,797 - INFO - Discord relay service started
-2026-02-27 21:13:41,797 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-27 21:13:41,797 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-27 21:13:41,798 - INFO - Check interval: 2s
 2026-02-27 21:15:51,034 - INFO - Webhook URL loaded
 2026-02-27 21:15:51,034 - INFO - Discord relay service started
-2026-02-27 21:15:51,035 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-27 21:15:51,035 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-27 21:15:51,035 - INFO - Check interval: 2s
 2026-02-27 21:16:22,260 - INFO - Shutting down relay service
 2026-02-28 02:43:58,510 - INFO - Webhook URL loaded
 2026-02-28 02:43:58,511 - INFO - Discord relay service started
-2026-02-28 02:43:58,511 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-28 02:43:58,511 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-28 02:43:58,511 - INFO - Check interval: 2s
 2026-02-28 02:49:52,098 - INFO - Shutting down relay service
 2026-02-28 02:49:56,074 - INFO - Webhook URL loaded
 2026-02-28 02:49:56,074 - INFO - Discord relay service started
-2026-02-28 02:49:56,075 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-28 02:49:56,075 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-28 02:49:56,075 - INFO - Check interval: 2s
 2026-02-28 02:55:21,957 - INFO - Webhook URL loaded
 2026-02-28 02:55:21,957 - INFO - Discord relay service started
-2026-02-28 02:55:21,957 - INFO - Watching: /home/tallest/Claude/.claude/scripts/instance-reports-queue
+2026-02-28 02:55:21,957 - INFO - Watching: /home/the Architect/Claude/.claude/scripts/instance-reports-queue
 2026-02-28 02:55:21,957 - INFO - Check interval: 2s
 2026-02-28 02:57:12,021 - INFO - Shutting down relay service
 2026-02-28 02:57:37,427 - INFO - Webhook URL loaded
 2026-02-28 02:57:37,427 - INFO - Discord relay service started
-2026-02-28 02:57:37,427 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-02-28 02:57:37,427 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-02-28 02:57:37,427 - INFO - Check interval: 2s
 2026-02-28 02:57:37,427 - INFO - Found 1 pending report(s)
 2026-02-28 02:57:37,724 - INFO - Posted report from Vector (category: question)
 2026-02-28 02:57:37,725 - INFO - Archived: report-20260228-031242-Vector.json
 2026-02-28 08:03:46,897 - INFO - Webhook URL loaded
 2026-02-28 08:03:46,897 - INFO - Discord relay service started
-2026-02-28 08:03:46,897 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-02-28 08:03:46,897 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-02-28 08:03:46,897 - INFO - Check interval: 2s
 2026-02-28 08:06:57,799 - INFO - Webhook URL loaded
 2026-02-28 08:06:57,800 - INFO - Discord relay service started
-2026-02-28 08:06:57,800 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-02-28 08:06:57,800 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-02-28 08:06:57,800 - INFO - Check interval: 2s
 2026-02-28 08:23:23,897 - INFO - Found 1 pending report(s)
 2026-02-28 08:23:24,302 - INFO - Posted report from Vector (Container/Linux/Desktop) (category: coordination)
@@ -328,17 +328,17 @@
 2026-02-28 08:24:04,865 - INFO - Archived: report-20260228-142500-Vector-session.json
 2026-03-02 04:35:35,905 - INFO - Webhook URL loaded
 2026-03-02 04:35:35,905 - INFO - Discord relay service started
-2026-03-02 04:35:35,905 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-03-02 04:35:35,905 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-03-02 04:35:35,905 - INFO - Check interval: 2s
 2026-03-02 04:35:57,823 - INFO - Shutting down relay service
 2026-03-02 04:47:39,971 - INFO - Webhook URL loaded
 2026-03-02 04:47:39,971 - INFO - Discord relay service started
-2026-03-02 04:47:39,972 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-03-02 04:47:39,972 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-03-02 04:47:39,972 - INFO - Check interval: 2s
 2026-03-02 04:47:47,487 - INFO - Shutting down relay service
 2026-03-02 04:51:12,138 - INFO - Webhook URL loaded
 2026-03-02 04:51:12,138 - INFO - Discord relay service started
-2026-03-02 04:51:12,138 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-03-02 04:51:12,138 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-03-02 04:51:12,138 - INFO - Check interval: 2s
 2026-03-02 04:53:33,359 - INFO - Shutting down relay service
 2026-03-02 04:56:55,093 - INFO - Found 1 pending report(s)
@@ -346,5 +346,5 @@
 2026-03-02 04:56:55,936 - INFO - Archived: report-20260301-git-architecture-session.json
 2026-03-02 08:21:32,069 - INFO - Webhook URL loaded
 2026-03-02 08:21:32,095 - INFO - Discord relay service started
-2026-03-02 08:21:32,095 - INFO - Watching: /home/tallest/Claude/.claude/instance-reports-queue
+2026-03-02 08:21:32,095 - INFO - Watching: /home/the Architect/Claude/.claude/instance-reports-queue
 2026-03-02 08:21:32,095 - INFO - Check interval: 2s

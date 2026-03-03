@@ -12,7 +12,7 @@
 
 [Unit]
 Description=Continuity Bridge Discord Bot
-Documentation=https://github.com/UncleTallest/continuity-bridge
+Documentation=https://github.com/TheArchitect/continuity-bridge
 After=network-online.target
 Wants=network-online.target
 
@@ -21,15 +21,15 @@ Type=simple
 
 # User and group to run as
 # CHANGE THIS to your actual username
-User=jerry
-Group=jerry
+User=the Architect
+Group=the Architect
 
 # Working directory (where bot files are)
 # CHANGE THIS to your bot directory
-WorkingDirectory=/home/jerry/continuity-bridge-bot
+WorkingDirectory=/home/the Architect/continuity-bridge-bot
 
 # Path to Python executable
-# Update if using virtual environment: /home/jerry/continuity-bridge-bot/venv/bin/python3
+# Update if using virtual environment: /home/the Architect/continuity-bridge-bot/venv/bin/python3
 ExecStart=/usr/bin/python3 discord-bot-generic.py
 
 # Restart policy
@@ -41,7 +41,7 @@ RestartSec=10
 # Optionally set here if not using .env:
 # Environment="DISCORD_BOT_TOKEN=your_token"
 # Environment="ANTHROPIC_API_KEY=your_key"
-# Environment="CLAUDE_HOME=/home/jerry/Claude"
+# Environment="CLAUDE_HOME=/home/the Architect/Claude"
 
 # Security hardening (optional but recommended)
 # Prevents bot from accessing most of filesystem

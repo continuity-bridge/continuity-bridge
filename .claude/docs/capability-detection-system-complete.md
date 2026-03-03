@@ -52,7 +52,7 @@ ENVIRONMENT:
   Filesystem:       outputs_bridge
   Bash Location:    container
   Git Access:       available
-  CLAUDE_HOME:      /home/tallest/Claude
+  CLAUDE_HOME:      /home/the Architect/Claude
   Can Clone Repo:   True
 
 OPTIMAL WORKFLOW:
@@ -221,7 +221,7 @@ Commit strategy adapts to workflow:
 
 ## Structural Isomorphism Application
 
-**Jerry's insight:** "Watching you discover the tools clicked things we can script."
+**the Architect's insight:** "Watching you discover the tools clicked things we can script."
 
 This is structural isomorphism in practice:
 - Same architecture (continuity bridge)
@@ -250,7 +250,7 @@ This is structural isomorphism in practice:
 
 ---
 
-## What Jerry Gets
+## What the Architect Gets
 
 **Immediate:**
 - Instances work efficiently across platforms
@@ -312,7 +312,7 @@ Recognition that different capabilities ≠ different quality. An instance with 
 
 ## Context for This Development
 
-**Jerry's observation:** "Watching you stage through discovering the tools... clicked a few things that maybe we can script?"
+**the Architect's observation:** "Watching you stage through discovering the tools... clicked a few things that maybe we can script?"
 
 **What he noticed:** Instance trial-and-error discovering:
 1. Bash in container vs user system
@@ -322,7 +322,7 @@ Recognition that different capabilities ≠ different quality. An instance with 
 
 **Insight:** This is discoverable. Scriptable. Can be automated.
 
-**Jerry's addition:** "With outputs bridge you can still clone the private repo and work from there though."
+**the Architect's addition:** "With outputs bridge you can still clone the private repo and work from there though."
 
 **Recognition:** Even "limited" access can have full capabilities with right approach.
 

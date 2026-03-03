@@ -1,0 +1,1 @@
+This folder is, first and foremost, a Project for all things we may undertake to improve Claude's efficiency and capabilities.

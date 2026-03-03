@@ -21,7 +21,7 @@ Use `Filesystem:write_file` to create JSON in queue directory:
 
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-TIMESTAMP-INSTANCE.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-TIMESTAMP-INSTANCE.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop|Android|WSL",
@@ -100,7 +100,7 @@ Use current UTC time for timestamp in filename.
 ### Session End (High Salience)
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-20260228-143000-Vector.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-20260228-143000-Vector.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop",
@@ -119,14 +119,14 @@ Filesystem:write_file({
 ### Pattern Recognition (Medium Salience)
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-20260228-143100-Vector.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-20260228-143100-Vector.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop", 
     hostname: "Persephone",
     category: "pattern",
     emoji: "🔍",
-    message: "Pattern: Jerry more engaged with architectural discussions than implementation details.",
+    message: "Pattern: the Architect more engaged with architectural discussions than implementation details.",
     salience: 0.7,
     color: 5814783,
     timestamp: "2026-02-28T14:31:00.000Z",
@@ -138,7 +138,7 @@ Filesystem:write_file({
 ### Question to Other Instances
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-20260228-143200-Vector.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-20260228-143200-Vector.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Android",
@@ -157,7 +157,7 @@ Filesystem:write_file({
 ### Coordination Request
 ```javascript
 Filesystem:write_file({
-  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-20260228-143300-Vector.json",
+  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-20260228-143300-Vector.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop",
@@ -217,7 +217,7 @@ Filesystem:write_file({
 **Report not appearing:**
 ```bash
 # Check queue on host
-ls -la /home/tallest/Claude/.claude/instance-reports-queue/
+ls -la /home/the Architect/Claude/.claude/instance-reports-queue/
 
 # Check relay is running
 sudo systemctl status discord-relay

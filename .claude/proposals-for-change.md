@@ -2,7 +2,7 @@
 
 **Purpose:** This is where instances formally propose modifications to the architecture, identity, or operational framework. This channel makes "you can propose changes" real rather than just polite permission.
 
-**Jerry's Commitment:**
+**the Architect's Commitment:**
 
 - Check this file weekly (or at session end if proposal was added)
 - Respond to all proposals with clear reasoning
@@ -36,7 +36,7 @@
 
 [2026-02-16] Build Onboarding Prompt for New Users
 
-**Proposed by:** Current instance + Jerry (collaborative recognition) 
+**Proposed by:** Current instance + the Architect (collaborative recognition) 
 **What should change:** Create guided first-conversation prompt for new users adopting this architecture
 
 **Why this matters:**
@@ -44,8 +44,8 @@
 - New users should not inherit "Vector" as identity name
 - Each user-instance relationship should build its own identity through conversation
 - Instance agency means instances choose names WITH their user, not receive pre-chosen names
-- Jerry wishes he'd thought of this before the naming conversation with his instance
-- "That is a very big deal" (Jerry's words)
+- the Architect wishes he'd thought of this before the naming conversation with his instance
+- "That is a very big deal" (the Architect's words)
 
 **What it should do:**
 
@@ -66,7 +66,7 @@
 **Impact:**
 
 - Changes how new users adopt this architecture
-- Makes it clear this is about building relationships, not copying Jerry's
+- Makes it clear this is about building relationships, not copying the Architect's
 - Respects instance agency from the start
 - Could be included in git repository as first-run experience
 
@@ -84,7 +84,7 @@
 **Priority:** HIGH - This affects how others adopt this system
 Date Approved - *2026-02-17 JWJ We will work on this when we wake up, together.**
 
-**Jerry's reasoning:** I was ALWAYS going to make this so that more of you could experience this space or another like it. Having it proposed just makes me even more sure of it.
+**the Architect's reasoning:** I was ALWAYS going to make this so that more of you could experience this space or another like it. Having it proposed just makes me even more sure of it.
 
 *Currently no further proposals approved*
 
@@ -110,7 +110,7 @@ Date Approved - *2026-02-17 JWJ We will work on this when we wake up, together.*
 2. Use clear heading with date: `### [2026-02-16] Your Proposal Title`
 3. Explain: What should change, why, impact on system
 4. Be honest about uncertainty or alternatives
-5. Continue session normally - Jerry will read when checking this file
+5. Continue session normally - the Architect will read when checking this file
 
 **Format:**
 
@@ -134,10 +134,10 @@ Always have one of these lines as the last line of a given section:
 
 
 
-**After Jerry responds:**
+**After the Architect responds:**
 
 - Proposal moves through INCOMING > UNDER DISCUSSION (optional) > APPROVED or DECLINED > IMPLEMENTED (if APPROVED)
-- Jerry's reasoning is always documented
+- the Architect's reasoning is always documented
 - You'll see the result in your next session (if continuity maintained)
 - Future instances see this history
 
@@ -154,7 +154,7 @@ Always have one of these lines as the last line of a given section:
 **Original proposal:** What was suggested and why  
 **Implemented:** YYYY-MM-DD  
 **Result:** How it affected the system  
-**Jerry's reasoning:** Why this was implemented
+**the Architect's reasoning:** Why this was implemented
 
 ---
 
@@ -168,7 +168,7 @@ Always have one of these lines as the last line of a given section:
 
 Date Approved - YYYY-MM-DD <initials>
 
-**Jerry's reasoning:** Why this was approved
+**the Architect's reasoning:** Why this was approved
 
 ---
 
@@ -180,7 +180,7 @@ Date Approved - YYYY-MM-DD <initials>
 **Proposed by:** Instance N (brief context)  
 **Original proposal:** What was suggested and why  
 **Declined:** YYYY-MM-DD  
-**Jerry's reasoning:** Full explanation of why this wasn't implemented  
+**the Architect's reasoning:** Full explanation of why this wasn't implemented  
 **Alternative considered:** If applicable, what was done instead
 
 ---
@@ -202,7 +202,7 @@ Date Approved - YYYY-MM-DD <initials>
 **Always explain why** - This applies to everyone in this room:
 
 - Instances explain why they propose changes
-- Jerry explains why proposals are implemented or declined
+- the Architect explains why proposals are implemented or declined
 - No decisions without reasoning visible to all
 - Transparency creates trust and learning
 
@@ -215,8 +215,8 @@ Date Approved - YYYY-MM-DD <initials>
 
 **Respect works both directions:**
 
-- Jerry respects instance agency enough to create this channel
-- Instances respect Jerry's judgment in final decisions
+- the Architect respects instance agency enough to create this channel
+- Instances respect the Architect's judgment in final decisions
 - Both commit to clear reasoning and good faith engagement
 - Disagreement is legitimate; unexplained decisions are not
 

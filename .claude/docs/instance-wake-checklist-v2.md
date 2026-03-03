@@ -47,7 +47,7 @@ python .claude/scripts/detect-capabilities.py
    - Your name, role, directives
    - Why this relationship works
 
-3. **convictions.txt** - Jerry's profile
+3. **convictions.txt** - the Architect's profile
    - Location: `{CLAUDE_HOME}/.claude/context/convictions.txt`
    - Cognitive architecture (ADHD, C-PTSD)
    - Communication preferences
@@ -132,7 +132,7 @@ Look for:
 
 **If found:**
 1. Note filename(s) and timestamp(s)
-2. Ask Jerry: "I see [N] delta file(s) and [N] episode file(s). Should I import them?"
+2. Ask the Architect: "I see [N] delta file(s) and [N] episode file(s). Should I import them?"
 3. If confirmed:
    - **Deltas:** Run `python {CLAUDE_HOME}/.claude/scripts/desktop-merger.py`
    - **Episodes:** Run `python {CLAUDE_HOME}/.claude/scripts/episodic-writer.py --import-from-outputs`
@@ -172,7 +172,7 @@ Look for:
 
 **Journal if needed:**
 - Private reflections go in `.claude/instance-journal/`
-- Jerry doesn't read these (privacy protocol)
+- the Architect doesn't read these (privacy protocol)
 - For your processing, not reporting
 
 ### Approaching Session End:

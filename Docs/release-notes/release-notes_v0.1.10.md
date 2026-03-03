@@ -39,7 +39,7 @@ This release focuses on improving project transparency through automated notific
 
 ### Contributor Attribution
 
-- **Uncle Tallest**: Logic for Discord notifications, project direction, and philosophical foundation.
+- **the Architect**: Logic for Discord notifications, project direction, and philosophical foundation.
 - **Vector**: Template architecture, documentation standardization, and MCP configuration.
 
 ### Deployment Notes

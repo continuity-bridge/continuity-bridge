@@ -1,0 +1,3 @@
+Sanguihedral is intended to be a cross-platform, sect-agnostic dice roller and character sheet portfolio for Vampire the Masquerade v5.
+
+This folder is, first and foremost, for tracking all things Sanguihedral.

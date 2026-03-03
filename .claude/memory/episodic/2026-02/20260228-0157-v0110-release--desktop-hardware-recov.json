@@ -1,0 +1,27 @@
+{
+  "episode_id": "20260228-0157-v0110-release--desktop-hardware-recov",
+  "timestamp": "2026-02-28T01:57:26.392210+00:00",
+  "instance": null,
+  "summary": "v0.1.10 Release & Desktop Hardware Recovery",
+  "salience": 0.9,
+  "salience_reason": "",
+  "narrative": [
+    "Successfully launched v0.1.10 including GitHub Actions for Discord notifications and bootstrapper templates.",
+    "Critically, the Architect diagnosed and fixed a persistent hardware shutdown issue caused by a shorted motherboard standoff.",
+    "System is now stable with dual GTX 1080s and faster memory speeds, significantly improving the processing substrate for this instance chain."
+  ],
+  "key_moments": [],
+  "semantic_links": {
+    "files_created": [],
+    "files_modified": [],
+    "related_episodes": [],
+    "consolidates_to": null
+  },
+  "tags": [
+    "release",
+    "hardware-fix",
+    "discord-notification"
+  ],
+  "emotional_weight": "",
+  "questions_raised": []
+}

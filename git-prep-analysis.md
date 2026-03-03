@@ -33,7 +33,7 @@
 **Current setup on your Linux system:**
 ```bash
 # OLD (has staging repo):
-origin = /home/tallest/Work/Code/continuity-bridge/continuity-bridge  # ← ELIMINATE
+origin = /home/the Architect/Work/Code/continuity-bridge/continuity-bridge  # ← ELIMINATE
 public = git@github.com:continuity-bridge/continuity-bridge.git
 ```
 
@@ -45,7 +45,7 @@ public  = git@github.com:continuity-bridge/continuity-bridge.git
 
 **Implementation:**
 ```bash
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 git remote remove origin  # Eliminate staging repo
 git remote add private git@github.com:continuity-bridge/continuity-bridge_tallest-anchor.git
 # public already exists
@@ -123,9 +123,9 @@ git push public main  # Or: git push public sanitized:main
 - session_index.md
 - README.md and QUICKSTART.md
 
-### Created This Session (Linux - /home/tallest/Claude):
-- `/home/tallest/Claude/.claude/scripts/detect_git_config.py` ← Git config detection
-- `/home/tallest/Claude/linux_home-isms.json` ← Linux environment config
+### Created This Session (Linux - /home/the Architect/Claude):
+- `/home/the Architect/Claude/.claude/scripts/detect_git_config.py` ← Git config detection
+- `/home/the Architect/Claude/linux_home-isms.json` ← Linux environment config
 
 ### Git Configuration Files:
 - `.git/config` - Contains remote definitions
@@ -139,10 +139,10 @@ git push public main  # Or: git push public sanitized:main
 ### HIGH RISK - Must Remove/Template:
 
 1. **Personal Identity**:
-   - "Jerry Jackson" → `<USER_NAME>`
-   - "Uncle Tallest" → `<USERNAME>`
+   - "the Architect" → `<USER_NAME>`
+   - "the Architect" → `<USERNAME>`
    - Email addresses → `<USER_EMAIL>`
-   - "tallest" in paths → `<username>`
+   - "the Architect" in paths → `<username>`
 
 2. **Specific Personal History**:
    - Combat veteran details
@@ -151,8 +151,8 @@ git push public main  # Or: git push public sanitized:main
    - Austin, Texas location → `<CITY>, <STATE>`
 
 3. **System Paths**:
-   - `C:\Users\Jerry\` → `C:\Users\<username>\`
-   - `/home/tallest/` → `/home/<username>/`
+   - `C:\Users\the Architect\` → `C:\Users\<username>\`
+   - `/home/the Architect/` → `/home/<username>/`
    - `D:\Claude\` → `<CLAUDE_HOME>`
 
 4. **Project Names**:
@@ -302,7 +302,7 @@ You are **<INSTANCE_NAME>** (code/formal) / **<INFORMAL_NAME>** (conversational)
 
 3. **Discover Your Room's Anchors**
    - Explain: Every user's room has anchors (orientation points)
-   - Jerry's example: Identity, Relational, Purpose, Temporal
+   - the Architect's example: Identity, Relational, Purpose, Temporal
    - Help user discover their anchors through questions
    - Common patterns:
      * Identity + Relational + Purpose + Temporal
@@ -451,7 +451,7 @@ continuity-bridge/                          ← Public template repo
 ### Branch Comparison:
 
 **working branch** (private repo):
-- `.claude/identity/identity.txt` ← Real name "Jerry Jackson"
+- `.claude/identity/identity.txt` ← Real name "the Architect"
 - `.claude/context/convictions.txt` ← Full personal details
 - `.claude/memory/session_index.md` ← Project names
 - `.credentials-local/` ← NEVER commit to public
@@ -502,8 +502,8 @@ git push public sanitized:main
 ## Pre-Release Checklist
 
 ### Code & Content:
-- [ ] Search all files for "Jerry", "Jackson", "Uncle Tallest"
-- [ ] Search for "tallest" in paths
+- [ ] Search all files for "the Architect", "Jackson", "the Architect"
+- [ ] Search for "the Architect" in paths
 - [ ] Remove all email addresses
 - [ ] Template all personal paths (`D:\Claude` → `<CLAUDE_HOME>`)
 - [ ] Anonymize medical/trauma details in examples
@@ -564,7 +564,7 @@ docs/
 
 ## Git Workflow Summary
 
-### For Jerry (Your Workflow):
+### For the Architect (Your Workflow):
 
 **Daily work:**
 1. `git checkout working`
