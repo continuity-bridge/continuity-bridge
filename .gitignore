@@ -75,6 +75,7 @@ Docs/*
 secrets.json
 config.json
 api-keys.txt
+COMMIT_MSG*
 
 # Personal notes at root
 convictions.txt
