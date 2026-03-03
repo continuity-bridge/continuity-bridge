@@ -13,6 +13,7 @@
 secrets.json
 config.json
 api-keys.txt
+COMMIT_MSG*
 
 # System files
 .DS_Store
