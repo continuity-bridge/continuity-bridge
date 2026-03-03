@@ -191,7 +191,7 @@ async def call_tool(name, arguments):
 
 **Public Artifacts:**
 
-- Gist: https://gist.github.com/TheArchitect/dfa64a6f7136ca79b3054fb3e563850a
+- Gist: https://gist.github.com/UncleTallest/dfa64a6f7136ca79b3054fb3e563850a
 - Reddit post: https://www.reddit.com/r/claudexplorers/comments/1r56kk8/
 - conversationX.json (127KB source conversation)
 
