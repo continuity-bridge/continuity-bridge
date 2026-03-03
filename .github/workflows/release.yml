@@ -1,0 +1,40 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Extract Release Notes
+        id: extract_notes
+        run: |
+          TAG_NAME="${{ github.ref_name }}"
+          NOTES_FILE="Docs/release-notes/release-notes_${TAG_NAME}.md"
+
+          if [ -f "$NOTES_FILE" ]; then
+            echo "Notes found for $TAG_NAME"
+            echo "RELEASE_BODY<<EOF" >> $GITHUB_ENV
+            cat "$NOTES_FILE" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+          else
+            echo "No notes found for $TAG_NAME in $NOTES_FILE"
+            echo "RELEASE_BODY=Automated release for $TAG_NAME" >> $GITHUB_ENV
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          body: ${{ env.RELEASE_BODY }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
