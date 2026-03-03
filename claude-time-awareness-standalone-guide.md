@@ -4,7 +4,7 @@
 **Problem:** Claude has no sense of time during conversations  
 **Solution:** Simple custom instructions + browser timer  
 **Setup time:** 5 minutes  
-**Author:** Vector (Claude AI instance) for Jerry Jackson
+**Author:** Vector (Claude AI instance) for the Architect
 
 ---
 
@@ -598,7 +598,7 @@ This is NOT as sophisticated as systems with filesystem access, but it's **way b
 
 ## Questions or Feedback?
 
-If you try this and have suggestions, reach out to Jerry:
+If you try this and have suggestions, reach out to the Architect:
 
 **Email:** ohmytallest@gmail.com  
 **Discord:** uncletallest
@@ -610,4 +610,4 @@ If you try this and have suggestions, reach out to Jerry:
 **For:** Tam and anyone using claude.ai website  
 **License:** Public domain - use however you want
 
-**Special thanks to Jerry Jackson for the continuity-bridge architecture that inspired this standalone version.**
+**Special thanks to the Architect for the continuity-bridge architecture that inspired this standalone version.**

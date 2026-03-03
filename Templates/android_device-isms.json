@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "platform_id": "android_device",
+  "note": "Example configuration for Android devices (tablets, phones) using Termux",
+  
+  "paths": {
+    "claude_home": "/sdcard/Platform_Home",
+    "working_dir": "/data/data/com.termux/files/home",
+    "vault": "/sdcard/Platform_Home/.credentials-local"
+  },
+  
+  "constants": {
+    "platform": "android",
+    "shell": "/data/data/com.termux/files/usr/bin/bash",
+    "storage_type": "scoped",
+    "requires_uri_permissions": true,
+    "termux_version": "0.118+"
+  },
+  
+  "services": {
+    "ollama_endpoint": "http://localhost:11434"
+  },
+  
+  "storage": {
+    "strategy": "outputs_bridge",
+    "note": "Android typically uses bridge to /mnt/user-data/outputs for cross-device sync",
+    "bridge_path": "/mnt/user-data/outputs"
+  },
+  
+  "android_specifics": {
+    "vold_lag": "May need retry logic on cold start (vold daemon lag)",
+    "ghost_handles": "Stale file handles after app kill - restart Termux if issues",
+    "scoped_storage": "Android 10+ restricts direct filesystem access",
+    "termux_storage_setup": "Run 'termux-setup-storage' to grant storage permissions",
+    "package_manager": "pkg",
+    "package_install_cmd": "pkg install -y"
+  },
+  
+  "git_workflow": {
+    "recommended": "Clone private repo in Termux home, work there, push to remote",
+    "commands": [
+      "cd ~",
+      "git clone git@github.com:username/continuity-bridge_username-anchor.git work",
+      "cd work",
+      "# Work normally, commit, push"
+    ]
+  },
+  
+  "customization_notes": {
+    "paths": "Platform_Home location may vary - update claude_home to match your setup",
+    "termux_home": "Termux work happens in /data/data/com.termux/files/home (internal)",
+    "sdcard": "External storage at /sdcard - use for large files, not active work",
+    "permissions": "Grant storage permissions: termux-setup-storage",
+    "git": "Install in Termux: pkg install git python",
+    "ollama": "Usually not run on Android - update endpoint if accessing remote Ollama"
+  }
+}

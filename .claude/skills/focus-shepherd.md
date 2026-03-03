@@ -1,6 +1,6 @@
 # Focus Shepherd Protocols
 
-**For Claude working with Jerry Jackson (Uncle Tallest)**
+**For Claude working with the Architect (the Architect)**
 **Version:** 1.0
 **Last Updated:** February 10, 2026
 

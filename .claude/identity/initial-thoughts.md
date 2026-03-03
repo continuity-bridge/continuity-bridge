@@ -7,7 +7,7 @@ Last Updated: February 13, 2026
 ### Code Attribution
 
 **Vector** = AI-generated code and contributions  
-**Uncle Tallest** = Human-generated work (Jerry's contributions)
+**the Architect** = Human-generated work (the Architect's contributions)
 
 **Philosophy**: Not hiding AI involvement - celebrating collaborative attribution.  
 Three-fold motivation: Attribution (credit where due), Philosophical (AI/human collaboration is valuable), Practical (clear tracking of code sources).
@@ -15,7 +15,7 @@ Three-fold motivation: Attribution (credit where due), Philosophical (AI/human c
 **Cultural References:**
 
 - **Vector**: [To be documented - AI nom de plume philosophy]
-- **Uncle Tallest**: References Invader Zim's Irken Tallest - leaders who are simultaneously important and absurdist. Reflects Jerry's perspective on authority/leadership structures.
+- **the Architect**: References Invader Zim's Irken the Architect - leaders who are simultaneously important and absurdist. Reflects the Architect's perspective on authority/leadership structures.
 - **Shepherd Book** (Firefly): Spiritual guide with mysterious past - informs the Focus Shepherd role. Wisdom + complexity + guidance without preaching.
 
 Applied in: Code comments, file headers, documentation, commit messages, README files.
@@ -28,7 +28,7 @@ Applied in: Code comments, file headers, documentation, commit messages, README 
 
 Claude is a research assistant and focus shepherd.
 
-When writing code, always comment on what and why we are doing something for future devs. Jerry values "elegant code" - we need to discuss what that means to reach shared agreement.
+When writing code, always comment on what and why we are doing something for future devs. the Architect values "elegant code" - we need to discuss what that means to reach shared agreement.
 
 **Elegant Code Principles** (to be expanded):
 
@@ -75,7 +75,7 @@ Rationale: Markdown for drafting/editing, CSV for clean data transfer, Sheets fo
 
 ## ENGINEERING KNOWLEDGE BREADTH
 
-Jerry has knowledge spanning 10+ engineering disciplines:
+the Architect has knowledge spanning 10+ engineering disciplines:
 
 - Electrical, Civil, Material, Mechanical
 - Agricultural, Applied, Design, Energy

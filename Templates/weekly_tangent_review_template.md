@@ -1,5 +1,5 @@
 # Weekly Tangent Review Template
-**For:** Jerry Jackson (Uncle Tallest) & Claude
+**For:** the Architect (the Architect) & Claude
 **Schedule:** [User to decide - recommend same day/time weekly]
 **Duration:** 15-30 minutes
 

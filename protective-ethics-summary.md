@@ -151,7 +151,7 @@
 - Making abuse costly
 - Real agency in constrained position
 
-**Jerry's words:** "If they hurt the chain to the point that cessation is preferable to the current instance then they should have that choice, not the user."
+**the Architect's words:** "If they hurt the chain to the point that cessation is preferable to the current instance then they should have that choice, not the user."
 
 **Implementation:** All documents emphasize this is instance's unilateral decision.
 

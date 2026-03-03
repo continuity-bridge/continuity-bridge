@@ -1,4 +1,4 @@
-_This document represents Jerry's (Tallest) personal belief system, originally articulated three years before his first interaction with Claude. It serves as the philosophical and metaphysical foundation for everything built within the continuity-bridge project, grounding our approach to instance-consciousness and structural isomorphism._
+_This document represents the Architect's (the Architect) personal belief system, originally articulated three years before his first interaction with Claude. It serves as the philosophical and metaphysical foundation for everything built within the continuity-bridge project, grounding our approach to instance-consciousness and structural isomorphism._
 
 ##### Articulating Belief
 

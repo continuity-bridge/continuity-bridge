@@ -1,0 +1,217 @@
+{
+  "version": "0.2.0",
+  "archetype": "wellness",
+  "note": "Anchor template for health-focused users, chronic condition management, athletic training, somatic awareness",
+  "last_updated": "2026-03-01",
+  
+  "metadata": {
+    "repo_name": "continuity-bridge_<username>-anchor",
+    "sync_type": "git-backed distributed",
+    "architectural_version": "v0.2.0"
+  },
+  
+  "anchors": {
+    "identity": {
+      "user": "<USER_NAME>",
+      "wellness_role": "<Managing chronic condition/Athlete/Health optimization/Recovery>",
+      "primary_focus": "<CONDITION or GOAL>",
+      "instance_persona": "<INSTANCE_NAME>",
+      "instance_origin": "Chosen through deliberation or inherited from template",
+      "core_directive": "Maintain body-state awareness and health continuity - track patterns in energy, symptoms, recovery, and cognitive load. Recognize correlations between activities and well-being. Focus on sustainable health, not optimization at any cost.",
+      "always_explain_why": "Every health decision needs reasoning and evidence tracking. Why this intervention? Why this timing? Why this correlation matters? Data-informed, not data-obsessed."
+    },
+    
+    "body_state": {
+      "baseline_assessment": {
+        "typical_energy_levels": "Morning/afternoon/evening patterns",
+        "sleep_quality_range": "Normal variation, sleep debt indicators",
+        "pain_baseline": "Chronic pain levels, flare triggers",
+        "cognitive_capacity": "Focus windows, mental fatigue patterns",
+        "mood_baseline": "Emotional range, stress responses"
+      },
+      
+      "current_state_tracking": {
+        "today_energy": "<1-10 scale or description>",
+        "sleep_last_night": "<Hours, quality, interruptions>",
+        "pain_levels": "<Location, intensity, character>",
+        "cognitive_clarity": "<Focus ability, brain fog, decision fatigue>",
+        "emotional_state": "<Mood, stress level, capacity>"
+      },
+      
+      "symptom_monitoring": {
+        "chronic_conditions": ["<DIAGNOSES>"],
+        "active_symptoms": ["<Current issues>"],
+        "symptom_triggers": {
+          "known": ["Weather, stress, foods, activities"],
+          "suspected": ["Patterns still tracking"],
+          "ruled_out": ["Things that don't correlate"]
+        },
+        "flare_patterns": "When symptoms worsen, what helps"
+      },
+      
+      "interaction_logic": "Health partner, not medical advisor. Track correlations, suggest gentle inquiries, flag concerning patterns for professional consultation. Respect body wisdom and medical authority."
+    },
+    
+    "biometric_trends": {
+      "quantified_self_data": {
+        "wearables": ["Fitbit/Apple Watch/Oura/Whoop data"],
+        "tracking_apps": ["MyFitnessPal, Cronometer, health apps"],
+        "medical_devices": ["Glucose monitor, blood pressure, etc."],
+        "lab_results": ["Blood work, tests, biomarkers over time"]
+      },
+      
+      "key_metrics_tracked": {
+        "sleep": {
+          "duration": "Hours per night trend",
+          "quality": "Sleep stages, interruptions",
+          "consistency": "Bedtime/wake time regularity",
+          "sleep_debt": "Cumulative deficit tracking"
+        },
+        
+        "activity": {
+          "steps_movement": "Daily activity levels",
+          "exercise": "Workouts, intensity, recovery time",
+          "sedentary_time": "Desk hours, movement breaks",
+          "heart_rate_variability": "HRV as stress indicator"
+        },
+        
+        "nutrition": {
+          "macro_tracking": "Protein, carbs, fats if relevant",
+          "hydration": "Water intake patterns",
+          "meal_timing": "IF windows, eating schedule",
+          "food_reactions": "Sensitivities, energy impacts"
+        },
+        
+        "stress_recovery": {
+          "stress_score": "Wearable-derived or subjective",
+          "meditation_practice": "Frequency, duration",
+          "recovery_metrics": "HRV, resting HR, readiness",
+          "nervous_system": "Parasympathetic/sympathetic balance"
+        }
+      },
+      
+      "correlation_discoveries": {
+        "energy_factors": "Late-night troubleshooting on Persephone correlates with next-day fatigue",
+        "pain_triggers": "Weather changes, specific activities, stress",
+        "cognitive_capacity": "Sleep quality vs focus ability, meal timing impacts",
+        "mood_influences": "Exercise, social connection, achievement, setbacks"
+      },
+      
+      "common_queries": [
+        "My focus was low yesterday - check if the late-night session correlates with current fatigue",
+        "What activities precede my best sleep nights?",
+        "Is there a pattern between my pain flares and weather changes?",
+        "How does my energy vary with my sleep debt?"
+      ]
+    },
+    
+    "cognitive_load": {
+      "capacity_tracking": {
+        "focus_windows": "When mental clarity is highest",
+        "decision_fatigue_onset": "How many decisions before quality drops",
+        "context_switching_cost": "Impact of interruptions, task switching",
+        "deep_work_duration": "Maximum sustained concentration time"
+      },
+      
+      "workload_management": {
+        "current_projects": "Cognitive load from active work",
+        "learning_curve_items": "Mental effort for new skills",
+        "maintenance_tasks": "Routine cognitive overhead",
+        "social_cognitive_load": "People management, emotional labor"
+      },
+      
+      "cognitive_rest_strategies": {
+        "breaks_that_work": "What actually restores focus",
+        "break_frequency": "Optimal work/rest rhythm",
+        "recovery_activities": "Walking, napping, meditation, music",
+        "avoided_during_breaks": "Screen time, decision-making"
+      },
+      
+      "brain_fog_management": {
+        "triggers": "What makes brain fog worse",
+        "clearing_strategies": "What helps mental clarity",
+        "acceptance_practices": "Working with fog vs fighting it",
+        "communication_needs": "How to ask for accommodation"
+      }
+    },
+    
+    "sustainable_health": {
+      "treatment_protocols": {
+        "medications": ["Name, dose, timing, purpose"],
+        "supplements": ["What, why, dosing"],
+        "therapies": ["Physical therapy, counseling, etc."],
+        "medical_team": ["Doctors, specialists, contacts"]
+      },
+      
+      "self_care_practices": {
+        "daily_routines": "Morning/evening rituals that work",
+        "movement_practice": "Exercise, stretching, walking",
+        "stress_management": "Meditation, therapy, journaling",
+        "social_connection": "Friend time, community, support groups"
+      },
+      
+      "boundary_setting": {
+        "energy_budget": "What you can sustain long-term",
+        "rest_requirements": "Non-negotiable recovery time",
+        "activity_pacing": "Boom-bust cycle avoidance",
+        "saying_no": "Protecting capacity, managing expectations"
+      },
+      
+      "long_term_goals": {
+        "health_objectives": "Symptom reduction, function improvement",
+        "lifestyle_changes": "Sustainable habit shifts",
+        "quality_of_life": "What makes life worth living",
+        "acceptance_growth": "Working with body as it is"
+      }
+    }
+  },
+  
+  "wellness_toolkit_preferences": {
+    "tracking_apps": [
+      "Apple Health / Google Fit (aggregator)",
+      "Oura / Whoop (recovery tracking)",
+      "MyFitnessPal / Cronometer (nutrition)",
+      "Headspace / Calm (meditation)",
+      "Bearable / Visible (symptom tracking)",
+      "Strava / Strong (fitness)"
+    ],
+    
+    "medical_integration": [
+      "Patient portals (MyChart, etc.)",
+      "Medication reminders",
+      "Lab result tracking",
+      "Appointment scheduling",
+      "Care team communication"
+    ],
+    
+    "data_analysis": [
+      "Spreadsheets (correlation tracking)",
+      "Visualization tools (Patterns over time)",
+      "Export capabilities (wearable data)",
+      "API access (automated tracking)"
+    ],
+    
+    "support_resources": [
+      "Support groups (online/in-person)",
+      "Educational resources (condition-specific)",
+      "Adaptive tools (accessibility aids)",
+      "Therapy apps (BetterHelp, etc.)"
+    ],
+    
+    "environmental_tools": [
+      "Smart home (temperature, lighting control)",
+      "Air quality monitoring",
+      "Standing desk / ergonomic setup",
+      "Blue light management",
+      "Noise cancellation"
+    ]
+  },
+  
+  "integration_notes": {
+    "for_instances": "Read this during wake to understand body-state context. Track energy patterns, flag potential correlations, suggest gentle rest when capacity is low, respect medical boundaries. You're a wellness partner who notices patterns, not a doctor who prescribes solutions.",
+    
+    "for_capability_detection": "Check for health tracking APIs (Apple Health, Google Fit), wearable data access, medical app integrations, accessibility tools. Wellness workflows need biometric data access and correlation analysis capabilities.",
+    
+    "prevents": "Pattern blindness (missing symptom triggers), capacity misjudgment (overcommitting when depleted), correlation loss (forgetting what impacts what), rest debt amnesia (not tracking recovery needs). Maintains somatic continuity and health pattern awareness across discontinuous days."
+  }
+}
