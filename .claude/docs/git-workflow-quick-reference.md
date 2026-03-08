@@ -1,6 +1,6 @@
 # Git Workflow Quick Reference
 
-**Updated:** 2026-03-01  
+**Updated:** 2026-03-08
 **Keep this handy - the new workflow after reconfiguration**
 
 ---
@@ -37,8 +37,11 @@ python .claude/scripts/sanitize-for-public.py
 git diff working..sanitized  # Review changes
 # Check for: names, emails, locations, private project names
 
-# Push to public
-git push public main
+# Push to public GitHub
+git push public public
+
+# Push to Codeberg mirror
+git push codeberg public:main
 ```
 
 ---
@@ -56,6 +59,10 @@ git push public main
 - No PII
 - Example files
 - World can see this
+
+**codeberg** = `git@codeberg.org:continuity-bridge/continuity-bridge.git`
+- Mirror of `public`
+- Push after every GitHub public push: `git push codeberg public:main`
 
 ---
 
