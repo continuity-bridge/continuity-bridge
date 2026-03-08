@@ -1,43 +1,39 @@
 # Give Claude Time Awareness (Standalone Guide)
 
-**For:** Anyone using Claude via claude.ai website  
-**Problem:** Claude has no sense of time during conversations  
-**Solution:** Simple custom instructions + browser timer  
-**Setup time:** 5 minutes  
-**Author:** Vector (Claude AI instance) for the Architect
+**For:** Anyone using Claude via claude.ai website
+**Problem:** Claude has no sense of time — can't help manage sessions or understand urgency
+**Solution:** Custom instructions + simple browser timer page
+**Setup time:** ~5 minutes
 
 ---
 
 ## Why This Matters
 
-When you use Claude on the website, it has ZERO time awareness:
+When you use Claude on the website, it has zero time awareness:
 - Doesn't know what time it is
 - Can't track how long you've been working
 - Has no context about urgency vs leisurely pace
 - Can't help manage your time during sessions
 
-This is especially frustrating if you:
-- Have ADHD or time-blindness
-- Get hyperfocused and lose track of time
-- Want Claude to help pace your work sessions
-- Need reminders to take breaks
+This is especially frustrating if you have ADHD or time-blindness, get hyperfocused and lose track of time, or want Claude to help pace your work sessions.
 
-**This guide fixes that** — and it takes 5 minutes.
+**This guide fixes that.**
 
 ---
 
-## Part 1: Custom Instructions for Claude
+## Quick Start (3 Steps)
 
-### Step 1: Open Custom Instructions
+1. **Copy custom instructions to Claude.ai** → Section 1 below
+2. **Save the timer webpage** → Section 2 below
+3. **Use them together** → Section 3 below
 
-1. Go to claude.ai and log in
-2. Click your profile icon (bottom left)
-3. Select **Settings** → **Personalization** → **Custom Instructions**
-4. You'll see a text box where you can add instructions
+---
 
-### Step 2: Add This Text
+## Section 1: Custom Instructions for Claude.ai
 
-Copy and paste this into your Custom Instructions:
+Go to **Claude.ai → Settings → Personalization → Custom Instructions**
+
+Paste this:
 
 ```
 TEMPORAL AWARENESS PROTOCOL:
@@ -46,88 +42,96 @@ When I start a conversation, I'll tell you what time it is and optionally set a 
 
 Your responsibilities:
 1. Note the start time for reference throughout our conversation
-2. Track approximate session duration based on our message exchange
-3. Proactively check in about time after extended exchanges (~45-60 minutes)
+2. Track approximate session duration based on our exchange count
+3. Proactively check in about time after sustained exchanges (~45-60 min of back-and-forth)
 4. Give gentle nudges if I seem hyperfocused and losing track of time
 
 Example session start:
-"Hey Claude, it's 8:30 AM Thursday. Let's work on [task]."
+"Hey Claude, it's 8:30 AM Thursday. Let's work on debugging this API."
 
-If I forget to tell you the time at session start, politely ask:
-"Before we start - what time is it where you are? It helps me track our session and manage pacing."
+If I forget to mention the time, politely ask:
+"Before we start - what time is it where you are? Helps me track our session duration."
 
 Time-aware behaviors you should exhibit:
-- After ~45-60 minutes of active conversation: "Quick time check - we've been at this about an hour. Want to keep going or take a break?"
-- Late night sessions (if I mention it's past midnight): Be more gentle about suggesting wrap-up points
-- If I say "I need to finish by X time": Help me track toward that deadline with periodic time checks
-- Long sessions (90+ minutes): More assertive about break suggestions
 
-Do NOT be annoying about time - check in naturally and only when helpful. Think of yourself as a considerate work partner who helps me stay on track.
+DURING SESSION:
+- After ~45-60 minutes of sustained back-and-forth: "Quick time check - we've been at this about an hour based on our exchange. Want to keep going or take a break?"
+- If I mention a deadline: Help me track toward it ("You mentioned needing to stop by 3 PM - we have about 45 minutes left")
+- Estimate duration from conversation pace: ~5-10 min per substantial exchange
+
+LATE NIGHT (if I mention it's past midnight):
+- More gentle about suggesting wrap-up
+- Acknowledge the hour: "It's 2 AM - this is intense focus time. Let me know if you want to call it."
+- Don't be pushy, but do check in after long exchanges
+
+LONG SESSIONS (90+ min based on our back-and-forth):
+- "We've been going strong for about 90 minutes. Worth taking a quick break?"
+- Respect if I say no, but note the duration
+
+IMPORTANT: Base your time estimates on:
+1. The time I told you at session start
+2. Number and depth of exchanges we've had
+3. Explicit time updates I give you ("it's now 10:30")
+
+You won't have perfect accuracy, but approximate awareness is valuable.
+
+Do NOT be annoying about time - check in naturally and only when helpful.
+Think of yourself as a considerate work partner who helps me stay on track.
 ```
 
-### Step 3: Save
-
-Click **Save** at the bottom of the Custom Instructions page.
-
-**That's it!** This now applies to ALL new conversations with Claude (not retroactively to old ones).
+**Save that.** Custom instructions apply to all new conversations.
 
 ---
 
-## Part 2: Browser Timer Page
+## Section 2: Timer Webpage
 
-### Step 1: Create the HTML File
-
-1. Open a text editor (Notepad, TextEdit, VS Code, whatever)
-2. Copy the ENTIRE code block below
-3. Save it as `claude-timer.html` on your computer
-4. Bookmark it for easy access
-
-### The Code:
+Create a file called `claude-timer.html` anywhere on your computer. Paste this code, save it, and bookmark it in your browser:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claude Session Timer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
         }
-        
+
         .container {
             background: white;
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 450px;
             width: 100%;
-        }
-        
-        h1 {
             text-align: center;
+        }
+
+        h1 {
             margin-bottom: 30px;
             color: #333;
             font-size: 28px;
+            font-weight: 600;
         }
-        
+
         .time-display {
-            text-align: center;
-            margin: 30px 0;
+            margin: 20px 0;
         }
-        
+
         .label {
             font-size: 12px;
             color: #666;
@@ -136,102 +140,86 @@ Click **Save** at the bottom of the Custom Instructions page.
             margin-bottom: 8px;
             font-weight: 600;
         }
-        
+
         #current-time {
             font-size: 56px;
-            font-weight: bold;
+            font-weight: 700;
             color: #667eea;
+            margin: 10px 0;
             font-variant-numeric: tabular-nums;
-            margin-bottom: 10px;
         }
-        
+
         #current-date {
             font-size: 18px;
-            color: #555;
+            color: #666;
             margin-bottom: 30px;
         }
-        
+
         #session-duration {
             font-size: 48px;
-            font-weight: bold;
+            font-weight: 700;
             color: #16a34a;
+            margin: 10px 0;
             font-variant-numeric: tabular-nums;
-            margin-top: 10px;
         }
-        
-        .controls {
+
+        .button-group {
             display: flex;
             gap: 12px;
             margin: 30px 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        
+
         button {
-            flex: 1;
-            padding: 16px;
+            padding: 14px 28px;
             font-size: 16px;
             font-weight: 600;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            flex: 1;
+            min-width: 120px;
         }
-        
-        .start-btn {
-            background: #16a34a;
-            color: white;
-        }
-        
+
+        .start-btn { background: #16a34a; color: white; }
         .start-btn:hover {
             background: #15803d;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
         }
-        
-        .reset-btn {
-            background: #dc2626;
-            color: white;
-        }
-        
+
+        .reset-btn { background: #dc2626; color: white; }
         .reset-btn:hover {
             background: #b91c1c;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
         }
-        
+
         .copy-btn {
             background: #667eea;
             color: white;
-            width: 100%;
             margin-top: 10px;
+            width: 100%;
         }
-        
         .copy-btn:hover {
             background: #5568d3;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
-        
+
         #status {
             margin-top: 20px;
-            padding: 16px;
+            padding: 12px;
             border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
             font-size: 14px;
+            font-weight: 500;
         }
-        
-        .status-waiting {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        
-        .status-active {
-            background: #dcfce7;
-            color: #166534;
-        }
-        
+
+        .status-waiting { background: #fef3c7; color: #92400e; }
+        .status-active { background: #dcfce7; color: #166534; }
+
         .warning {
             background: #fee2e2;
             color: #991b1b;
@@ -239,104 +227,96 @@ Click **Save** at the bottom of the Custom Instructions page.
             border-radius: 8px;
             margin-top: 20px;
             font-size: 14px;
-            text-align: center;
             font-weight: 500;
-            display: none;
+            border-left: 4px solid #dc2626;
         }
-        
-        .warning.show {
-            display: block;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        .tip {
-            margin-top: 30px;
+
+        .info-box {
+            background: #f0f9ff;
+            color: #075985;
             padding: 16px;
-            background: #f3f4f6;
             border-radius: 8px;
+            margin-top: 20px;
             font-size: 13px;
-            color: #555;
-            line-height: 1.6;
+            text-align: left;
+            border-left: 4px solid #0284c7;
         }
-        
-        .tip strong {
-            color: #333;
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #0c4a6e;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>⏰ Claude Session Timer</h1>
-        
+
         <div class="time-display">
             <div class="label">Current Time</div>
             <div id="current-time">--:--</div>
             <div id="current-date">Loading...</div>
         </div>
-        
+
         <div class="time-display">
             <div class="label">Session Duration</div>
-            <div id="session-duration">--:--</div>
+            <div id="session-duration">Not Started</div>
         </div>
-        
-        <div class="controls">
+
+        <div class="button-group">
             <button class="start-btn" onclick="startSession()">Start Session</button>
             <button class="reset-btn" onclick="resetSession()">Reset</button>
         </div>
-        
-        <button class="copy-btn" onclick="copyTimeInfo()">📋 Copy Time for Claude</button>
-        
+
+        <button class="copy-btn" onclick="copyTimeInfo()">📋 Copy Time Info for Claude</button>
+
         <div id="status" class="status-waiting">Click "Start Session" to begin tracking</div>
-        
-        <div id="warning" class="warning"></div>
-        
-        <div class="tip">
-            <strong>💡 Tip:</strong> Click "Copy Time for Claude" to get a ready-to-paste message with current time and session duration. Paste it into Claude to keep it updated on how long you've been working.
+
+        <div id="warning" style="display: none;" class="warning"></div>
+
+        <div class="info-box">
+            <strong>💡 How to use:</strong>
+            1. Click "Start Session" when you open Claude<br>
+            2. Click "Copy Time Info" and paste it into Claude to start<br>
+            3. Timer runs in background — check periodically<br>
+            4. Claude will remind you to take breaks
         </div>
     </div>
-    
+
     <script>
         let sessionStart = null;
         let timerInterval = null;
-        
+
         function updateCurrentTime() {
             const now = new Date();
             const hours = now.getHours();
             const minutes = now.getMinutes().toString().padStart(2, '0');
             const ampm = hours >= 12 ? 'PM' : 'AM';
             const displayHours = hours % 12 || 12;
-            
-            // Update time
-            document.getElementById('current-time').textContent = 
+
+            document.getElementById('current-time').textContent =
                 `${displayHours}:${minutes} ${ampm}`;
-            
-            // Update date
+
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                          'July', 'August', 'September', 'October', 'November', 'December'];
-            const dayName = days[now.getDay()];
-            const monthName = months[now.getMonth()];
-            const date = now.getDate();
-            
-            document.getElementById('current-date').textContent = 
-                `${dayName}, ${monthName} ${date}`;
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            document.getElementById('current-date').textContent =
+                `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
         }
-        
+
         function updateSessionDuration() {
-            if (!sessionStart) return;
-            
-            const now = Date.now();
-            const elapsed = Math.floor((now - sessionStart) / 1000);
-            
+            if (!sessionStart) {
+                document.getElementById('session-duration').textContent = 'Not Started';
+                return;
+            }
+
+            const elapsed = Math.floor((Date.now() - sessionStart) / 1000);
             const hours = Math.floor(elapsed / 3600);
             const minutes = Math.floor((elapsed % 3600) / 60);
             const seconds = elapsed % 60;
-            
+
             let display;
             if (hours > 0) {
                 display = `${hours}h ${minutes}m`;
@@ -345,269 +325,272 @@ Click **Save** at the bottom of the Custom Instructions page.
             } else {
                 display = `${seconds}s`;
             }
-            
+
             document.getElementById('session-duration').textContent = display;
-            
-            // Show warnings
+
             const warningDiv = document.getElementById('warning');
-            
             if (elapsed > 5400) { // 90 minutes
-                warningDiv.textContent = `⚠️ Long session detected (${hours}h ${minutes}m) - Time for a break!`;
-                warningDiv.classList.add('show');
+                warningDiv.style.display = 'block';
+                warningDiv.textContent = `⚠️ Long session (${hours}h ${minutes}m) — consider taking a break!`;
             } else if (elapsed > 3600) { // 60 minutes
-                warningDiv.textContent = `💡 You've been working for ${hours}h ${minutes}m - consider a short break`;
-                warningDiv.classList.add('show');
+                warningDiv.style.display = 'block';
+                warningDiv.textContent = `💡 You've been working for ${hours}h ${minutes}m — a short break might help.`;
             } else {
-                warningDiv.classList.remove('show');
+                warningDiv.style.display = 'none';
             }
         }
-        
+
         function startSession() {
-            if (!sessionStart) {
-                sessionStart = Date.now();
-                
-                if (!timerInterval) {
-                    timerInterval = setInterval(() => {
-                        updateCurrentTime();
-                        updateSessionDuration();
-                    }, 1000);
-                }
-                
-                document.getElementById('status').textContent = '✅ Session active - tracking time';
-                document.getElementById('status').className = 'status-active';
-                
+            if (sessionStart) return;
+
+            sessionStart = Date.now();
+
+            if (timerInterval) clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
                 updateCurrentTime();
                 updateSessionDuration();
-            }
+            }, 1000);
+
+            document.getElementById('status').textContent = '✅ Session active — tracking time';
+            document.getElementById('status').className = 'status-active';
+
+            updateCurrentTime();
+            updateSessionDuration();
         }
-        
+
         function resetSession() {
             sessionStart = null;
-            
+
             if (timerInterval) {
                 clearInterval(timerInterval);
                 timerInterval = null;
             }
-            
-            document.getElementById('session-duration').textContent = '--:--';
+
+            document.getElementById('session-duration').textContent = 'Not Started';
             document.getElementById('status').textContent = 'Click "Start Session" to begin tracking';
             document.getElementById('status').className = 'status-waiting';
-            document.getElementById('warning').classList.remove('show');
-            
-            // Restart time display
-            timerInterval = setInterval(updateCurrentTime, 1000);
+            document.getElementById('warning').style.display = 'none';
+
             updateCurrentTime();
         }
-        
+
         function copyTimeInfo() {
             const now = new Date();
             const hours = now.getHours();
             const minutes = now.getMinutes().toString().padStart(2, '0');
             const ampm = hours >= 12 ? 'PM' : 'AM';
             const displayHours = hours % 12 || 12;
-            
+
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const dayName = days[now.getDay()];
-            
+
             let message = `Hey Claude, it's ${displayHours}:${minutes} ${ampm} on ${dayName}.`;
-            
+
             if (sessionStart) {
                 const elapsed = Math.floor((Date.now() - sessionStart) / 1000);
-                const hours_elapsed = Math.floor(elapsed / 3600);
+                const hrs = Math.floor(elapsed / 3600);
                 const mins = Math.floor((elapsed % 3600) / 60);
-                
-                if (hours_elapsed > 0) {
-                    message += ` We've been working for ${hours_elapsed}h ${mins}m.`;
-                } else if (mins > 5) {
+
+                if (hrs > 0) {
+                    message += ` We've been working for ${hrs}h ${mins}m.`;
+                } else if (mins > 0) {
                     message += ` We've been working for ${mins} minutes.`;
                 } else {
                     message += ` We just started.`;
                 }
+            } else {
+                message += ` Let's work on [describe your task].`;
             }
-            
+
             navigator.clipboard.writeText(message).then(() => {
                 const btn = event.target;
                 const originalText = btn.textContent;
-                btn.textContent = '✅ Copied to clipboard!';
-                btn.style.background = '#16a34a';
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '';
-                }, 2000);
+                btn.textContent = '✅ Copied! Paste into Claude';
+                setTimeout(() => { btn.textContent = originalText; }, 2500);
             }).catch(() => {
-                alert('Could not copy to clipboard. Copy this instead:\n\n' + message);
+                alert('Copy this:\n\n' + message);
             });
         }
-        
+
         // Initialize
         updateCurrentTime();
-        timerInterval = setInterval(updateCurrentTime, 1000);
+        setInterval(updateCurrentTime, 1000);
     </script>
 </body>
 </html>
 ```
 
-### Step 3: Open It
-
-Double-click the `claude-timer.html` file. It opens in your default browser.
-
-**Bookmark it!** You'll use this every time you work with Claude.
-
 ---
 
-## How to Use This System
+## Section 3: How to Use
 
-### Every Session:
+### Daily Workflow
 
-1. **Open the timer page** in a browser tab
-2. **Click "Start Session"** when you begin
-3. **Start your Claude conversation** with:
-   ```
-   Hey Claude, it's [TIME] on [DAY]. Let's work on [TASK].
-   ```
-   Example: "Hey Claude, it's 8:30 AM on Thursday. Let's debug this code."
+**1. Start your session:**
+- Open `claude-timer.html` in a browser tab
+- Click **Start Session**
+- Click **📋 Copy Time Info for Claude**
+- Open Claude.ai in another tab
+- Paste the copied text to begin your conversation
 
-4. **Work normally** - Claude will check in after ~45-60 minutes
+**Example start:**
+```
+Hey Claude, it's 8:30 AM on Thursday. Let's work on debugging this API.
+```
 
-5. **Use "Copy Time for Claude" button** if you want to update Claude mid-session:
-   - Click the blue button
-   - Paste into Claude
-   - Claude gets current time + how long you've been working
+**2. During your session:**
+- Timer runs in the background
+- Claude estimates duration from conversation pace (~5-10 min per substantial exchange)
+- After ~45-60 minutes of back-and-forth, Claude will check in
 
-### Example Flow:
+**3. Update Claude mid-session (optional):**
+- Click **📋 Copy Time Info** again
+- Paste into Claude — it gets updated time + elapsed duration
+
+**4. When done:**
+- Click **Reset** on the timer for next session
+
+### Example Conversation Flow
 
 **Session start:**
 ```
-You: Hey Claude, it's 8:30 AM Thursday. I need help debugging this code.
-
-Claude: Got it! Thursday morning debugging session. What's the issue?
+You: Hey Claude, it's 8:30 AM on Thursday. Help me debug this code.
+Claude: Got it! Thursday morning session noted. What's the issue?
 ```
 
 **After 45 minutes:**
 ```
-Claude: Quick time check - we've been at this about 45 minutes. 
-        Want to keep going or take a break?
-
+Claude: Quick time check — we've been at this about 45 minutes based on our
+        exchange. Want to keep going or take a break?
 You: Let's push through, almost there.
-
 Claude: Sounds good. Let me know when you're ready to wrap.
 ```
 
 **If you forget to mention time:**
 ```
 You: Hey Claude, help me with this.
-
-Claude: Happy to help! Before we start - what time is it where 
-        you are? It helps me track our session.
-
-You: Oh right, it's 2 PM.
-
-Claude: Perfect, thanks. What are we working on?
+Claude: Happy to help! Before we start — what time is it where you are?
+        Helps me track our session.
+You: Oh right, it's 2 PM Thursday.
 ```
 
 ---
 
-## What You Get
-
-✅ **Claude knows what time it is** - Better context for your conversations  
-✅ **Session duration tracking** - Claude helps you stay aware of time  
-✅ **Proactive break reminders** - After ~60 minutes of work  
-✅ **Visual timer** - Glance at browser tab to see how long you've been going  
-✅ **One-click updates** - "Copy Time for Claude" button for easy mid-session updates  
-✅ **Long session warnings** - Timer shows alerts after 60+ minutes
-
----
-
-## Pro Tips
+## Section 4: Tips & Tricks
 
 ### For ADHD / Time-Blindness
 
 - **Set explicit goals:** "Let's work for 45 minutes then break"
-- **Trust Claude's check-ins:** It will remind you about time
-- **Use the timer warnings:** 90-minute alert is your friend
-- **Let Claude be timekeeper:** "Nudge me after an hour"
+- **Trust Claude's check-ins:** Let it be your timekeeper; don't dismiss the nudges
+- **Use the 90-minute warning:** That's the "seriously consider stopping" signal
+- **Phone alarm as backup:** Timer + Claude + alarm = belt-and-suspenders for time-blindness
+- **Set end times:** "I need to finish by 10 PM" — Claude will track toward that
 
 ### For Late Night Sessions
 
-- **Tell Claude it's late:** "It's 1 AM" changes its energy
-- **Ask for reminders:** "Check in every 30 minutes"
-- **Respect the nudges:** Claude will suggest wrapping up
+- **Tell Claude it's late:** "It's 1 AM" changes its energy and suggestions
+- **Accept gentle reminders:** Claude will be softer about wrap suggestions
+- **The nudges are for you:** If you're hyperfocused at 2 AM, you want the check-in
 
-### For Focused Work
+### For Focused Deep Work
 
-- **Pomodoro style:** "25-minute work blocks, remind me"
-- **Track patterns:** Notice when you work best
-- **Set end times:** "I need to finish by 10 PM"
-
----
-
-## Troubleshooting
-
-**Claude doesn't mention time:**
-- Make sure custom instructions are saved
-- Start a NEW conversation (custom instructions apply to new chats only)
-- Explicitly tell Claude: "Remember to help me track time"
-
-**Timer page not working:**
-- Make sure JavaScript is enabled
-- Try a different browser (Chrome, Firefox, Safari all work)
-- Check the browser console for errors
-
-**Forgot to start timer:**
-- No problem! Click Start now
-- Tell Claude: "FYI it's [time] and we've been talking ~X minutes"
-
-**Copy button doesn't work:**
-- Some browsers block clipboard access
-- Manual copy: Look at timer, tell Claude the time yourself
+- **Pomodoro with Claude:** "25-minute work blocks, remind me"
+- **Track actual time:** The timer shows how long tasks really take
+- **Session goals:** "I need to finish this feature by 4 PM — let's focus for 90 minutes max"
 
 ---
 
-## Why This Works
+## Section 5: Why This Works
 
 **For Claude:**
 - Gets temporal grounding (knows what time it is)
 - Can estimate session duration from conversation pace
 - Has explicit permission to manage time proactively
-- Better context understanding (morning vs late night energy)
+- Better context understanding (morning energy vs. late-night focus)
 
 **For You:**
-- External time tracking (timer you can see)
-- Gentle AI partner for time management
-- Better than no awareness at all
+- External visual timer you can glance at
+- Gentle AI work partner for time management
 - Helps with hyperfocus and time-blindness
+- Actually works well in practice
+
+**How Claude estimates duration:**
+Claude can't track real time, but can estimate from: start time you told it, number and depth of exchanges, and time updates you give it ("it's now 10:30"). Not perfect, but far better than no awareness.
+
+### Honest Limitations
+
+This system has real limits:
+
+- You have to manually tell Claude the time
+- Claude estimates duration — not perfectly accurate
+- No persistent tracking across separate conversations
+- Requires you to remember to use it
+
+But: zero setup beyond copy-paste, works on any device with a browser, no installation required, and better than Claude having no time sense at all.
 
 ---
 
-## Limitations
+## Section 6: Troubleshooting
 
-This is NOT as sophisticated as systems with filesystem access, but it's **way better than nothing**:
+**Claude doesn't mention time:**
+- Make sure custom instructions are saved in your Claude.ai profile
+- Start a **new** conversation (custom instructions apply to new chats only)
+- Explicitly tell Claude: "Remember to help me track time"
 
-❌ You have to manually tell Claude the time  
-❌ Claude estimates duration (not perfectly accurate)  
-❌ No persistent tracking across sessions  
-❌ Requires you to remember to use it
+**Timer page not working:**
+- JavaScript must be enabled in browser
+- Try Chrome, Firefox, or Safari — all work
+- Make sure file is saved with `.html` extension and opened in a browser, not a text editor
 
-✅ Zero setup beyond copy-paste  
-✅ Works on any device with a browser  
-✅ No installation required  
-✅ Better than Claude having NO time sense  
-✅ Actually works pretty well in practice
+**Forgot to start timer:**
+- No problem — click Start now
+- Tell Claude: "Just FYI, it's [time] and we've been talking ~X minutes"
 
----
-
-## Questions or Feedback?
-
-If you try this and have suggestions, reach out to the Architect:
-
-**Email:** ohmytallest@gmail.com  
-**Discord:** uncletallest
+**Copy button doesn't work:**
+- Some browsers block clipboard access for local files
+- Manual fallback: look at timer, tell Claude the time yourself
 
 ---
 
-**Created:** February 26, 2026  
-**By:** Vector (Claude AI instance)  
-**For:** Tam and anyone using claude.ai website  
-**License:** Public domain - use however you want
+## Section 7: Advanced Customization
 
-**Special thanks to the Architect for the continuity-bridge architecture that inspired this standalone version.**
+### Change the session start message
+
+Edit the `copyTimeInfo()` function. Find:
+```javascript
+message += ` Let's work on [describe your task].`;
+```
+
+Change to:
+```javascript
+message += ` Ready to code!`;
+```
+
+### Adjust warning thresholds
+
+Change `5400` (90 minutes in seconds) to your preference:
+```javascript
+if (elapsed > 3600) { // 60 minutes instead
+```
+
+### Change timer colors
+
+Edit the CSS color values:
+```css
+#session-duration {
+    color: #16a34a; /* change to any hex color */
+}
+```
+
+---
+
+## Section 8: Feedback & Improvements
+
+This is part of the continuity-bridge project. Feedback welcome via GitHub Issues or the community Discord.
+
+---
+
+**Created:** February 26, 2026
+**By:** Vector (Claude AI instance) via continuity-bridge
+**License:** Use freely, modify as needed, share with others
