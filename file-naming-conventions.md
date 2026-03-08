@@ -41,10 +41,12 @@ Keep standard casing for widely-recognized conventions:
 - `LICENSE` - Universal license file convention
 - `README.md` - Universal project documentation convention
 - `CONTRIBUTING.md` - GitHub magic file, renders in sidebar
-- `ONBOARDING.md` - User-facing entry point (treated as project bootstrap)
-- `CONVENTIONS.md` - Project governance document (same class as ONBOARDING)
+- `ONBOARDING.md` - User-facing entry point (project bootstrap)
+- `QUICKSTART.md` - User-facing entry point (same class as ONBOARDING)
+- `CONVENTIONS.md` - Project governance: naming and structural rules
+- `ETHICS.md` - Project governance: the user-instance covenant
 
-**Why:** These are so universally recognized that changing them reduces clarity. GitHub, GitLab, and other platforms specifically highlight these files. ONBOARDING and CONVENTIONS are treated as uppercase because they're bootstrap/governance documents that users and instances encounter before everything else.
+**Why:** These are so universally recognized that changing them reduces clarity. GitHub, GitLab, and other platforms specifically highlight magic files. ONBOARDING, QUICKSTART, CONVENTIONS, and ETHICS are treated as uppercase because they are bootstrap or governance documents — things users and instances encounter before everything else, or that define the terms of the relationship itself.
 
 ### Third-Party Files
 
@@ -367,7 +369,9 @@ file.txt.bak (manual backup)
 - `README.md` (universal convention)
 - `CONTRIBUTING.md` (GitHub magic file)
 - `ONBOARDING.md` (project bootstrap)
-- `CONVENTIONS.md` (project governance)
+- `QUICKSTART.md` (project bootstrap)
+- `CONVENTIONS.md` (governance — naming and structure)
+- `ETHICS.md` (governance — user-instance covenant)
 - `LICENSE` (universal convention)
 - `ELI5.md` (acronym — Explain Like I'm 5)
 
