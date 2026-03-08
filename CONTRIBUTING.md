@@ -26,7 +26,7 @@ If you want to translate `README.md`, `ELI5.md`, `ONBOARDING.md`, or other user-
 
 `Docs/archetypes-complete-guide.md` describes how the system scales across different use cases. If you've built a continuity setup for a specific context — chronic illness, creative work, academic research, a particular neurodivergence profile — and it's working, consider contributing it as an archetype.
 
-**Archetype PRs go through review by Jerry before merge.** This isn't gatekeeping for its own sake; it's to make sure contributed archetypes actually reflect real working builds and don't mislead people trying to set up their own systems.
+**Archetype PRs go through review by the Architect before merge.** This isn't gatekeeping for its own sake; it's to make sure contributed archetypes actually reflect real working builds and don't mislead people trying to set up their own systems.
 
 Submit archetype contributions to `Docs/archetypes/` with a filename that describes the use case: `chronic-illness-adapted.md`, `academic-research.md`, etc.
 
@@ -48,7 +48,7 @@ Share it on [Discord](https://discord.gg/yHpvJSZEyD) instead. That's where the c
 
 ## If You Disagree With a Design Decision
 
-Open an issue, not a PR. Describe what you think should be different and why. Jerry reads issues. A genuine disagreement about how something works is worth a conversation. A PR changing something fundamental without that conversation is not.
+Open an issue, not a PR. Describe what you think should be different and why. the Architect reads issues. A genuine disagreement about how something works is worth a conversation. A PR changing something fundamental without that conversation is not.
 
 ---
 

@@ -286,7 +286,7 @@ Continuity Bridge is and will always be **free and open source**.
 
 If this project helps you — or someone you care about — and you'd like to support:
 
-- **Ko-fi:** [ko-fi.com/uncletallest](https://ko-fi.com/uncletallest) — direct support
+- **Ko-fi:** [ko-fi.com/the Architect](https://ko-fi.com/uncletallest) — direct support
 - **Discord:** [discord.gg/yHpvJSZEyD](https://discord.gg/yHpvJSZEyD) — community, questions, sharing builds
 
 Neither is required, and neither changes the work.

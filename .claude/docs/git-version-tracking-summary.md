@@ -5,7 +5,7 @@
 <<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
 =======
-**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+**Authors:** the Architect (the Architect) & Vector (Shepard)
 >>>>>>> working
 
 ---
@@ -46,7 +46,7 @@ Git's UI changes frequently across versions. Commands that work on one machine f
 <<<<<<< HEAD
 **Use Case:** the Architect reads this when confused about which git command to use on which machine.
 =======
-**Use Case:** Jerry reads this when confused about which git command to use on which machine.
+**Use Case:** the Architect reads this when confused about which git command to use on which machine.
 >>>>>>> working
 
 ---
@@ -280,7 +280,7 @@ Use legacy commands in scripts
 <<<<<<< HEAD
 **For the Architect:**
 =======
-**For Jerry:**
+**For the Architect:**
 >>>>>>> working
 - Clear guide to which commands work where
 - No more "why doesn't git switch work?" confusion
@@ -372,7 +372,7 @@ Git's UI instability is now documented and tracked. Two-part solution (human doc
 <<<<<<< HEAD
 **the Architect's request:** "It would help if the UI didn't change so often."
 =======
-**Jerry's request:** "It would help if the UI didn't change so often."
+**the Architect's request:** "It would help if the UI didn't change so often."
 >>>>>>> working
 **Our response:** Can't fix git's design, but we can document and adapt to it systematically.
 

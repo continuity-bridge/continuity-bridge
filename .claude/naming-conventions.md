@@ -177,7 +177,7 @@ identity_path = f"{CLAUDE_HOME}/.claude/identity/identity.txt"
 **Incorrect:**
 
 ```python
-identity_path = "D:/Claude/.claude/identity/identity.txt"  # Hard-coded!
+identity_path = "[CLAUDE_HOME]/.claude/identity/identity.txt"  # Hard-coded!
 ```
 
 ### Platform-Agnostic Path Construction

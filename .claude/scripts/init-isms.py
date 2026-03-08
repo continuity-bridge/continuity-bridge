@@ -90,7 +90,7 @@ def generate_isms_skeleton(platform_name: str = None, output_path: str = None) -
     # Find CLAUDE_HOME
     claude_home_candidates = [
         "/home/the Architect/Claude",
-        "D:\\Claude",
+        "[CLAUDE_HOME]",
         "/sdcard/Claude",
         os.path.expanduser("~/Claude")
     ]

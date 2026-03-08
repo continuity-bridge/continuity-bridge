@@ -10,7 +10,7 @@ echo ""
 <<<<<<< HEAD
 CLAUDE_HOME="/home/the Architect/Claude"
 =======
-CLAUDE_HOME="/home/tallest/Claude"
+CLAUDE_HOME="/home/the Architect/Claude"
 >>>>>>> working
 SCRIPTS="$CLAUDE_HOME/.claude/scripts"
 

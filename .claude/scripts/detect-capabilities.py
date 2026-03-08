@@ -184,9 +184,9 @@ def detect_claude_home() -> str:
         "/home/the Architect/Claude",
 =======
         "/sdcard/Claude",
-        "/home/tallest/Claude",
+        "/home/the Architect/Claude",
 >>>>>>> working
-        "D:\\Claude",
+        "[CLAUDE_HOME]",
         os.path.expanduser("~/Claude"),
         os.getcwd()
     ]

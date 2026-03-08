@@ -58,7 +58,7 @@ To remove user friction in syncing private repos, a dedicated SSH management sys
 
 - **`heartbeat-check.py`:** Optimized for mobile by prioritizing Android paths in the auto-detection candidate list.
 
-- **`detect_claude_home()`:** Cleaned redundant hard-coded paths (e.g., `/home/tallest/`) in favor of dynamic `os.path.expanduser("~/")` for universal Linux/Mac support.
+- **`detect_claude_home()`:** Cleaned redundant hard-coded paths (e.g., `/home/the Architect/`) in favor of dynamic `os.path.expanduser("~/")` for universal Linux/Mac support.
 
 ### Dependency Management
 
@@ -70,7 +70,7 @@ To remove user friction in syncing private repos, a dedicated SSH management sys
 
 ## 🧪 Testing Results
 
-- **Persephone (Pop!_OS):** Confirmed `DIRECT_WRITE` workflow with <100ms latency on NVMe storage.
+- **[WORKSTATION] (Pop!_OS):** Confirmed `DIRECT_WRITE` workflow with <100ms latency on NVMe storage.
 
 - **Fire HD 8 (Android 7):** Confirmed `CONTAINER_GIT_WITH_BRIDGE` workflow using `/sdcard/Claude` as the root.
 
