@@ -17,9 +17,9 @@ echo ""
 
 echo "CLAUDE_HOME Candidates:"
 <<<<<<< HEAD
-for path in "/home/the Architect/Claude" "/sdcard/Claude" "D:\\Claude" "$HOME/Claude" "$(pwd)"; do
+for path in "/home/the Architect/Claude" "/sdcard/Claude" "[CLAUDE_HOME]" "$HOME/Claude" "$(pwd)"; do
 =======
-for path in "/home/tallest/Claude" "/sdcard/Claude" "D:\\Claude" "$HOME/Claude" "$(pwd)"; do
+for path in "/home/the Architect/Claude" "/sdcard/Claude" "[CLAUDE_HOME]" "$HOME/Claude" "$(pwd)"; do
 >>>>>>> working
     if [ -d "$path/.claude" ]; then
         echo "  ✓ FOUND: $path"
@@ -54,5 +54,5 @@ echo "Recent Files Written (last hour):"
 <<<<<<< HEAD
 find /home/the Architect/Claude -type f -mmin -60 2>/dev/null | head -10 || echo "  No files found or no access"
 =======
-find /home/tallest/Claude -type f -mmin -60 2>/dev/null | head -10 || echo "  No files found or no access"
+find /home/the Architect/Claude -type f -mmin -60 2>/dev/null | head -10 || echo "  No files found or no access"
 >>>>>>> working

@@ -65,7 +65,7 @@ You showed me Gemini's contributions and said: "Want to see more before merging?
 
 **anchors.json** - Four cognitive anchors
 
-- Identity (Vector/Shepard, Tallest)
+- Identity (Vector/Shepard, the Architect)
 - Relational (cognitive style, structural isomorphism)
 - Purpose (v0.2.0 milestone, objectives)
 - Temporal (memory architecture, lifecycle)
@@ -160,7 +160,7 @@ Ready
 ## To Test It
 
 ```bash
-cd /home/tallest/Claude/.claude/scripts
+cd /home/the Architect/Claude/.claude/scripts
 
 # Quick test (all 5 checks)
 ./test-v0.2.0.sh
@@ -174,7 +174,7 @@ cat ../.claude/runtime-manifest.json | jq .
 cat ../.claude/logs/wake-audit.log | jq .
 ```
 
-**Expected on Persephone:**
+**Expected on [WORKSTATION]:**
 
 - Heartbeat: SUCCESS, latency < 100ms (NVMe)
 - Workflow: DIRECT_WRITE
@@ -210,7 +210,7 @@ cat ../.claude/logs/wake-audit.log | jq .
 - logs/wake-audit.log
 - logs/heartbeat-result.json
 
-**All in:** `/home/tallest/Claude/.claude/`
+**All in:** `/home/the Architect/Claude/.claude/`
 
 ---
 

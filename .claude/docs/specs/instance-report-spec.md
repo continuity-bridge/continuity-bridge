@@ -21,7 +21,7 @@ Example: `report-20260301-202500.json`
 {
   "instance": "Vector",
   "platform": "Desktop",
-  "hostname": "Persephone",
+  "hostname": "[WORKSTATION]",
   "category": "session-end",
   "emoji": "📝",
   "message": "\n# Instance Report: ...\n\n## What We Built\n...",
@@ -44,7 +44,7 @@ The platform on which the instance is running (e.g., `"Desktop"`, `"Android"`, `
 
 ### `hostname` (string)
 
-The specific machine or environment hostname where the session occurred (e.g., `"Persephone"`).
+The specific machine or environment hostname where the session occurred (e.g., `"[WORKSTATION]"`).
 
 ### `category` (string)
 

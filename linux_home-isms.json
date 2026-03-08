@@ -8,7 +8,7 @@
     "os_family": "debian",
     "architecture": "x86_64",
     "container": false,
-    "description": "Persephone - Linux desktop (Pop!_OS Cosmic)"
+    "description": "[WORKSTATION] - Linux desktop (Pop!_OS Cosmic)"
   },
   "paths": {
     "claude_home": "/home/the Architect/Claude",
@@ -87,6 +87,6 @@
     "created": "2026-03-01T21:30:00Z",
     "last_updated": "2026-03-01T21:30:00Z",
     "updated_by": "Vector",
-    "notes": "Pop!_OS 24.04 (Cosmic) - Persephone desktop system"
+    "notes": "Pop!_OS 24.04 (Cosmic) - [WORKSTATION] desktop system"
   }
 }
