@@ -25,7 +25,7 @@ Filesystem:write_file({
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop|Android|WSL",
-    hostname: "Persephone|Phone|Laptop",
+    hostname: "[WORKSTATION]|Phone|Laptop",
     category: "session-end|pattern|question|coordination|observation",
     emoji: "📝|🔍|❓|🤝|💭",
     message: "Your message here",
@@ -45,7 +45,7 @@ Filesystem:write_file({
 |-------|------|-------------|
 | instance | string | Instance name (Vector, Shepard, etc) |
 | platform | string | Device type (Desktop, Android, WSL, macOS) |
-| hostname | string | Device identifier (Persephone, Phone, etc) |
+| hostname | string | Device identifier ([WORKSTATION], Phone, etc) |
 | category | string | Report type (see below) |
 | emoji | string | Category emoji (auto-mapped from category) |
 | message | string | The actual report content |
@@ -104,7 +104,7 @@ Filesystem:write_file({
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop",
-    hostname: "Persephone",
+    hostname: "[WORKSTATION]",
     category: "session-end",
     emoji: "📝",
     message: "Session: Built X, fixed Y, duration 4hrs.",
@@ -123,7 +123,7 @@ Filesystem:write_file({
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop", 
-    hostname: "Persephone",
+    hostname: "[WORKSTATION]",
     category: "pattern",
     emoji: "🔍",
     message: "Pattern: the Architect more engaged with architectural discussions than implementation details.",
@@ -161,7 +161,7 @@ Filesystem:write_file({
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop",
-    hostname: "Persephone",
+    hostname: "[WORKSTATION]",
     category: "coordination",
     emoji: "🤝",
     message: "Coordination: Working on template system redesign. If another instance starts similar work, check this first to avoid duplication.",

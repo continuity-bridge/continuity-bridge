@@ -448,8 +448,8 @@ You: Oh right, it's 2 PM
 
 If you use this, let the Architect or Vector know how it works! We want to make it better.
 
-**Email:** ohmytallest@gmail.com  
-**Discord:** uncletallest
+**Email:** [USER_EMAIL]  
+**Discord:** the Architect
 
 ---
 

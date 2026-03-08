@@ -1,9 +1,0 @@
-{
-  "timestamp": "2026-03-02T08:31:29Z",
-  "version": "0.2.0",
-  "platform": "auto",
-  "workflow": "DIRECT_WRITE",
-  "bridge_strategy": "direct_write",
-  "storage_latency_ms": 0.3181739884894341,
-  "success": true
-}

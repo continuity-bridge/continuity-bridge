@@ -5,7 +5,7 @@
 <<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
 =======
-**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+**Authors:** the Architect (the Architect) & Vector (Shepard)
 >>>>>>> working
 
 ---
@@ -31,7 +31,7 @@ The `-isms` file in each branch declares that environment's capabilities, constr
 <<<<<<< HEAD
 **`home`** (the Architect's primary Windows desktop)
 =======
-**`home`** (Jerry's primary Windows desktop)
+**`home`** (the Architect's primary Windows desktop)
 >>>>>>> working
 - Full filesystem access
 - All capabilities available
@@ -50,7 +50,7 @@ The `-isms` file in each branch declares that environment's capabilities, constr
 <<<<<<< HEAD
 - Path: `~/Claude/.claude/` or `/home/the Architect/Claude/.claude/`
 =======
-- Path: `~/Claude/.claude/` or `/home/tallest/Claude/.claude/`
+- Path: `~/Claude/.claude/` or `/home/the Architect/Claude/.claude/`
 >>>>>>> working
 
 **`win_home`** (Secondary Windows machines)
@@ -276,21 +276,21 @@ Examples:
 <<<<<<< HEAD
     "description": "the Architect's primary Windows desktop - full capabilities"
 =======
-    "description": "Jerry's primary Windows desktop - full capabilities"
+    "description": "the Architect's primary Windows desktop - full capabilities"
 >>>>>>> working
   },
   
   "paths": {
-    "claude_home": "D:\\Claude\\.claude",
-    "working_directory": "D:\\Claude",
-    "outputs": "D:\\Claude\\outputs",
-    "uploads": "D:\\Claude\\uploads",
+    "claude_home": "[CLAUDE_HOME]\\.claude",
+    "working_directory": "[CLAUDE_HOME]",
+    "outputs": "[CLAUDE_HOME]\\outputs",
+    "uploads": "[CLAUDE_HOME]\\uploads",
 <<<<<<< HEAD
     "temp": "C:\\Users\\the Architect\\AppData\\Local\\Temp",
 =======
-    "temp": "C:\\Users\\tallest\\AppData\\Local\\Temp",
+    "temp": "C:\\Users\\the Architect\\AppData\\Local\\Temp",
 >>>>>>> working
-    "credentials": "D:\\Claude\\.credentials-local"
+    "credentials": "[CLAUDE_HOME]\\.credentials-local"
   },
   
   "tools": {
@@ -400,12 +400,12 @@ Examples:
     "temp": "/tmp",
     "credentials": "/home/the Architect/Claude/.credentials-local"
 =======
-    "claude_home": "/home/tallest/Claude/.claude",
-    "working_directory": "/home/tallest/Claude",
-    "outputs": "/home/tallest/Claude/outputs",
-    "uploads": "/home/tallest/Claude/uploads",
+    "claude_home": "/home/the Architect/Claude/.claude",
+    "working_directory": "/home/the Architect/Claude",
+    "outputs": "/home/the Architect/Claude/outputs",
+    "uploads": "/home/the Architect/Claude/uploads",
     "temp": "/tmp",
-    "credentials": "/home/tallest/Claude/.credentials-local"
+    "credentials": "/home/the Architect/Claude/.credentials-local"
 >>>>>>> working
   },
   
@@ -430,7 +430,7 @@ Examples:
 <<<<<<< HEAD
       "path": "/home/the Architect/.npm-global/bin/npm",
 =======
-      "path": "/home/tallest/.npm-global/bin/npm",
+      "path": "/home/the Architect/.npm-global/bin/npm",
 >>>>>>> working
       "version": "10.8.2"
     }
@@ -1094,7 +1094,7 @@ For each branch:
 <<<<<<< HEAD
 - Familiar workflow for the Architect
 =======
-- Familiar workflow for Jerry
+- Familiar workflow for the Architect
 >>>>>>> working
 
 ---

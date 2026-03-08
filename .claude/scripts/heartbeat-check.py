@@ -209,13 +209,13 @@ def main():
         candidates = [
 <<<<<<< HEAD
             "/home/the Architect/Claude",
-            "D:\\Claude",
+            "[CLAUDE_HOME]",
             "/sdcard/Claude",
             os.path.expanduser("~/Claude"),
 =======
             "/sdcard/Claude",           # Android (adb upload location) - PRIMARY
-            os.path.expanduser("~/Claude"),     # Linux (Persephone)
-            "D:\\Claude",               # Windows Dual Boot
+            os.path.expanduser("~/Claude"),     # Linux ([WORKSTATION])
+            "[CLAUDE_HOME]",               # Windows Dual Boot
 >>>>>>> working
             os.getcwd()
         ]

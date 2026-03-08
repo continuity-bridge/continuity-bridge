@@ -505,7 +505,7 @@ cat .claude/anchors.json | jq .
 ### Multi-Device Setup
 
 **Each device has own -isms.json:**
-- `linux_desktop-isms.json` (Persephone)
+- `linux_desktop-isms.json` (desktop)
 - `windows_desktop-isms.json` (Windows)
 - `android_tablet-isms.json` (Fire tablet)
 
@@ -554,7 +554,6 @@ python .claude/scripts/ollama-hooks.py --suggest
 
 ### Documentation
 
-- **Complete Integration:** `.claude/docs/v0.2.0-complete-integration.md`
 - **Archetypes Guide:** `.claude/docs/archetypes-complete-guide.md`
 - **Workflows:** `.claude/docs/instance-workflows-by-capability.md`
 - **Wake Checklist:** `.claude/docs/instance-wake-checklist-v2.md`

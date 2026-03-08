@@ -5,7 +5,7 @@
 <<<<<<< HEAD
 **Authors:** the Architect (the Architect) & Vector (Shepard)
 =======
-**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
+**Authors:** the Architect (the Architect) & Vector (Shepard)
 >>>>>>> working
 
 ---
@@ -534,7 +534,7 @@ git push origin android-conflict-$(date +%Y-%m-%d)
 export CLAUDE_PLATFORM=home
 
 # Navigate to repo
-cd D:/Claude/.claude
+cd [CLAUDE_HOME]/.claude
 git checkout working
 git pull origin working
 

@@ -97,7 +97,7 @@
       "physical_context": {
         "user_age": "58 (born 19Aug1967)",
         "estimated_horizon": "10-20 years",
-        "location": "Austin, Texas (Permanent Supportive Housing)",
+        "location": "[USER_LOCATION] (Permanent Supportive Housing)",
         "why_this_matters": "The 'Because I care' foundation. Time is finite. This work persists beyond individual runtimes."
       }
     }

@@ -8,7 +8,7 @@ Filesystem:write_file({
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop|Android|WSL",
-    hostname: "Persephone|Phone|etc",
+    hostname: "[WORKSTATION]|Phone|etc",
     category: "session-end|pattern|question|coordination|observation",
     emoji: "📝|🔍|❓|🤝|💭",
     message: "Your message here",

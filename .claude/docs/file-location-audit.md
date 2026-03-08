@@ -11,7 +11,7 @@
 <<<<<<< HEAD
 /home/the Architect/Claude/
 =======
-/home/tallest/Claude/
+/home/the Architect/Claude/
 >>>>>>> working
 ├── .claude/
 │   ├── anchors.json                    # Your active anchors (technical)
@@ -149,7 +149,7 @@
 <<<<<<< HEAD
 cd /home/the Architect/Claude
 =======
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 >>>>>>> working
 git remote -v
 git branch -a
@@ -295,10 +295,10 @@ find /home/the Architect -name "*instance*report*" 2>/dev/null
 # Check git history
 cd /home/the Architect/Claude
 =======
-find /home/tallest -name "*instance*report*" 2>/dev/null
+find /home/the Architect -name "*instance*report*" 2>/dev/null
 
 # Check git history
-cd /home/tallest/Claude
+cd /home/the Architect/Claude
 >>>>>>> working
 git log --all --full-history --name-only -- '*instance*report*'
 ```
