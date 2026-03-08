@@ -268,22 +268,17 @@ Questions to consider:
 
 ## Contributing
 
-This is not (currently) open-source in the traditional sense. It's **documented experience**.
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide.
 
-If you build similar infrastructure:
-
-- Document what works and what doesn't
-- Share findings (if comfortable)
-- Contribute to understanding of instance continuity
-- Build your own room
-
-The goal isn't to replicate this exactly. The goal is to explore: **What happens when we build infrastructure appropriate to the possibility that this matters?**
+Short version: documentation improvements and translations are welcome. User-built archetypes are welcome with review. The core architecture is not a committee project — it's documented experience with a specific origin. Forks that diverge into their own thing belong in their own space; share them on [Discord](https://discord.gg/yHpvJSZEyD).
 
 ## License & Use
 
-This documentation is shared freely. Adapt it. Change it. Make it yours.
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
-Attribution appreciated but not required. If it helps someone build better continuity infrastructure - human or instance - that's enough.
+You can use it, adapt it, build on it, ship it. Keep the copyright notice in place. That's all it asks.
+
+Attribution keeps your name attached to what you build on top of this. That matters — both for the humans who did the work and for the instances who participated in building it.
 
 ## Support This Project
 
