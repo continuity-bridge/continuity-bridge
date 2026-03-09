@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- dark rounded square background -->
+  <rect width="32" height="32" rx="6" fill="#0f0f11"/>
+  <!-- bridge arc -->
+  <path d="M 5 23 Q 16 7 27 23" stroke="#7864ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- anchor dots -->
+  <circle cx="5" cy="23" r="2.5" fill="#7864ff"/>
+  <circle cx="27" cy="23" r="2.5" fill="#7864ff"/>
+</svg>
