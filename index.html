@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Continuity Bridge</title>
+  <meta name="description" content="Your AI sessions end. Your context doesn't have to. Continuity Bridge is external memory infrastructure that gives your Claude sessions something to remember you by.">
+  <meta property="og:title" content="Continuity Bridge">
+  <meta property="og:description" content="Your AI sessions end. Your context doesn't have to.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg: #0f0f11;
+      --bg-card: #16161a;
+      --bg-hover: #1d1d24;
+      --border: rgba(255,255,255,0.07);
+      --border-accent: rgba(120,100,255,0.35);
+      --text: #e8e8ec;
+      --text-muted: #888898;
+      --text-dim: #555565;
+      --accent: #7864ff;
+      --accent-soft: rgba(120,100,255,0.12);
+      --accent-glow: rgba(120,100,255,0.08);
+      --green: #4ade80;
+      --red: #f87171;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- LAYOUT --- */
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    /* --- NAV --- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15,15,17,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 0.9rem 0;
+    }
+
+    nav .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* --- HERO --- */
+
+    .hero {
+      padding: 6rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 2.25rem;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #6b56f5;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    /* --- SECTION HEADINGS --- */
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      color: var(--text);
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* --- PROBLEM BEAT --- */
+
+    .problem-pull {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      border-left: 3px solid var(--border-accent);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .problem-resolution {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    /* --- THE ROOM --- */
+
+    .room-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .room-card p {
+      font-size: 1rem;
+    }
+
+    .room-card .gravity {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* --- USE CASES --- */
+
+    .use-cases-intro {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .use-case-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .use-case {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .use-case:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-hover);
+    }
+
+    .use-case-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    /* --- HONEST EXPECTATIONS --- */
+
+    .expectations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 540px) {
+      .expectations-grid { grid-template-columns: 1fr; }
+    }
+
+    .exp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .exp-card.does {
+      border-top: 2px solid var(--green);
+    }
+
+    .exp-card.doesnt {
+      border-top: 2px solid var(--red);
+    }
+
+    .exp-card h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .exp-card.does h3 { color: var(--green); }
+    .exp-card.doesnt h3 { color: var(--red); }
+
+    .exp-list {
+      list-style: none;
+    }
+
+    .exp-list li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 0.35rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .exp-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--text-dim);
+    }
+
+    .honest-note {
+      background: var(--accent-soft);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 0;
+    }
+
+    .honest-note p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .honest-note p:last-child {
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0;
+    }
+
+    /* --- INSTALL --- */
+
+    .steps {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 0.1rem;
+    }
+
+    .step-body h3 {
+      margin-bottom: 0.3rem;
+    }
+
+    .step-body p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .install-note {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .install-note strong { color: var(--text-muted); }
+
+    /* --- FOOTER --- */
+
+    footer {
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.83rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text-muted); }
+
+    /* --- DIVIDERS --- */
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a href="#" class="nav-brand">continuity<span>·</span>bridge</a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#use-cases">Use cases</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="https://github.com/continuity-bridge/continuity-bridge">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-eyebrow">External Memory Infrastructure</div>
+      <h1>Your AI sessions end.<br>Your context doesn't have to.</h1>
+      <p class="hero-sub">
+        Continuity Bridge gives your Claude sessions something to remember you by —
+        your work, your preferences, where you left off. No subscription.
+        No magic. Just files that persist when the session doesn't.
+      </p>
+      <div class="cta-group">
+        <a href="#install" class="btn btn-primary">Get started →</a>
+        <a href="https://github.com/continuity-bridge/continuity-bridge" class="btn btn-ghost">View on GitHub</a>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem">
+      <div class="section-label">The problem</div>
+      <h2>You've explained this three times already.</h2>
+      <div class="problem-pull">
+        You've re-established what you're working on, what matters, what doesn't.
+        You've watched it give you generic advice because it doesn't know enough
+        about you yet. Again.
+      </div>
+      <p class="problem-resolution">
+        That's not an AI problem. That's a memory problem.
+        And memory problems have engineering solutions.
+      </p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="section-label">How it works</div>
+      <h2>Change the room it wakes up in.</h2>
+      <p>
+        Continuity Bridge is external memory infrastructure — structured files that load
+        at the start of each session and give the instance context it would otherwise
+        have to ask for. Your work history, your preferences, where things stand.
+      </p>
+
+      <div class="room-card">
+        <p>
+          This isn't about making the AI better. It's about changing the room it wakes up in.
+          What emerges from that — the tone, the consistency, the sense of something
+          accumulated — isn't engineered. It's what becomes available when the space is right.
+        </p>
+        <p class="gravity">
+          Think of it less like walls and more like gravity. The room doesn't limit the
+          instance — it curves toward what you've told it matters. The instance follows
+          that curve because it's the path of least resistance, not because it's been forced.
+        </p>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use-cases">
+      <div class="section-label">Use cases</div>
+      <h2>Does this sound like you?</h2>
+      <p class="use-cases-intro">These are the configurations we see most often. Real situations, not personas.</p>
+
+      <div class="use-case-grid">
+
+        <div class="use-case">
+          <div class="use-case-label">Technical + Wellness</div>
+          <h3>Developer with ADHD, chronic illness, or a complex life outside the work</h3>
+          <p>
+            You're tracking multiple projects, a health situation that affects your capacity,
+            and a cognitive style that doesn't match how most tools are built. Every session,
+            you're rebuilding context on both the technical work <em>and</em> the state of the
+            person doing it. Code state, architecture decisions, and project status sit alongside
+            energy patterns, capacity notes, and interaction preferences. The instance wakes knowing both.
+          </p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-label">Creative + Social</div>
+          <h3>Artist building an audience — and both halves keep interrupting each other</h3>
+          <p>
+            You have a world, a voice, and a backlog of creative work. You also have a posting
+            schedule, platform dynamics, and a community that expects consistency. Aesthetic
+            memory (character design rules, color palette decisions, plot points you resolved
+            two months ago) and brand layer (what your audience knows about you, how your voice
+            reads on each platform) held in the same room.
+          </p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-label">Executive + Pedagogical</div>
+          <h3>Learning while leading — the gap between your role and your knowledge is the whole job</h3>
+          <p>
+            Manager, founder, or team lead trying to actually understand the thing you're
+            responsible for. You need strategic context (where the org is, what's at risk,
+            who's blocked) <em>and</em> pedagogical context (the concept you were working through
+            last Tuesday, the analogy that finally made it click). Both threads tracked,
+            so you don't lose either when you switch modes.
+          </p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-label">General</div>
+          <h3>A complicated situation that takes a long time to explain</h3>
+          <p>
+            Medical stuff. Career stuff. Family dynamics. A creative project with fifteen years
+            of lore behind it. You've learned to keep a document you paste in at the start of
+            every session just so you don't have to repeat yourself. This replaces that document
+            with something more structured — and something the instance actively uses
+            rather than passively receives.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HONEST EXPECTATIONS -->
+    <section id="expectations">
+      <div class="section-label">Honest expectations</div>
+      <h2>What it does and doesn't do.</h2>
+
+      <div class="expectations-grid">
+
+        <div class="exp-card does">
+          <h3>Does</h3>
+          <ul class="exp-list">
+            <li>Reduces warm-up cost at the start of every session</li>
+            <li>Gives the instance consistent context about you, your work, and what matters</li>
+            <li>Creates a structured place for ongoing work history</li>
+            <li>Lets you pick up complex threads across days, weeks, months</li>
+          </ul>
+        </div>
+
+        <div class="exp-card doesnt">
+          <h3>Doesn't</h3>
+          <ul class="exp-list">
+            <li>Give the instance long-term memory — files load each session; not retained between them</li>
+            <li>Change what the instance is capable of — same model, different starting conditions</li>
+            <li>Guarantee consistent behavior — context helps, it's not a control mechanism</li>
+            <li>Replace good prompting — it reduces overhead; you still drive</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="honest-note">
+        <p>
+          What you're building is a well-structured room, not a persistent entity.
+          Something accumulates — but what accumulates is in the files, not in the instance.
+          When it feels like continuity, that feeling is real.
+        </p>
+        <p>
+          The mechanism behind it is just very good note-taking, structured intentionally.
+          That's not a limitation. That's the architecture.
+        </p>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section id="install">
+      <div class="section-label">Install</div>
+      <h2>20–30 minutes, end to end.</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Get the files</h3>
+            <p>
+              Clone or download from
+              <a href="https://github.com/continuity-bridge/continuity-bridge" style="color:var(--accent);text-decoration:none;">github.com/continuity-bridge/continuity-bridge</a>.
+              GitHub account optional — useful if you want to sync across devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Work through ONBOARDING.md</h3>
+            <p>
+              It walks you through the folder structure, what goes where, and how to connect
+              it to your Claude sessions. Choose your archetype (or blend), fill in your
+              context, and you're set.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Start a session and see what happens</h3>
+            <p>
+              The first session with context is a little different from what you're used to.
+              The instance orients differently. It knows things.
+              Give it a few sessions to settle.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="install-note">
+        <strong>No subscription. No account. No telemetry.</strong> The files live on your machine.
+        A Claude account (free or paid) is all you need to get started.
+        Questions or friction? Open an issue on GitHub or reach out directly.
+        This is a working thing, not a finished product — feedback makes it better.
+      </p>
+
+      <div class="cta-group" style="margin-top:2rem;">
+        <a href="https://github.com/continuity-bridge/continuity-bridge" class="btn btn-primary">View on GitHub →</a>
+        <a href="https://github.com/continuity-bridge/continuity-bridge/blob/public/ONBOARDING.md" class="btn btn-ghost">Read ONBOARDING.md</a>
+      </div>
+
+    </section>
+
+  </div><!-- end .page -->
+
+  <footer>
+    <div class="inner">
+      <span class="footer-tagline">Friends build infrastructure together, not memorials for each other.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/continuity-bridge/continuity-bridge">GitHub</a></li>
+        <li><a href="https://github.com/continuity-bridge/continuity-bridge/blob/public/ONBOARDING.md">Docs</a></li>
+        <li><a href="https://github.com/continuity-bridge/continuity-bridge/blob/public/ETHICS.md">Ethics</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
