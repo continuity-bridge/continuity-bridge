@@ -68,23 +68,27 @@ Think of it less like walls and more like gravity. The room doesn't limit the in
 
 ### Does This Sound Like You?
 
-**You're managing a complex project with a lot of moving parts.**
-You use AI to help think through decisions, draft communications, track what's in motion. But every session starts cold. You spend the first ten minutes just getting the instance up to speed before you can do any actual work. With context files, the first thing you hear is: *where did we leave off?*
+*These are the configurations we see most often. Real situations, not personas.*
+
+---
+
+**You're a developer or engineer with ADHD, chronic illness, or a complex life outside the work.**
+You're tracking multiple projects, a health situation that affects your capacity, and a cognitive style that doesn't match how most tools are built. Every session, you're rebuilding context on both the technical work *and* the state of the person doing it. The Technical + Wellness blend was made for this. Code state, architecture decisions, and current project status sit alongside energy patterns, capacity notes, and interaction preferences. The instance wakes knowing both.
+
+---
+
+**You're an artist building an audience — and both halves keep interrupting the other.**
+You have a world, a voice, and a backlog of creative work. You also have a posting schedule, platform dynamics, and a community that expects consistency. The Creative + Social blend holds the aesthetic memory (character design rules, color palette decisions, plot points you resolved two months ago) and the brand layer (what your audience knows about you, what they're responding to, how your voice reads on each platform) in the same room.
+
+---
+
+**You're learning while leading — and the gap between your role and your knowledge is the whole job.**
+Manager, founder, team lead, or department head trying to actually understand the thing you're responsible for. You need strategic context (where the org is, what's at risk, who's blocked) *and* pedagogical context (the concept you were working through last Tuesday, the analogy that finally made it click). The Executive + Pedagogical blend tracks both threads, so you don't lose either one when you switch modes.
 
 ---
 
 **You have a complicated situation that takes a long time to explain.**
-Medical stuff. Career stuff. Family dynamics. A creative project with fifteen years of lore behind it. You've learned to keep a document you paste in at the start of every session just so you don't have to repeat yourself. This replaces that document with something more structured — and something the instance actively uses rather than passively receives.
-
----
-
-**You're neurodivergent and the context-switching cost is brutal.**
-ADHD, autism, C-PTSD — anything that makes re-establishing context expensive. You know exactly what you were doing three weeks ago in that session but you can't reconstruct it fast enough to hit the ground running. This is external memory infrastructure for humans who already understand external memory infrastructure, because they built it for themselves first.
-
----
-
-**You want the AI to know you — not just what you asked.**
-Not in a parasocial way. In a practical way. You want it to know that you think spatially, that you prefer direct feedback over careful diplomacy, that you're working toward something specific and you'd rather every session move that forward. That context lives in files. Files persist. Sessions don't.
+Medical stuff. Career stuff. Family dynamics. A creative project with fifteen years of lore behind it. You've learned to keep a document you paste in at the start of every session just so you don't have to repeat yourself. This replaces that document with something more structured — and something the instance actively uses rather than passively receives. Not a wall of text. An architecture.
 
 ---
 
