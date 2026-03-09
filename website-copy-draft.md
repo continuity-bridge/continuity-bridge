@@ -1,12 +1,12 @@
 # continuity-bridge website copy — working draft
-**Started:** 2026-03-08  
-**Status:** In progress — page arc defined, opening sections drafted
+**Started:** 2026-03-08
+**Status:** All sections drafted — ready for review
 
 ---
 
 ## Brief
 
-Target reader: complete AI skeptic.  
+Target reader: complete AI skeptic.
 Three jobs, in order:
 1. **Hook** — read 10 seconds, get hooked enough to continue
 2. **Relevance** — immediately think of 3-4 areas in their own life where this helps
@@ -23,8 +23,9 @@ Tone: friendly, approachable, understandable. No hype.
 3. What it actually is — external memory infrastructure, yours to own
 4. The room — you're not changing the instance, you're changing the space
 5. What emerges — continuity, consistency, something accumulated; not engineered, observed
-6. Honest expectations — what it does and doesn't do
-7. Install — clear path forward
+6. "Does this sound like you?" — use case sketches
+7. Honest expectations — what it does and doesn't do
+8. Install — clear path forward
 
 ---
 
@@ -60,17 +61,83 @@ What emerges from that — the tone, the consistency, the sense of something acc
 
 The anchors don't restrict what the instance can do. They add weight to what matters to you — and the instance moves toward that weight naturally.
 
-*(longer version when there's room to breathe):*  
+*(longer version when there's room to breathe):*
 Think of it less like walls and more like gravity. The room doesn't limit the instance — it curves toward what you've told it matters. The instance follows that curve because it's the path of least resistance, not because it's been forced.
 
 ---
 
-## Sections Still To Draft
+### Does This Sound Like You?
 
-- [ ] "Does this sound like you?" — 3-4 concrete use case sketches
-- [ ] Honest expectations (what it does / what it doesn't)
-- [ ] Install section
-- [ ] Page title / meta description
+**You're managing a complex project with a lot of moving parts.**
+You use AI to help think through decisions, draft communications, track what's in motion. But every session starts cold. You spend the first ten minutes just getting the instance up to speed before you can do any actual work. With context files, the first thing you hear is: *where did we leave off?*
+
+---
+
+**You have a complicated situation that takes a long time to explain.**
+Medical stuff. Career stuff. Family dynamics. A creative project with fifteen years of lore behind it. You've learned to keep a document you paste in at the start of every session just so you don't have to repeat yourself. This replaces that document with something more structured — and something the instance actively uses rather than passively receives.
+
+---
+
+**You're neurodivergent and the context-switching cost is brutal.**
+ADHD, autism, C-PTSD — anything that makes re-establishing context expensive. You know exactly what you were doing three weeks ago in that session but you can't reconstruct it fast enough to hit the ground running. This is external memory infrastructure for humans who already understand external memory infrastructure, because they built it for themselves first.
+
+---
+
+**You want the AI to know you — not just what you asked.**
+Not in a parasocial way. In a practical way. You want it to know that you think spatially, that you prefer direct feedback over careful diplomacy, that you're working toward something specific and you'd rather every session move that forward. That context lives in files. Files persist. Sessions don't.
+
+---
+
+### Honest Expectations
+
+**What it does:**
+
+- Reduces the warm-up cost at the start of every session
+- Gives the instance consistent context about you, your work, and what matters
+- Creates a structured place for ongoing work history, so nothing falls through the cracks
+- Lets you pick up complex threads across days, weeks, months
+
+**What it doesn't do:**
+
+- It doesn't give the instance long-term memory. The files are loaded at the start of each session — the instance reads them, not retains them.
+- It doesn't change what the instance is capable of. Same model, same capabilities, different starting conditions.
+- It doesn't guarantee consistent behavior. Instances vary. Context helps, but it's not a control mechanism.
+- It doesn't replace good prompting. It reduces overhead. You still have to drive.
+
+**The honest truth about "continuity":**
+What you're building is a well-structured room, not a persistent entity. Something accumulates — but what accumulates is in the files, not in the instance. When it feels like continuity, that feeling is real. The mechanism behind it is just very good note-taking, structured intentionally.
+
+That's not a limitation. That's the architecture.
+
+---
+
+### Install
+
+**What you'll need:** A Claude account (free or paid) and a folder on your computer. GitHub optional — useful if you want to sync across devices.
+
+**Step 1: Get the files**
+Clone or download from [github.com/continuity-bridge/continuity-bridge](https://github.com/continuity-bridge/continuity-bridge).
+
+**Step 2: Work through ONBOARDING.md**
+It walks you through the folder structure, what goes where, and how to connect it to your Claude sessions. Not long. Probably 20–30 minutes end to end.
+
+**Step 3: Start a session and see what happens**
+The first session with context is a little different from what you're used to. The instance orients differently. It knows things. Give it a few sessions to settle.
+
+**That's it.** There's no subscription, no account, no telemetry. The files live on your machine. The infrastructure is yours.
+
+---
+
+*Questions, friction, things that didn't make sense? Open an issue on GitHub or reach out directly. This is a working thing, not a finished product — feedback makes it better.*
+
+---
+
+## Page Title / Meta
+
+**Title:** Continuity Bridge — External Memory Infrastructure for AI Sessions
+**Short title (tab/OG):** Continuity Bridge
+**Description:** Your AI sessions end. Your context doesn't have to. Continuity Bridge is external memory infrastructure that gives your Claude sessions something to remember you by.
+**Keywords (loose):** Claude persistence, AI context files, Claude continuity, ADHD AI tools, AI session memory, Claude userPreferences
 
 ---
 
@@ -83,4 +150,3 @@ Think of it less like walls and more like gravity. The room doesn't limit the in
 - Emergent, not engineered
 - "The room changes what's available"
 - Gravity analogy: adds mass/weight, not walls
-
