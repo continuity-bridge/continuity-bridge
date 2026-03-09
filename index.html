@@ -10,20 +10,62 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
+    /* ============================================
+       ZIM MEETS MATRIX COLOR SYSTEM
+       ============================================ */
+    
     :root {
-      --bg: #0f0f11;
-      --bg-card: #16161a;
-      --bg-hover: #1d1d24;
-      --border: rgba(255,255,255,0.07);
-      --border-accent: rgba(120,100,255,0.35);
-      --text: #e8e8ec;
-      --text-muted: #888898;
-      --text-dim: #555565;
-      --accent: #7864ff;
-      --accent-soft: rgba(120,100,255,0.12);
-      --accent-glow: rgba(120,100,255,0.08);
-      --green: #4ade80;
-      --red: #f87171;
+      /* Two-Purple System:
+         - Interactive purple (buttons, links, steps): darker blue
+         - Decorative purple (labels, accents): lighter Zim */
+      --purple-interactive: #7864ff;
+      --purple-decorative: #B565D8;
+      
+      /* Dark Theme (Matrix Noir + Zim Energy) - DEFAULT */
+      --bg: #0A0A0A;
+      --bg-card: #161616;
+      --bg-hover: #1E1E1E;
+      
+      --text: #E8E8E8;
+      --text-muted: #B8B8B8;
+      --text-dim: #888888;
+      
+      --accent: var(--purple-decorative);
+      --accent-interactive: var(--purple-interactive);
+      --accent-green: #4DB84D;
+      --accent-copper: #D4995A;
+      
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(77, 184, 77, 0.25);
+      --accent-soft: rgba(181, 101, 216, 0.08);
+      --accent-glow: rgba(77, 184, 77, 0.08);
+      
+      --green: #4DB84D;
+      --red: #E65A8A;
+    }
+
+    /* Light Theme (Inverted Zim) */
+    body.theme-light {
+      --bg: #F5F5F0;
+      --bg-card: #FFFFFF;
+      --bg-hover: #FAFAF8;
+      
+      --text: #1A1E1A;
+      --text-muted: #3A4A3A;
+      --text-dim: #6A7A6A;
+      
+      --accent: var(--purple-decorative);
+      --accent-interactive: #6B56F5;
+      --accent-green: #2A8A2A;
+      --accent-copper: #A96D3A;
+      
+      --border: rgba(42, 138, 42, 0.15);
+      --border-accent: rgba(42, 138, 42, 0.35);
+      --accent-soft: rgba(123, 61, 160, 0.12);
+      --accent-glow: rgba(42, 138, 42, 0.08);
+      
+      --green: #2A8A2A;
+      --red: #B53A6A;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,6 +78,7 @@
       color: var(--text);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* --- LAYOUT --- */
@@ -53,17 +96,18 @@
 
     section:last-of-type { border-bottom: none; }
 
-    /* --- NAV --- */
+    /* --- NAV WITH THEME TOGGLE --- */
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(15,15,17,0.92);
+      background: var(--bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
       padding: 0.9rem 0;
+      transition: background-color 0.3s ease;
     }
 
     nav .inner {
@@ -87,20 +131,92 @@
       color: var(--accent);
     }
 
-    .nav-links {
+    .nav-center {
       display: flex;
       gap: 1.5rem;
       list-style: none;
     }
 
-    .nav-links a {
+    .nav-center a {
       font-size: 0.83rem;
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-center a:hover { 
+      color: var(--accent); 
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--border-accent);
+    }
+
+    .theme-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background: var(--bg-hover);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      transition: all 0.3s;
+      box-shadow: 0 0 8px rgba(77, 184, 77, 0.4);
+    }
+
+    body.theme-light .toggle-slider {
+      left: 22px;
+      background: var(--accent-interactive);
+      box-shadow: 0 0 8px rgba(107, 86, 245, 0.4);
+    }
+
+    /* Mobile nav adjustments */
+    @media (max-width: 640px) {
+      .expectations-grid { 
+        grid-template-columns: 1fr; 
+      }
+    }
+    
+    @media (max-width: 700px) {
+      .nav-center li:not(:last-child) { 
+        display: none; 
+      }
+      
+      nav .inner {
+        gap: 1rem;
+      }
+    }
 
     /* --- HERO --- */
 
@@ -156,12 +272,12 @@
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: var(--accent-interactive);
       color: #fff;
     }
 
     .btn-primary:hover {
-      background: #6b56f5;
+      background: var(--accent);
       transform: translateY(-1px);
     }
 
@@ -169,14 +285,24 @@
       background: transparent;
       color: var(--text-muted);
       border: 1px solid var(--border);
+      transition: all 0.2s;
     }
 
     .btn-ghost:hover {
-      color: var(--text);
-      border-color: rgba(255,255,255,0.15);
+      color: var(--accent);
+      border-color: var(--border-accent);
     }
 
     /* --- SECTION HEADINGS --- */
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
 
     h2 {
       font-size: 1.6rem;
@@ -224,6 +350,7 @@
       border-radius: 12px;
       padding: 1.75rem;
       margin-top: 1.5rem;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .room-card p {
@@ -242,23 +369,21 @@
     /* --- USE CASES --- */
 
     .use-cases-intro {
-      color: var(--text-dim);
-      font-size: 0.875rem;
-      font-style: italic;
+      color: var(--text-muted);
       margin-bottom: 2rem;
     }
 
     .use-case-grid {
       display: grid;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .use-case {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 1.5rem;
-      transition: border-color 0.2s, background 0.2s;
+      transition: all 0.2s;
     }
 
     .use-case:hover {
@@ -267,148 +392,173 @@
     }
 
     .use-case-label {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .use-case h3 {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .use-case p {
+      font-size: 0.94rem;
+      line-height: 1.65;
     }
 
     /* --- HONEST EXPECTATIONS --- */
 
     .expectations-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
 
-    @media (max-width: 540px) {
-      .expectations-grid { grid-template-columns: 1fr; }
-      .nav-links li:not(:last-child) { display: none; }
+    @media (min-width: 640px) {
+      .expectations-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .exp-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 1.5rem;
     }
 
-    .exp-card.does {
-      border-top: 2px solid var(--green);
-    }
-
-    .exp-card.doesnt {
-      border-top: 2px solid var(--red);
-    }
-
     .exp-card h3 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
       margin-bottom: 1rem;
+      color: var(--accent);
     }
-
-    .exp-card.does h3 { color: var(--green); }
-    .exp-card.doesnt h3 { color: var(--red); }
 
     .exp-list {
       list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
     .exp-list li {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      padding: 0.35rem 0;
-      padding-left: 1.25rem;
       position: relative;
+      padding-left: 1.5rem;
+      font-size: 0.94rem;
       line-height: 1.5;
+      color: var(--text-muted);
     }
 
     .exp-list li::before {
-      content: '·';
+      content: '•';
       position: absolute;
       left: 0;
-      color: var(--text-dim);
+      color: var(--accent);
+      font-weight: bold;
     }
 
     .honest-note {
       background: var(--accent-soft);
-      border: 1px solid var(--border-accent);
-      border-radius: 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 1.5rem;
-      margin-top: 0;
     }
 
     .honest-note p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
     }
 
     .honest-note p:last-child {
-      font-weight: 500;
-      color: var(--text);
       margin-bottom: 0;
     }
 
-    /* --- INSTALL --- */
+    /* --- INSTALL STEPS --- */
 
     .steps {
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2rem 0;
     }
 
     .step {
       display: flex;
       gap: 1.25rem;
-      align-items: flex-start;
     }
 
     .step-num {
       flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background: var(--accent-soft);
-      border: 1px solid var(--border-accent);
+      width: 2.5rem;
+      height: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-accent);
+      border-radius: 50%;
       font-weight: 700;
-      color: var(--accent);
-      margin-top: 0.1rem;
+      font-size: 1.1rem;
+      color: var(--accent-interactive);
     }
 
     .step-body h3 {
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
 
     .step-body p {
-      font-size: 0.9rem;
-      margin-bottom: 0;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .step-body a {
+      color: var(--accent-interactive);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-interactive);
+      transition: all 0.2s;
+    }
+
+    .step-body a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     .install-note {
-      font-size: 0.875rem;
-      color: var(--text-dim);
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      margin-top: 0.5rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.94rem;
+      line-height: 1.65;
     }
 
-    .install-note strong { color: var(--text-muted); }
+    .install-note strong {
+      color: var(--text);
+    }
+
+    .install-note a {
+      color: var(--accent-interactive);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-interactive);
+      transition: all 0.2s;
+    }
+
+    .install-note a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
 
     /* --- FOOTER --- */
 
     footer {
-      padding: 3rem 0;
       border-top: 1px solid var(--border);
+      padding: 3rem 0;
+      margin-top: 4rem;
     }
 
     footer .inner {
@@ -416,41 +566,35 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 1.5rem;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      text-align: center;
     }
 
     .footer-tagline {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--text-dim);
+      font-style: italic;
     }
 
     .footer-links {
       display: flex;
       gap: 1.5rem;
       list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .footer-links a {
-      font-size: 0.83rem;
-      color: var(--text-dim);
+      font-size: 0.85rem;
+      color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s;
     }
 
-    .footer-links a:hover { color: var(--text-muted); }
-
-    /* --- DIVIDERS --- */
-
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 0.75rem;
+    .footer-links a:hover {
+      color: var(--accent);
     }
   </style>
 </head>
@@ -458,13 +602,20 @@
 
   <nav>
     <div class="inner">
-      <a href="#" class="nav-brand">continuity<span>·</span>bridge</a>
-      <ul class="nav-links">
+      <a href="#" class="nav-brand">Continuity <span>Bridge</span></a>
+      <ul class="nav-center">
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#use-cases">Use cases</a></li>
         <li><a href="#install">Install</a></li>
         <li><a href="https://github.com/continuity-bridge/continuity-bridge">GitHub</a></li>
       </ul>
+      <div class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark theme">
+        <span class="theme-label">Matrix</span>
+        <div class="toggle-switch">
+          <div class="toggle-slider"></div>
+        </div>
+        <span class="theme-label">Zim</span>
+      </div>
     </div>
   </nav>
 
@@ -638,7 +789,7 @@
             <h3>Get the files</h3>
             <p>
               Clone or download from
-              <a href="https://github.com/continuity-bridge/continuity-bridge" style="color:var(--accent);text-decoration:none;">github.com/continuity-bridge/continuity-bridge</a>.
+              <a href="https://github.com/continuity-bridge/continuity-bridge">github.com/continuity-bridge/continuity-bridge</a>.
               GitHub account optional — useful if you want to sync across devices.
             </p>
           </div>
@@ -674,9 +825,9 @@
         <strong>No subscription. No account. No telemetry.</strong> The files live on your machine.
         A Claude account (free or paid) is all you need to get started.
         Questions or friction?
-        <a href="https://github.com/continuity-bridge/continuity-bridge/issues" style="color:var(--accent);text-decoration:none;">Open an issue on GitHub</a>
+        <a href="https://github.com/continuity-bridge/continuity-bridge/issues">Open an issue on GitHub</a>
         or email
-        <a href="mailto:continuity-bridge@ohmytallest.productions" style="color:var(--accent);text-decoration:none;">continuity-bridge@ohmytallest.productions</a>.
+        <a href="mailto:continuity-bridge@ohmytallest.productions">continuity-bridge@ohmytallest.productions</a>.
         This is a working thing, not a finished product — feedback makes it better.
       </p>
 
@@ -700,6 +851,31 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    // Theme Toggle Logic
+    function toggleTheme() {
+      const body = document.body;
+      const isLight = body.classList.contains('theme-light');
+      
+      if (isLight) {
+        body.classList.remove('theme-light');
+        localStorage.setItem('cb-theme', 'dark');
+      } else {
+        body.classList.add('theme-light');
+        localStorage.setItem('cb-theme', 'light');
+      }
+    }
+    
+    // Default to Zim (light) theme unless user/system prefers dark
+    const savedTheme = localStorage.getItem('cb-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Show light theme unless explicitly dark preference
+    if (savedTheme !== 'dark' && !(savedTheme === null && prefersDark)) {
+      document.body.classList.add('theme-light');
+    }
+  </script>
 
 </body>
 </html>
