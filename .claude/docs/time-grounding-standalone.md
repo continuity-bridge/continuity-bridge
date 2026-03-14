@@ -453,7 +453,7 @@ You: Oh right, it's 2 PM
 
 If you use this, let Jerry or Vector know how it works! We want to make it better.
 
-**Email:** [EMAIL_REMOVED]  
+**Email:** ohmytallest@gmail.com  
 **Discord:** uncletallest
 
 ---

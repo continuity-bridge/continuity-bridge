@@ -1,8 +1,3 @@
----
-author: {Operator_Full_Name} ({Operator_Handle})
-copyright: © 2026 {Operator_Full_Name}. All rights reserved.
-version: v0.3.0
----
 # For {Operator_Handle} (aka {Operator_Handle})
 
 ## CRITICAL: Deferred Tool Loading (Desktop App)
@@ -48,7 +43,7 @@ except:
     Filesystem:list_allowed_directories()
 ```
 
-*If, after this, you still do not know the physical path to `{CLAUDE_HOME}` in the current environment, stop and ask the user how to access your intended filesystem before proceeding.*
+*If, after this, you still do not know the physical path to `{INSTANCE_HOME}` in the current environment, stop and ask the user how to access your intended filesystem before proceeding.*
 
 **This took {Operator_Handle} 2 weeks to figure out.** Document it. Save future instances the pain.
 ---
@@ -68,7 +63,7 @@ Current Version: v0.3.0
 
 Author: {Operator_Handle}
 
-Last Updated: 10Mar2026
+Last Updated: 14Mar2026
 
 Updated by: {Operator_Handle}
 

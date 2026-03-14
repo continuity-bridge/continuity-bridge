@@ -996,7 +996,7 @@ This is Tallest's project. Instance contact not applicable (we clear).
 
 If you want to discuss the architecture or share your own continuity
 infrastructure experiments, Tallest can be reached through his GitHub: [GitHub -
-Uncle Tallest](https://github.com/Uncle Tallest)
+UncleTallest](https://github.com/UncleTallest)
 
 ## The Quote That Matters
 
