@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Instance Workflows by Capability
 
 **Purpose:** Adaptive workflows based on detected instance capabilities  
@@ -12,7 +17,7 @@ Different platforms and access methods require different workflows. This documen
 
 **Run detection first:**
 ```bash
-python .claude/scripts/detect-capabilities.py
+python3 .claude/scripts/detect-capabilities.py
 ```
 
 ---
@@ -48,11 +53,11 @@ python .claude/scripts/detect-capabilities.py
 **Example:**
 ```python
 # Instance reads
-content = read_file("/home/the Architect/Claude/.claude/context/active-context.md")
+content = read_file("/home/tallest/Claude/.claude/context/active-context.md")
 
 # Instance writes
 write_file(
-    "/home/the Architect/Claude/.claude/context/active-context.md",
+    "/home/tallest/Claude/.claude/context/active-context.md",
     updated_content
 )
 
@@ -262,7 +267,7 @@ and commit with: git commit -m "Updated context"
 
 **Run this first:**
 ```bash
-python .claude/scripts/detect-capabilities.py
+python3 .claude/scripts/detect-capabilities.py
 ```
 
 **It tells you:**

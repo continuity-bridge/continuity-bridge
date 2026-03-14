@@ -14,13 +14,13 @@ Search and replace the following tags throughout this file:
 |------------|--------------|---------|
 | `[INSTANCE_NAME]` | Instance code/formal name | Vector |
 | `[INSTANCE_TITLE]` | Instance conversational name | Shepard |
-| `[USER_NAME]` | User's preferred name | the Architect |
-| `[USER_FULL_NAME]` | User's full legal name | the Architect |
+| `[USER_NAME]` | User's preferred name | Jerry |
+| `[USER_FULL_NAME]` | User's full legal name | Jerry Jackson |
 | `[USER_DOB]` | User's date of birth | 19Aug1967 |
-| `[USER_LOCATION]` | User's city/state | [USER_LOCATION] |
+| `[USER_LOCATION]` | User's city/state | Austin, Texas |
 | `[USER_DOMAIN]` | User's email domain | ohmytallest.productions |
 | `[HOME_DIR]` | Linux home directory path | /home/username |
-| `[SUPPORT_SERVICE_PROVIDER]` | Housing/support service name | [SUPPORT_SERVICE_PROVIDER] |
+| `[SUPPORT_SERVICE_PROVIDER]` | Housing/support service name | Caritas of Austin |
 
 **Step 2: Remove/customize sensitive sections**
 

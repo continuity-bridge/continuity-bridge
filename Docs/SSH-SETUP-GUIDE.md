@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # SSH Key Setup - Complete Visual Guide
 
 **For Users Who Have Never Done This Before**
@@ -369,7 +374,7 @@ git remote set-url private git@github.com-continuity-bridge:user/repo.git
 
 1. Run preflight checks:
    ```bash
-   python ~/.claude/scripts/preflight.py
+   python3 ~/.claude/scripts/preflight.py
    ```
 
 2. Test git operations:

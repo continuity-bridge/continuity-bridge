@@ -1,30 +1,30 @@
 {
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
   "version": "0.2.0",
   "platform_id": "windows_desktop",
   "note": "Example configuration for Windows desktop systems",
-  
   "paths": {
-    "claude_home": "[CLAUDE_HOME]",
-    "working_dir": "[CLAUDE_HOME]",
-    "vault": "[CLAUDE_HOME]\\.credentials-local"
+    "claude_home": "D:\\Claude",
+    "working_dir": "D:\\Claude",
+    "vault": "D:\\Claude\\.credentials-local"
   },
-  
   "constants": {
     "platform": "windows",
     "shell": "powershell",
     "user_profile": "C:\\Users\\<username>",
     "drive": "D:"
   },
-  
   "services": {
     "ollama_endpoint": "http://localhost:11434"
   },
-  
   "storage": {
     "strategy": "direct_write",
     "note": "Assumes MCP filesystem access or local execution"
   },
-  
   "customization_notes": {
     "paths": "Update drive letter if you use C:\\ or another drive",
     "user_profile": "Replace <username> with your Windows username",

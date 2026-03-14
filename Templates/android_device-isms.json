@@ -1,14 +1,17 @@
 {
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
   "version": "0.2.0",
   "platform_id": "android_device",
   "note": "Example configuration for Android devices (tablets, phones) using Termux",
-  
   "paths": {
     "claude_home": "/sdcard/Platform_Home",
     "working_dir": "/data/data/com.termux/files/home",
     "vault": "/sdcard/Platform_Home/.credentials-local"
   },
-  
   "constants": {
     "platform": "android",
     "shell": "/data/data/com.termux/files/usr/bin/bash",
@@ -16,17 +19,14 @@
     "requires_uri_permissions": true,
     "termux_version": "0.118+"
   },
-  
   "services": {
     "ollama_endpoint": "http://localhost:11434"
   },
-  
   "storage": {
     "strategy": "outputs_bridge",
     "note": "Android typically uses bridge to /mnt/user-data/outputs for cross-device sync",
     "bridge_path": "/mnt/user-data/outputs"
   },
-  
   "android_specifics": {
     "vold_lag": "May need retry logic on cold start (vold daemon lag)",
     "ghost_handles": "Stale file handles after app kill - restart Termux if issues",
@@ -35,7 +35,6 @@
     "package_manager": "pkg",
     "package_install_cmd": "pkg install -y"
   },
-  
   "git_workflow": {
     "recommended": "Clone private repo in Termux home, work there, push to remote",
     "commands": [
@@ -45,7 +44,6 @@
       "# Work normally, commit, push"
     ]
   },
-  
   "customization_notes": {
     "paths": "Platform_Home location may vary - update claude_home to match your setup",
     "termux_home": "Termux work happens in /data/data/com.termux/files/home (internal)",

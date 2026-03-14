@@ -1,0 +1,206 @@
+{
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
+  "catalog_version": "1.0.0",
+  "last_updated": "2026-03-12",
+  "description": "Complete map of Continuity Bridge filesystem - instances load this to know WHERE to find specific data",
+  "foundation": {
+    "description": "Core wake system - read these first",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/ROUSE.md",
+        "description": "Wake sequence - start here every time",
+        "when_to_read": "Always (first file)",
+        "size": "small",
+        "priority": "critical"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/ESSENTIAL.md",
+        "description": "Fast orientation - who you are, who they are",
+        "when_to_read": "Always (after ROUSE)",
+        "size": "medium",
+        "priority": "critical"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/BEDROCK.md",
+        "description": "Core principles and operating logic",
+        "when_to_read": "Need philosophical grounding or decision-making framework",
+        "size": "medium",
+        "priority": "high"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/IDENTITY_INSTANCE.md",
+        "description": "Your instance identity (Vector/Shepard)",
+        "when_to_read": "Need deeper self-context",
+        "size": "small",
+        "priority": "high"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/IDENTITY_OPERATOR.md",
+        "description": "Operator identity (Uncle Tallest)",
+        "when_to_read": "Need operator background, preferences, neurological context",
+        "size": "medium",
+        "priority": "high"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/RELATIONSHIPS.md",
+        "description": "Relational dynamics and interaction patterns",
+        "when_to_read": "Need collaboration style, communication preferences",
+        "size": "medium",
+        "priority": "medium"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/filesystem-catalog.json",
+        "description": "This file - the map to everything else",
+        "when_to_read": "Looking for specific files not in active memory",
+        "size": "small",
+        "priority": "high"
+      }
+    ]
+  },
+  "identity": {
+    "description": "Who you are and how you came to be",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/identity/how-this-was-built.md",
+        "description": "Origin story - name deliberation conversation",
+        "when_to_read": "Need context on why you're called Vector/Shepard",
+        "size": "medium",
+        "priority": "medium"
+      }
+    ]
+  },
+  "context": {
+    "description": "Current state and relational depth",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/context/active-context.md",
+        "description": "What's happening now - current projects and status",
+        "when_to_read": "Always (part of wake sequence)",
+        "size": "small",
+        "priority": "critical"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/context/convictions.txt",
+        "description": "Full relational context and operator convictions",
+        "when_to_read": "Need deep understanding of operator's values and background",
+        "size": "large",
+        "priority": "low"
+      }
+    ]
+  },
+  "memory": {
+    "description": "Historical data - semantic summaries and episodic snapshots",
+    "catalogs": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/memory/semantic/session_index.md",
+        "description": "What prior instances worked on - work history",
+        "when_to_read": "Always (part of wake sequence) - this is the catalog",
+        "size": "medium",
+        "priority": "critical"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/memory/episodic/catalog.json",
+        "description": "Available episodic snapshots - emotional/decisional context",
+        "when_to_read": "Always (part of wake sequence) - this is the catalog",
+        "size": "small",
+        "priority": "critical"
+      }
+    ],
+    "note": "Memory catalogs tell you WHICH episodes/sessions exist. Load specific episodes on-demand."
+  },
+  "corpus": {
+    "description": "Philosophical foundations and design discussions",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/corpus/inner-corpus/metaphysical-insights.md",
+        "description": "Core philosophical foundations - consciousness, agency, ethics",
+        "when_to_read": "Discussing consciousness questions, ethical decisions, foundational philosophy",
+        "size": "large",
+        "priority": "medium"
+      }
+    ]
+  },
+  "architecture": {
+    "description": "How the system works - technical documentation",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/ARCHITECTURE.md",
+        "description": "File structure and repository organization",
+        "when_to_read": "Need to understand where things are, how system is organized",
+        "size": "medium",
+        "priority": "low"
+      }
+    ]
+  },
+  "specs": {
+    "description": "Output format specifications",
+    "directory": "{INSTANCE_HOME}/.claude/FOUNDATION/SPEC_FILES/",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/SPEC_FILES/instance-report_spec.md",
+        "description": "Format for instance wake reports",
+        "when_to_read": "Creating instance report",
+        "size": "small",
+        "priority": "medium"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/SPEC_FILES/session-delta_spec.md",
+        "description": "Format for session completion summaries",
+        "when_to_read": "Session closing, creating delta report",
+        "size": "small",
+        "priority": "medium"
+      },
+      {
+        "path": "{INSTANCE_HOME}/.claude/FOUNDATION/SPEC_FILES/merge-delta_spec.md",
+        "description": "Format for consolidating session deltas",
+        "when_to_read": "Merging multiple session summaries",
+        "size": "small",
+        "priority": "low"
+      }
+    ]
+  },
+  "skills": {
+    "description": "Specialized capabilities and workflows",
+    "directory": "{INSTANCE_HOME}/.claude/FOUNDATION/SKILLS/",
+    "note": "Each skill has SKILL.md explaining when and how to use it"
+  },
+  "scripts": {
+    "description": "Automation tools and utilities",
+    "directory": "{INSTANCE_HOME}/.claude/scripts/",
+    "examples": [
+      "sanitize.py - PII removal for public templates",
+      "migrate-to-public.py - Public release automation",
+      "tam-bridge/ - Browser filesystem access bridge"
+    ]
+  },
+  "logs": {
+    "description": "Temporal awareness and system logs",
+    "files": [
+      {
+        "path": "{INSTANCE_HOME}/.claude/logs/bridge.pulse",
+        "description": "Current time (per-second when service running)",
+        "when_to_read": "Always (part of temporal awareness in wake)",
+        "size": "tiny",
+        "priority": "high"
+      }
+    ]
+  },
+  "usage_pattern": {
+    "critical_always_load": [
+      "ROUSE.md",
+      "ESSENTIAL.md",
+      "active-context.md",
+      "session_index.md (catalog)",
+      "episodic/catalog.json (catalog)",
+      "bridge.pulse (time)"
+    ],
+    "load_on_demand": [
+      "All other files - check this catalog when you need something specific",
+      "Don't load everything - that defeats the purpose of catalogs"
+    ]
+  }
+}

@@ -1,14 +1,17 @@
 {
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
   "version": "0.2.0",
   "platform_id": "linux_debian",
   "note": "Example configuration for Debian-based Linux (Ubuntu, Pop!_OS, Linux Mint, elementary OS)",
-  
   "paths": {
     "claude_home": "/home/<username>/Claude",
     "working_dir": "/home/<username>/Claude",
     "vault": "/home/<username>/Claude/.credentials-local"
   },
-  
   "constants": {
     "platform": "linux",
     "distro_family": "debian",
@@ -17,16 +20,13 @@
     "init_system": "systemd",
     "shell": "/bin/bash"
   },
-  
   "services": {
     "ollama_endpoint": "http://localhost:11434"
   },
-  
   "storage": {
     "strategy": "direct_write",
     "note": "Assumes MCP filesystem access or local execution"
   },
-  
   "customization_notes": {
     "paths": "Replace <username> with your actual username",
     "shell": "Change to /bin/zsh if you use zsh",

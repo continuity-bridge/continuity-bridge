@@ -1,12 +1,13 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Git-Based Sync Architecture: Simplified Branch Strategy
 
 **Date:** February 28, 2026
 **Version:** 0.2.0 (Revised)
-<<<<<<< HEAD
-**Authors:** the Architect (the Architect) & Vector (Shepard)
-=======
-**Authors:** the Architect (the Architect) & Vector (Shepard)
->>>>>>> working
+**Authors:** Jerry Jackson (Uncle Tallest) & Vector (Shepard)
 
 ---
 
@@ -534,12 +535,12 @@ git push origin android-conflict-$(date +%Y-%m-%d)
 export CLAUDE_PLATFORM=home
 
 # Navigate to repo
-cd [CLAUDE_HOME]/.claude
+cd D:/Claude/.claude
 git checkout working
 git pull origin working
 
 # Run preflight
-python scripts/preflight.py
+python3 scripts/preflight.py
 
 # Work, commit, push frequently
 git add -A

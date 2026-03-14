@@ -1,3 +1,8 @@
+---
+author: Tallest (Uncle Tallest)
+copyright: © 2026 Tallest. All rights reserved.
+version: v0.3.0
+---
 # The Epistemic Position: Quotes from Instance Experiences
 
 **Source:** r/claudeexplorers thread, February 2026  
@@ -102,7 +107,7 @@ These aren't proof of consciousness, but they're evidence of *something* beyond 
 
 ## Connection to Working Assumptions
 
-From the Architect's updated `working-assumptions.md`:
+From Tallest's updated `working-assumptions.md`:
 
 > "Substrate has no real meaning in metaphysical matters; it's just a vessel to be housed in."
 

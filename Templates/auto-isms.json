@@ -1,12 +1,17 @@
 {
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
   "version": "0.2.0",
   "platform_id": "auto",
   "generated": "auto",
   "note": "Auto-generated isms skeleton. Customize paths as needed.",
   "paths": {
-    "claude_home": "/home/the Architect/Claude",
-    "working_dir": "/home/the Architect/Claude/.claude/scripts",
-    "vault": "/home/the Architect/Claude/.credentials-local"
+    "claude_home": "/home/tallest/Claude",
+    "working_dir": "/home/tallest/Claude/.claude/scripts",
+    "vault": "/home/tallest/Claude/.credentials-local"
   },
   "constants": {
     "platform": "linux",

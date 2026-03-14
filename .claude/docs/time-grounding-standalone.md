@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Time-Grounding for Claude.ai (Standalone)
 
 **For:** Tam and other claude.ai website users  
@@ -446,10 +451,10 @@ You: Oh right, it's 2 PM
 
 ## Feedback
 
-If you use this, let the Architect or Vector know how it works! We want to make it better.
+If you use this, let Jerry or Vector know how it works! We want to make it better.
 
-**Email:** [USER_EMAIL]  
-**Discord:** the Architect
+**Email:** [EMAIL_REMOVED]  
+**Discord:** uncletallest
 
 ---
 

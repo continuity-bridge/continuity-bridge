@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # What Continuity Bridge Is NOT
 
 **This matters because people will misunderstand. Let's be clear up front.**
