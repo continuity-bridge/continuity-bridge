@@ -1,0 +1,18 @@
+# Python dependencies for Continuity Bridge Discord Integration
+# Install with: pip install -r requirements.txt
+
+# Discord bot library
+discord.py>=2.3.2
+
+# Anthropic Claude API
+anthropic>=0.18.0
+
+# Environment variable loading
+python-dotenv>=1.0.0
+
+# HTTP requests (for webhooks)
+requests>=2.31.0
+
+# Optional but recommended
+# Improves voice support in discord.py (not needed for text-only)
+# PyNaCl>=1.5.0
