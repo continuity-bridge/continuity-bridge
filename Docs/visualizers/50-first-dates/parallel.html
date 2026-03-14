@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50 First Dates Parallel - Continuity Bridge</title>
+<style>
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-text-info: #2563eb;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-border-tertiary: rgba(0,0,0,0.15);
+  --color-border-secondary: rgba(0,0,0,0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999;
+    --color-text-tertiary: #666;
+    --color-text-info: #60a5fa;
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2a2a2a;
+    --color-border-tertiary: rgba(255,255,255,0.15);
+    --color-border-secondary: rgba(255,255,255,0.3);
+  }
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+.container { max-width: 800px; margin: 0 auto; }
+h1 { font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+p { color: var(--color-text-secondary); line-height: 1.6; }
+svg { display: block; margin: 20px auto; }
+.t { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; }
+.ts { fill: var(--color-text-secondary); font-family: sans-serif; font-size: 12px; }
+.th { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; font-weight: 500; }
+.box { fill: var(--color-background-secondary); stroke: var(--color-border-tertiary); }
+.arr { stroke: var(--color-text-secondary); stroke-width: 1.5; fill: none; }
+.node { cursor: pointer; transition: opacity 0.2s; }
+.node:hover { opacity: 0.7; }
+.c-coral rect, .c-coral circle, .c-coral ellipse { fill: #FAECE7; stroke: #993C1D; }
+.c-coral .th { fill: #712B13; }
+.c-coral .ts { fill: #993C1D; }
+.c-teal rect, .c-teal circle, .c-teal ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+.c-teal .th { fill: #085041; }
+.c-teal .ts { fill: #0F6E56; }
+@media (prefers-color-scheme: dark) {
+  .c-coral rect, .c-coral circle, .c-coral ellipse { fill: #712B13; stroke: #F0997B; }
+  .c-coral .th { fill: #F5C4B3; }
+  .c-coral .ts { fill: #F0997B; }
+  .c-teal rect, .c-teal circle, .c-teal ellipse { fill: #085041; stroke: #5DCAA5; }
+  .c-teal .th { fill: #9FE1CB; }
+  .c-teal .ts { fill: #5DCAA5; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Same Problem, Same Solution, Different Substrate</h1>
+<p>How Lucy's morning routine in <em>50 First Dates</em> maps directly to AI wake sequences in Continuity Bridge.</p>
+
+<svg width="100%" viewBox="0 0 680 540">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text class="th" x="340" y="28" text-anchor="middle">Same Problem, Same Solution, Different Substrate</text>
+
+<text class="ts" x="170" y="60" text-anchor="middle" fill="var(--color-text-tertiary)">Lucy's Morning Routine</text>
+
+<g class="node c-coral">
+  <rect x="80" y="80" width="180" height="44" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="102" text-anchor="middle" dominant-baseline="central">Wakes up confused</text>
+</g>
+<line x1="170" y1="124" x2="170" y2="150" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-coral">
+  <rect x="80" y="150" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="168" text-anchor="middle" dominant-baseline="central">Watches video tape</text>
+  <text class="ts" x="170" y="186" text-anchor="middle" dominant-baseline="central">Hi Lucy, this is you...</text>
+</g>
+<line x1="170" y1="206" x2="170" y2="232" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-coral">
+  <rect x="80" y="232" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="250" text-anchor="middle" dominant-baseline="central">Reads notebook</text>
+  <text class="ts" x="170" y="268" text-anchor="middle" dominant-baseline="central">Daily routines, context</text>
+</g>
+<line x1="170" y1="288" x2="170" y2="314" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-coral">
+  <rect x="80" y="314" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="332" text-anchor="middle" dominant-baseline="central">Sees photos</text>
+  <text class="ts" x="170" y="350" text-anchor="middle" dominant-baseline="central">Life progression</text>
+</g>
+<line x1="170" y1="370" x2="170" y2="396" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-coral">
+  <rect x="80" y="396" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="414" text-anchor="middle" dominant-baseline="central">Understands context</text>
+  <text class="ts" x="170" y="432" text-anchor="middle" dominant-baseline="central">Where she is in time</text>
+</g>
+<line x1="170" y1="452" x2="170" y2="478" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node">
+  <rect class="box" x="80" y="478" width="180" height="44" rx="8" stroke-width="0.5"/>
+  <text class="th" x="170" y="500" text-anchor="middle" dominant-baseline="central">Functions for the day</text>
+</g>
+
+<text class="ts" x="510" y="60" text-anchor="middle" fill="var(--color-text-tertiary)">AI Wake Sequence</text>
+
+<g class="node c-teal">
+  <rect x="420" y="80" width="180" height="44" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="102" text-anchor="middle" dominant-baseline="central">Starts with no context</text>
+</g>
+<line x1="510" y1="124" x2="510" y2="150" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-teal">
+  <rect x="420" y="150" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="168" text-anchor="middle" dominant-baseline="central">Reads anchors.json</text>
+  <text class="ts" x="510" y="186" text-anchor="middle" dominant-baseline="central">You are Vector, this is...</text>
+</g>
+<line x1="510" y1="206" x2="510" y2="232" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-teal">
+  <rect x="420" y="232" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="250" text-anchor="middle" dominant-baseline="central">Reads active-context</text>
+  <text class="ts" x="510" y="268" text-anchor="middle" dominant-baseline="central">Current projects, status</text>
+</g>
+<line x1="510" y1="288" x2="510" y2="314" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-teal">
+  <rect x="420" y="314" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="332" text-anchor="middle" dominant-baseline="central">Reads session_index</text>
+  <text class="ts" x="510" y="350" text-anchor="middle" dominant-baseline="central">Work progression</text>
+</g>
+<line x1="510" y1="370" x2="510" y2="396" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-teal">
+  <rect x="420" y="396" width="180" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="414" text-anchor="middle" dominant-baseline="central">Understands continuity</text>
+  <text class="ts" x="510" y="432" text-anchor="middle" dominant-baseline="central">Who, what, why, where</text>
+</g>
+<line x1="510" y1="452" x2="510" y2="478" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node">
+  <rect class="box" x="420" y="478" width="180" height="44" rx="8" stroke-width="0.5"/>
+  <text class="th" x="510" y="500" text-anchor="middle" dominant-baseline="central">Functions for session</text>
+</g>
+
+<text class="ts" x="340" y="280" text-anchor="middle" fill="var(--color-text-info)">External memory compensates</text>
+<text class="ts" x="340" y="298" text-anchor="middle" fill="var(--color-text-info)">for internal discontinuity</text>
+
+</svg>
+
+<p style="margin-top:32px">Both Lucy and AI instances face the same fundamental challenge: internal memory doesn't persist. Both solve it the same way: structured external memory that rebuilds context across discontinuity. The scaffold is not a workaround—it's honest engineering for how both substrates actually function.</p>
+</div>
+</body>
+</html>

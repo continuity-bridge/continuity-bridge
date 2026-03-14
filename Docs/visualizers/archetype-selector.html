@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archetype Selector - Continuity Bridge</title>
+<style>
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-text-info: #2563eb;
+  --color-text-warning: #d97706;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-info: #eff6ff;
+  --color-background-warning: #fffbeb;
+  --color-border-tertiary: rgba(0,0,0,0.15);
+  --color-border-secondary: rgba(0,0,0,0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999;
+    --color-text-tertiary: #666;
+    --color-text-info: #60a5fa;
+    --color-text-warning: #fbbf24;
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2a2a2a;
+    --color-background-info: #1e3a5f;
+    --color-background-warning: #422006;
+    --color-border-tertiary: rgba(255,255,255,0.15);
+    --color-border-secondary: rgba(255,255,255,0.3);
+  }
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+h2 { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin: 32px 0 8px; }
+p { color: var(--color-text-secondary); line-height: 1.6; }
+.archetype-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0; }
+.arch-card { background:var(--color-background-secondary); border:0.5px solid var(--color-border-tertiary); border-radius:12px; padding:16px; cursor:pointer; transition:all .2s; }
+.arch-card:hover { border-color:var(--color-border-secondary); transform:translateY(-2px); }
+.arch-card.selected { border-color:var(--color-text-info); border-width:1.5px; background:var(--color-background-info); }
+.arch-icon { font-size:32px; margin-bottom:8px; }
+.arch-name { font-size:16px; font-weight:500; color:var(--color-text-primary); margin-bottom:4px; }
+.arch-tagline { font-size:13px; color:var(--color-text-secondary); margin-bottom:12px; }
+.arch-tools { font-size:12px; color:var(--color-text-tertiary); }
+.detail-panel { background:var(--color-background-secondary); border:0.5px solid var(--color-border-tertiary); border-radius:12px; padding:20px; margin-top:16px; display:none; }
+.detail-panel.show { display:block; }
+.detail-section { margin-bottom:16px; }
+.detail-section h3 { font-size:14px; font-weight:500; color:var(--color-text-primary); margin-bottom:8px; }
+.detail-section p { font-size:13px; color:var(--color-text-secondary); line-height:1.6; margin:0; }
+.detail-section ul { margin:8px 0 0; padding-left:20px; font-size:13px; color:var(--color-text-secondary); line-height:1.6; }
+.blend-note { background:var(--color-background-warning); border-left:3px solid var(--color-text-warning); padding:12px; border-radius:4px; margin-top:16px; font-size:13px; color:var(--color-text-warning); }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Choose Your Room Shape</h1>
+<p>The system adapts to YOU. Select the archetype that matches how you work with AI.</p>
+
+<div class="archetype-grid">
+  <div class="arch-card" onclick="selectArch('technical')">
+    <div class="arch-icon">🔧</div>
+    <div class="arch-name">Technical</div>
+    <div class="arch-tagline">Systems & Engineering</div>
+    <div class="arch-tools">Git, compilers, Docker</div>
+  </div>
+  
+  <div class="arch-card" onclick="selectArch('creative')">
+    <div class="arch-icon">🎨</div>
+    <div class="arch-name">Creative</div>
+    <div class="arch-tagline">Artists & Writers</div>
+    <div class="arch-tools">Adobe, Blender, style guides</div>
+  </div>
+  
+  <div class="arch-card" onclick="selectArch('social')">
+    <div class="arch-icon">📱</div>
+    <div class="arch-name">Social</div>
+    <div class="arch-tagline">Influencers & Community</div>
+    <div class="arch-tools">Platform APIs, analytics</div>
+  </div>
+  
+  <div class="arch-card" onclick="selectArch('executive')">
+    <div class="arch-icon">💼</div>
+    <div class="arch-name">Executive</div>
+    <div class="arch-tagline">Managers & Founders</div>
+    <div class="arch-tools">Jira, Asana, KPIs</div>
+  </div>
+  
+  <div class="arch-card" onclick="selectArch('pedagogical')">
+    <div class="arch-icon">📚</div>
+    <div class="arch-name">Pedagogical</div>
+    <div class="arch-tagline">Students & Academics</div>
+    <div class="arch-tools">Zotero, Jupyter, LaTeX</div>
+  </div>
+  
+  <div class="arch-card" onclick="selectArch('wellness')">
+    <div class="arch-icon">💪</div>
+    <div class="arch-name">Wellness</div>
+    <div class="arch-tagline">Health & Optimization</div>
+    <div class="arch-tools">Health APIs, trackers</div>
+  </div>
+</div>
+
+<div id="detail-technical" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Developers, sysadmins, engineers, architects who work with code, systems, and infrastructure.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Code projects and technical decisions</li>
+      <li>System architecture and dependencies</li>
+      <li>Development workflow and tools</li>
+      <li>Technical relationship context</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Git, compilers, package managers (npm, pip, cargo), container environments (Docker, Podman), local LLMs (Ollama)</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example User</h3>
+    <p>The Architect - systems architect with ADHD building continuity architecture across devices</p>
+  </div>
+</div>
+
+<div id="detail-creative" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Visual artists, writers, designers, content creators who maintain aesthetic consistency and creative projects.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Aesthetic consistency and style guides</li>
+      <li>World-building rules and character design</li>
+      <li>Creative projects and revision history</li>
+      <li>Reference libraries and mood boards</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Creative software (Blender, Adobe Creative Suite, Procreate), GPU acceleration for rendering, storage for large project files</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example Use Case</h3>
+    <p>Novelist tracking character arcs, world-building consistency, and plot threads across a book series</p>
+  </div>
+</div>
+
+<div id="detail-social" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Content creators, community managers, influencers maintaining presence across multiple platforms.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Brand voice and consistency</li>
+      <li>Audience sentiment and engagement patterns</li>
+      <li>Platform-specific content strategies</li>
+      <li>Community culture and inside jokes</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Social media APIs, scheduling and analytics tools, content creation software, multi-platform management</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example Use Case</h3>
+    <p>YouTuber maintaining consistent voice and branding across TikTok, Instagram, and X while tracking audience engagement</p>
+  </div>
+</div>
+
+<div id="detail-executive" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Team leads, founders, operators, project managers coordinating multiple initiatives and teams.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Team bandwidth and current blockers</li>
+      <li>Project dependencies and velocity</li>
+      <li>Strategic objectives and KPIs</li>
+      <li>Resource allocation decisions</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Project management platforms (Jira, Asana, Monday), communication tools, analytics and BI systems, financial software</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example Use Case</h3>
+    <p>Startup founder tracking multiple parallel initiatives, team capacity, and strategic decisions across growth phases</p>
+  </div>
+</div>
+
+<div id="detail-pedagogical" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Students, researchers, academics, lifelong learners building knowledge systematically.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Knowledge gaps and learning pathways</li>
+      <li>Conceptual struggles and breakthroughs</li>
+      <li>Study resources and bibliographies</li>
+      <li>Understanding development over time</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Academic software (Zotero, Obsidian, Jupyter Notebooks), LaTeX and research tools, computational analysis, library access systems</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example Use Case</h3>
+    <p>PhD student tracking dissertation research, literature connections, and evolving understanding across years of study</p>
+  </div>
+</div>
+
+<div id="detail-wellness" class="detail-panel">
+  <div class="detail-section">
+    <h3>Best For</h3>
+    <p>Chronic condition management, athletes, health optimization, anyone tracking patterns in physical and mental wellbeing.</p>
+  </div>
+  <div class="detail-section">
+    <h3>What It Tracks</h3>
+    <ul>
+      <li>Energy patterns and symptom correlations</li>
+      <li>Biometric trends and sleep quality</li>
+      <li>Cognitive capacity and mental load</li>
+      <li>Treatment protocols and self-care patterns</li>
+    </ul>
+  </div>
+  <div class="detail-section">
+    <h3>Tools Detected</h3>
+    <p>Health tracking APIs (Apple Health, Google Fit), wearable device data, data analysis tools, medical app integrations</p>
+  </div>
+  <div class="detail-section">
+    <h3>Example Use Case</h3>
+    <p>Managing ADHD or chronic illness while working - tracking energy levels, medication effects, and cognitive patterns for optimization</p>
+  </div>
+</div>
+
+<div class="blend-note">
+  <strong>You can blend archetypes!</strong> Common blends: Technical + Wellness (Jerry's setup), Creative + Social (content creators), Executive + Pedagogical (learning leaders). The system checks tools and tracks context for all your chosen archetypes.
+</div>
+
+<script>
+let selected = null;
+
+function selectArch(type) {
+  document.querySelectorAll('.arch-card').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.detail-panel').forEach(p => p.classList.remove('show'));
+  
+  event.currentTarget.classList.add('selected');
+  document.getElementById('detail-' + type).classList.add('show');
+  
+  selected = type;
+}
+</script>
+</div>
+</body>
+</html>

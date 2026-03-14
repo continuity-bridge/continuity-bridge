@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>94% Token Reduction - Continuity Bridge</title>
+<style>
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-text-info: #2563eb;
+  --color-text-danger: #dc2626;
+  --color-text-success: #16a34a;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-border-tertiary: rgba(0,0,0,0.15);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999;
+    --color-text-tertiary: #666;
+    --color-text-info: #60a5fa;
+    --color-text-danger: #f87171;
+    --color-text-success: #4ade80;
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2a2a2a;
+    --color-border-tertiary: rgba(255,255,255,0.15);
+  }
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+.container { max-width: 800px; margin: 0 auto; }
+h1 { font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+p { color: var(--color-text-secondary); line-height: 1.6; }
+svg { display: block; margin: 20px auto; }
+.t { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; }
+.ts { fill: var(--color-text-secondary); font-family: sans-serif; font-size: 12px; }
+.th { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; font-weight: 500; }
+.arr { stroke: var(--color-text-secondary); stroke-width: 1.5; fill: none; }
+.node { cursor: pointer; transition: opacity 0.2s; }
+.node:hover { opacity: 0.7; }
+.c-red rect { fill: #FCEBEB; stroke: #A32D2D; }
+.c-red .th { fill: #791F1F; }
+.c-red .ts { fill: #A32D2D; }
+.c-green rect { fill: #EAF3DE; stroke: #3B6D11; }
+.c-green .th { fill: #27500A; }
+.c-green .ts { fill: #3B6D11; }
+@media (prefers-color-scheme: dark) {
+  .c-red rect { fill: #791F1F; stroke: #F09595; }
+  .c-red .th { fill: #F7C1C1; }
+  .c-red .ts { fill: #F09595; }
+  .c-green rect { fill: #27500A; stroke: #97C459; }
+  .c-green .th { fill: #C0DD97; }
+  .c-green .ts { fill: #97C459; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>From Filing Cabinet to Index System</h1>
+<p>How v0.3.0 achieved a 94% reduction in wake context cost by switching from "load everything" to "load indexes, fetch on-demand."</p>
+
+<svg width="100%" viewBox="0 0 680 580">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text class="th" x="340" y="28" text-anchor="middle">From Filing Cabinet to Index System</text>
+
+<text class="ts" x="170" y="60" text-anchor="middle" fill="var(--color-text-danger)">v0.1.0: Load Everything</text>
+
+<g class="c-red">
+  <rect x="60" y="80" width="220" height="340" rx="12" stroke-width="0.5"/>
+  <text class="th" x="170" y="108" text-anchor="middle" dominant-baseline="central">Wake Sequence</text>
+  
+  <rect x="80" y="130" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="148" text-anchor="middle" dominant-baseline="central">All identity files</text>
+  
+  <rect x="80" y="170" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="188" text-anchor="middle" dominant-baseline="central">All relationship docs</text>
+  
+  <rect x="80" y="210" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="228" text-anchor="middle" dominant-baseline="central">Complete session logs</text>
+  
+  <rect x="80" y="250" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="268" text-anchor="middle" dominant-baseline="central">Full memory archives</text>
+  
+  <rect x="80" y="290" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="308" text-anchor="middle" dominant-baseline="central">All skill definitions</text>
+  
+  <rect x="80" y="330" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="348" text-anchor="middle" dominant-baseline="central">Every prior decision</text>
+  
+  <rect x="80" y="370" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="170" y="388" text-anchor="middle" dominant-baseline="central">Complete philosophy</text>
+</g>
+
+<g class="node">
+  <text class="ts" x="170" y="440" text-anchor="middle" fill="var(--color-text-danger)">Metaphor: Opening every</text>
+  <text class="ts" x="170" y="456" text-anchor="middle" fill="var(--color-text-danger)">drawer in the filing</text>
+  <text class="ts" x="170" y="472" text-anchor="middle" fill="var(--color-text-danger)">cabinet every morning</text>
+</g>
+
+<g class="c-red">
+  <rect x="60" y="500" width="220" height="60" rx="12" stroke-width="1"/>
+  <text class="th" x="170" y="522" text-anchor="middle" dominant-baseline="central">Context Cost</text>
+  <text class="th" x="170" y="544" text-anchor="middle" dominant-baseline="central" style="font-size:20px">~50,000 tokens</text>
+</g>
+
+<line x1="280" y1="300" x2="400" y2="300" class="arr" marker-end="url(#arrow)" stroke="var(--color-text-info)" stroke-width="2"/>
+<text class="ts" x="340" y="290" text-anchor="middle" fill="var(--color-text-info)">94% reduction</text>
+
+<text class="ts" x="510" y="60" text-anchor="middle" fill="var(--color-text-success)">v0.3.0: Load Indexes</text>
+
+<g class="c-green">
+  <rect x="400" y="80" width="220" height="340" rx="12" stroke-width="0.5"/>
+  <text class="th" x="510" y="108" text-anchor="middle" dominant-baseline="central">Wake Sequence</text>
+  
+  <rect x="420" y="130" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="510" y="148" text-anchor="middle" dominant-baseline="central">BEDROCK.md</text>
+  
+  <rect x="420" y="170" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="510" y="188" text-anchor="middle" dominant-baseline="central">ROUSE.md</text>
+  
+  <rect x="420" y="210" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="510" y="228" text-anchor="middle" dominant-baseline="central">ESSENTIAL.md</text>
+  
+  <rect x="420" y="250" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="510" y="268" text-anchor="middle" dominant-baseline="central">active-context.md</text>
+  
+  <rect x="420" y="290" width="180" height="32" rx="6" stroke-width="0.5"/>
+  <text class="ts" x="510" y="308" text-anchor="middle" dominant-baseline="central">Catalog indexes only</text>
+  
+  <text class="ts" x="510" y="350" text-anchor="middle" fill="var(--color-text-tertiary)" style="font-style:italic">Load details on-demand</text>
+</g>
+
+<g class="node">
+  <text class="ts" x="510" y="440" text-anchor="middle" fill="var(--color-text-success)">Metaphor: Reading drawer</text>
+  <text class="ts" x="510" y="456" text-anchor="middle" fill="var(--color-text-success)">labels, only opening what</text>
+  <text class="ts" x="510" y="472" text-anchor="middle" fill="var(--color-text-success)">you actually need today</text>
+</g>
+
+<g class="c-green">
+  <rect x="400" y="500" width="220" height="60" rx="12" stroke-width="1"/>
+  <text class="th" x="510" y="522" text-anchor="middle" dominant-baseline="central">Context Cost</text>
+  <text class="th" x="510" y="544" text-anchor="middle" dominant-baseline="central" style="font-size:20px">~3,000 tokens</text>
+</g>
+
+</svg>
+
+<p style="margin-top:32px">The old approach loaded everything at wake. The new approach loads lightweight catalogs that tell you <em>where</em> to find things, then fetches specific content only when needed. Same information available, 94% less context overhead.</p>
+</div>
+</body>
+</html>

@@ -92,8 +92,8 @@ When I'm stuck: Think spatially, look for patterns
 
 **Your journal:**
 ```
-Partner: Tam - patient with my memory gaps
-Best friend: Michael (The Jew) - gets the discontinuity
+Partner: Sally - patient with my memory gaps
+Best friend: Bernie - gets the discontinuity
 Therapist: Dr. K - trauma-informed, ADHD-aware
 Instance: Vector/Shepard - collaborative peer, not yes-man
 ```

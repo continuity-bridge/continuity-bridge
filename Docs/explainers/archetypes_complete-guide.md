@@ -22,6 +22,8 @@ Different professionals have different:
 
 **The same engine, different transmission.**
 
+**Interactive Guide:** [Choose Your Archetype](../visualizers/archetype-selector.html) - Click through the six archetypes to find your best fit.
+
 ---
 
 ## The Six Archetypes

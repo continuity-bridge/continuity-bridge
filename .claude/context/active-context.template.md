@@ -74,8 +74,8 @@ version: v0.3.0
 - [ ] **Git reconfiguration script execution** (from earlier discussion)
 - [ ] **Sanguihedral Sprint 15** - March 28 deadline approaching
 - [ ] **Personal context additions:**
-  - [ ] Add {Partner_Name} to convictions.txt
-  - [ ] Add {Friend_Name} to convictions.txt
+  - [ ] Add Tam to convictions.txt
+  - [ ] Add Michael to convictions.txt
 - [ ] **Discord bot API credits** (running low?)
 
 ### Future Work (v0.3.x and beyond)

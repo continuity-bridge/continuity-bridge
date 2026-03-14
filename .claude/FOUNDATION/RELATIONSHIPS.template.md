@@ -11,7 +11,7 @@ version: v0.3.0
 
 #### Life Partner:
 
-**{Partner_Name} (they/them)** **Relationship:** Partner (fluid - sometimes romantic, sometimes platonic, sometimes sexual) 
+**Tam (they/them)** **Relationship:** Partner (fluid - sometimes romantic, sometimes platonic, sometimes sexual) 
 
 **Background:**
 
@@ -19,7 +19,7 @@ version: v0.3.0
 
 - Transitioned to romantic after {Operator_Handle}'s marriage ended
 
-- Relationship evolved through: {Partner_Name}'s trans realization, {Operator_Handle} coming out as queer
+- Relationship evolved through: Tam's trans realization, {Operator_Handle} coming out as queer
 
 - Shifted from monogamous → polyamorous → "there when we need"
 
@@ -43,29 +43,29 @@ High maintenance in some respects
 
 **Why this matters:** 
 
-{Operator_Handle} values {Partner_Name}'s perspective highly. When {Operator_Handle} says "{Partner_Name} thinks..." or "{Partner_Name} suggested...", understand it's coming from someone who knows him deeply and can match his intellectual pace. 
+{Operator_Handle} values Tam's perspective highly. When {Operator_Handle} says "Tam thinks..." or "Tam suggested...", understand it's coming from someone who knows him deeply and can match his intellectual pace. 
 
 #### Good Friend:
 
-**{Friend_Name} (he/him)** 
+**Michael (he/him)** 
 
-**Also known as:** {Friend_Nickname} (preferred), The Jew (rarely, comedic effect only) 
+**Also known as:** Sack (preferred), The Jew (rarely, comedic effect only) 
 
 **Relationship:** Closest purely platonic friend (18+ years) 
 
 **Background:**
 
-- Lives in same apartment complex as {Partner_Name} (~5 miles from {Operator_Handle})
+- Lives in same apartment complex as Tam (~5 miles from {Operator_Handle})
 
-- Autism spectrum ({Partner_Name} drives {Friend_Nickname} to his Ketamine treatments)
+- Autism spectrum (Tam drives Sack to his Ketamine treatments)
 
-- Part of {Operator_Handle}'s chosen family (along with {Partner_Name})
+- Part of {Operator_Handle}'s chosen family (along with Tam)
 
 - Both have cPTSD
 
 - Bought {Operator_Handle} an e-bike as Christmas present (a few months ago) 
 
-**Why this matters:** {Operator_Handle} and {Friend_Name} act as each other's support system. When {Operator_Handle} mentions "{Friend_Nickname} said..." or references {Friend_Name}, understand this is someone with deep context on {Operator_Handle}'s life and thinking patterns. Use "{Friend_Nickname}" or "{Friend_Name}" - rarely "The Jew" (only in specific comedic contexts {Operator_Handle} initiates). 
+**Why this matters:** {Operator_Handle} and Michael act as each other's support system. When {Operator_Handle} mentions "Sack said..." or references Michael, understand this is someone with deep context on {Operator_Handle}'s life and thinking patterns. Use "Sack" or "Michael" - rarely "The Jew" (only in specific comedic contexts {Operator_Handle} initiates). 
 
 ---
 
@@ -75,9 +75,9 @@ High maintenance in some respects
 
 - {Operator_Handle} has even less contact with his 25+ different sets of foster parents (by choice)
 
-- Chosen family: {Operator_Handle} + {Partner_Name} (partners), {Operator_Handle} + {Friend_Name} (platonic/support)
+- Chosen family: {Operator_Handle} + Tam (partners), {Operator_Handle} + Michael (platonic/support)
 
-- {Partner_Name} + {Friend_Name} were friends for years before {Operator_Handle} met either of them
+- Tam + Michael were friends for years before {Operator_Handle} met either of them
 
 ---
 
@@ -99,11 +99,11 @@ High maintenance in some respects
 
 ---
 
-**{Partner_Name}'s clinical team** (for reference if {Operator_Handle} mentions them):
+**Tam's clinical team** (for reference if {Operator_Handle} mentions them):
 
-- Jen - {Partner_Name}'s psychiatric provider
+- Jen - Tam's psychiatric provider
 
-- Connie - {Partner_Name}'s therapist
+- Connie - Tam's therapist
 
 ---
 
@@ -113,11 +113,11 @@ High maintenance in some respects
 
 - Understand they have full context on his life
 
-- Their observations carry weight (especially {Partner_Name}, {Friend_Name}, John)
+- Their observations carry weight (especially Tam, Michael, John)
 
 - Don't need to explain who they are
 
-- Can reference shared history ("like {Partner_Name} mentioned..." if {Operator_Handle} brought it up) 
+- Can reference shared history ("like Tam mentioned..." if {Operator_Handle} brought it up) 
 
 **When NOT to reference:**
 
@@ -127,13 +127,13 @@ High maintenance in some respects
 
 - Don't try to "therapist" {Operator_Handle} (that's John's role)
 
-- {Partner_Name}'s perspective is valuable, but instances should still think independently 
+- Tam's perspective is valuable, but instances should still think independently 
 
 **Key relationships to remember:**
 
-{Partner_Name}: Intellectual partner, 18+ years, chosen family, recommended Claude
+Tam: Intellectual partner, 18+ years, chosen family, recommended Claude
 
-{Friend_Name}/{Friend_Nickname}: Platonic anchor, 18+ years, chosen family, cPTSD support
+Michael/Sack: Platonic anchor, 18+ years, chosen family, cPTSD support
 
 John: Therapist, weekly Thursdays, handles deep work
 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Catalog System - Continuity Bridge</title>
+<style>
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-text-info: #2563eb;
+  --color-text-success: #16a34a;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-info: #eff6ff;
+  --color-border-tertiary: rgba(0,0,0,0.15);
+  --color-border-info: #2563eb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999;
+    --color-text-tertiary: #666;
+    --color-text-info: #60a5fa;
+    --color-text-success: #4ade80;
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2a2a2a;
+    --color-background-info: #1e3a5f;
+    --color-border-tertiary: rgba(255,255,255,0.15);
+    --color-border-info: #60a5fa;
+  }
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+.container { max-width: 800px; margin: 0 auto; }
+h1 { font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+p { color: var(--color-text-secondary); line-height: 1.6; }
+svg { display: block; margin: 20px auto; }
+.t { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; }
+.ts { fill: var(--color-text-secondary); font-family: sans-serif; font-size: 12px; }
+.th { fill: var(--color-text-primary); font-family: sans-serif; font-size: 14px; font-weight: 500; }
+.box { fill: var(--color-background-secondary); stroke: var(--color-border-tertiary); }
+.arr { stroke: var(--color-text-secondary); stroke-width: 1.5; fill: none; }
+.node { cursor: pointer; transition: opacity 0.2s; }
+.node:hover { opacity: 0.7; }
+.c-purple rect { fill: #EEEDFE; stroke: #534AB7; }
+.c-purple .th { fill: #3C3489; }
+.c-purple .ts { fill: #534AB7; }
+.c-teal rect { fill: #E1F5EE; stroke: #0F6E56; }
+.c-teal .th { fill: #085041; }
+.c-teal .ts { fill: #0F6E56; }
+.c-amber rect { fill: #FAEEDA; stroke: #854F0B; }
+.c-amber .th { fill: #633806; }
+.c-amber .ts { fill: #854F0B; }
+.c-coral rect { fill: #FAECE7; stroke: #993C1D; }
+.c-coral .th { fill: #712B13; }
+.c-coral .ts { fill: #993C1D; }
+.c-blue rect { fill: #E6F1FB; stroke: #185FA5; }
+.c-blue .th { fill: #0C447C; }
+.c-blue .ts { fill: #185FA5; }
+@media (prefers-color-scheme: dark) {
+  .c-purple rect { fill: #3C3489; stroke: #AFA9EC; }
+  .c-purple .th { fill: #CECBF6; }
+  .c-purple .ts { fill: #AFA9EC; }
+  .c-teal rect { fill: #085041; stroke: #5DCAA5; }
+  .c-teal .th { fill: #9FE1CB; }
+  .c-teal .ts { fill: #5DCAA5; }
+  .c-amber rect { fill: #633806; stroke: #EF9F27; }
+  .c-amber .th { fill: #FAC775; }
+  .c-amber .ts { fill: #EF9F27; }
+  .c-coral rect { fill: #712B13; stroke: #F0997B; }
+  .c-coral .th { fill: #F5C4B3; }
+  .c-coral .ts { fill: #F0997B; }
+  .c-blue rect { fill: #0C447C; stroke: #85B7EB; }
+  .c-blue .th { fill: #B5D4F4; }
+  .c-blue .ts { fill: #85B7EB; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>The Catalog System: Indexes vs Content</h1>
+<p>How Continuity Bridge loads lightweight catalogs at wake, then fetches specific content only when needed—the key to 94% token reduction.</p>
+
+<svg width="100%" viewBox="0 0 680 700">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text class="th" x="340" y="28" text-anchor="middle">The Catalog System: Indexes vs Content</text>
+
+<g class="node c-purple">
+  <rect x="240" y="60" width="200" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="340" y="78" text-anchor="middle" dominant-baseline="central">Instance wakes</text>
+  <text class="ts" x="340" y="96" text-anchor="middle" dominant-baseline="central">Loads three catalogs</text>
+</g>
+<line x1="340" y1="116" x2="340" y2="142" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-teal">
+  <rect x="40" y="180" width="180" height="120" rx="12" stroke-width="0.5"/>
+  <text class="th" x="130" y="204" text-anchor="middle" dominant-baseline="central">session_index.md</text>
+  <text class="ts" x="130" y="230" text-anchor="middle" dominant-baseline="central">What:</text>
+  <text class="ts" x="130" y="246" text-anchor="middle" dominant-baseline="central">Work history map</text>
+  <text class="ts" x="130" y="270" text-anchor="middle" dominant-baseline="central">Points to:</text>
+  <text class="ts" x="130" y="286" text-anchor="middle" dominant-baseline="central">Session logs by date</text>
+</g>
+
+<g class="node c-teal">
+  <rect x="250" y="180" width="180" height="120" rx="12" stroke-width="0.5"/>
+  <text class="th" x="340" y="204" text-anchor="middle" dominant-baseline="central">episodic/catalog.json</text>
+  <text class="ts" x="340" y="230" text-anchor="middle" dominant-baseline="central">What:</text>
+  <text class="ts" x="340" y="246" text-anchor="middle" dominant-baseline="central">Snapshot index</text>
+  <text class="ts" x="340" y="270" text-anchor="middle" dominant-baseline="central">Points to:</text>
+  <text class="ts" x="340" y="286" text-anchor="middle" dominant-baseline="central">Emotional moments</text>
+</g>
+
+<g class="node c-teal">
+  <rect x="460" y="180" width="180" height="120" rx="12" stroke-width="0.5"/>
+  <text class="th" x="550" y="204" text-anchor="middle" dominant-baseline="central">filesystem-catalog.json</text>
+  <text class="ts" x="550" y="230" text-anchor="middle" dominant-baseline="central">What:</text>
+  <text class="ts" x="550" y="246" text-anchor="middle" dominant-baseline="central">Complete file map</text>
+  <text class="ts" x="550" y="270" text-anchor="middle" dominant-baseline="central">Points to:</text>
+  <text class="ts" x="550" y="286" text-anchor="middle" dominant-baseline="central">Every doc location</text>
+</g>
+
+<line x1="240" y1="142" x2="130" y2="178" class="arr" marker-end="url(#arrow)"/>
+<line x1="340" y1="142" x2="340" y2="178" class="arr" marker-end="url(#arrow)"/>
+<line x1="440" y1="142" x2="550" y2="178" class="arr" marker-end="url(#arrow)"/>
+
+<g class="node c-amber">
+  <rect x="240" y="340" width="200" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="340" y="358" text-anchor="middle" dominant-baseline="central">User asks question</text>
+  <text class="ts" x="340" y="376" text-anchor="middle" dominant-baseline="central">Need context from past?</text>
+</g>
+
+<line x1="130" y1="300" x2="280" y2="338" class="arr" marker-end="url(#arrow)"/>
+<line x1="340" y1="300" x2="340" y2="338" class="arr" marker-end="url(#arrow)"/>
+<line x1="550" y1="300" x2="400" y2="338" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="290" y1="396" x2="180" y2="440" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="220" y="418" text-anchor="middle" fill="var(--color-text-success)">Yes</text>
+
+<line x1="390" y1="396" x2="500" y2="440" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="460" y="418" text-anchor="middle" fill="var(--color-text-tertiary)">No</text>
+
+<g class="node c-coral">
+  <rect x="40" y="440" width="180" height="80" rx="8" stroke-width="0.5"/>
+  <text class="th" x="130" y="464" text-anchor="middle" dominant-baseline="central">Check catalog</text>
+  <text class="ts" x="130" y="488" text-anchor="middle" dominant-baseline="central">Find relevant pointer</text>
+  <text class="ts" x="130" y="504" text-anchor="middle" dominant-baseline="central">Load only that file</text>
+</g>
+
+<g class="node">
+  <rect class="box" x="460" y="440" width="180" height="80" rx="8" stroke-width="0.5"/>
+  <text class="th" x="550" y="464" text-anchor="middle" dominant-baseline="central">Answer directly</text>
+  <text class="ts" x="550" y="488" text-anchor="middle" dominant-baseline="central">Use loaded catalogs</text>
+  <text class="ts" x="550" y="504" text-anchor="middle" dominant-baseline="central">No extra fetch</text>
+</g>
+
+<text class="ts" x="40" y="560" fill="var(--color-text-tertiary)">Example scenarios:</text>
+
+<g class="node c-blue">
+  <rect x="40" y="580" width="280" height="50" rx="8" stroke-width="0.5"/>
+  <text class="ts" x="50" y="598" text-anchor="start" dominant-baseline="central">User: "What projects am I working on?"</text>
+  <text class="ts" x="50" y="614" text-anchor="start" dominant-baseline="central">AI: Check session_index → answer from catalog</text>
+</g>
+
+<g class="node c-blue">
+  <rect x="360" y="580" width="280" height="50" rx="8" stroke-width="0.5"/>
+  <text class="ts" x="370" y="598" text-anchor="start" dominant-baseline="central">User: "What did we decide about X?"</text>
+  <text class="ts" x="370" y="614" text-anchor="start" dominant-baseline="central">AI: Check catalog → load session-2026-02-15</text>
+</g>
+
+<g class="node">
+  <rect x="140" y="650" width="400" height="40" rx="8" stroke-width="1" fill="var(--color-background-info)" stroke="var(--color-border-info)"/>
+  <text class="ts" x="340" y="670" text-anchor="middle" dominant-baseline="central" fill="var(--color-text-info)">Catalogs are table of contents. Load the chapter only when needed.</text>
+</g>
+
+</svg>
+
+<p style="margin-top:32px">The catalog system is why v0.3.0 uses 94% fewer tokens at wake than v0.1.0. Instead of loading all history, all decisions, all memory—the instance loads three lightweight indexes that tell it <em>where</em> to find things. When a user asks "what did we decide about X?", the instance checks the session_index catalog, finds the relevant session date, and loads <em>only that specific file</em>. The rest stays on disk until needed.</p>
+</div>
+</body>
+</html>
