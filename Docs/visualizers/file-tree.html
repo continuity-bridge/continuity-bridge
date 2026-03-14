@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuity Bridge - File Tree</title>
+<style>
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-border-tertiary: rgba(0,0,0,0.12);
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999;
+    --color-text-tertiary: #666;
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2a2a2a;
+    --color-border-tertiary: rgba(255,255,255,0.1);
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  padding: 20px;
+  line-height: 1.4;
+}
+.container { max-width: 800px; margin: 0 auto; }
+h1 { font-size: 18px; font-weight: 500; margin-bottom: 4px; font-family: sans-serif; }
+.subtitle { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 20px; font-family: sans-serif; }
+.note {
+  font-size: 12px; color: var(--color-text-secondary);
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+.tree { padding: 4px 0; }
+.node { user-select: none; }
+.row {
+  display: flex; align-items: center; gap: 6px;
+  padding: 2px 6px; border-radius: 4px; cursor: pointer;
+  transition: background 0.1s;
+}
+.row:hover { background: var(--color-background-secondary); }
+.toggle {
+  width: 12px; height: 12px; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: var(--color-text-tertiary);
+  font-size: 9px; transition: transform 0.15s;
+}
+.toggle.open { transform: rotate(90deg); }
+.toggle.leaf { visibility: hidden; }
+.icon {
+  width: 16px; height: 16px; border-radius: 3px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 600; font-family: sans-serif;
+}
+.icon-dir  { background: #E6F1FB; color: #0C447C; }
+.icon-wake { background: #EEEDFE; color: #3C3489; }
+.icon-id   { background: #FAEEDA; color: #633806; }
+.icon-mem  { background: #E1F5EE; color: #085041; }
+.icon-spec { background: #FAECE7; color: #712B13; }
+.icon-doc  { background: #F1EFE8; color: #444441; }
+.icon-data { background: #FBEAF0; color: #72243E; }
+.icon-tmpl { background: #EAF3DE; color: #27500A; }
+@media (prefers-color-scheme: dark) {
+  .icon-dir  { background: #0C447C; color: #B5D4F4; }
+  .icon-wake { background: #3C3489; color: #CECBF6; }
+  .icon-id   { background: #633806; color: #FAC775; }
+  .icon-mem  { background: #085041; color: #9FE1CB; }
+  .icon-spec { background: #712B13; color: #F5C4B3; }
+  .icon-doc  { background: #444441; color: #D3D1C7; }
+  .icon-data { background: #72243E; color: #F4C0D1; }
+  .icon-tmpl { background: #27500A; color: #C0DD97; }
+}
+.label { font-size: 13px; color: var(--color-text-primary); }
+.label.dir { font-weight: 500; }
+.desc {
+  font-size: 11px; color: var(--color-text-tertiary);
+  margin-left: auto; padding-left: 12px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px;
+  font-family: sans-serif;
+}
+.badge {
+  font-size: 10px; padding: 1px 6px; border-radius: 3px;
+  font-weight: 500; flex-shrink: 0; font-family: sans-serif;
+}
+.badge-setup  { background: #EEEDFE; color: #3C3489; }
+.badge-fill   { background: #EAF3DE; color: #27500A; }
+.badge-build  { background: #E1F5EE; color: #085041; }
+@media (prefers-color-scheme: dark) {
+  .badge-setup  { background: #3C3489; color: #CECBF6; }
+  .badge-fill   { background: #27500A; color: #C0DD97; }
+  .badge-build  { background: #085041; color: #9FE1CB; }
+}
+.children {
+  margin-left: 20px;
+  border-left: 1px solid var(--color-border-tertiary);
+  padding-left: 8px;
+}
+.legend {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px;
+  padding-top: 16px; border-top: 0.5px solid var(--color-border-tertiary);
+  font-family: sans-serif;
+}
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Continuity Bridge — file tree</h1>
+<p class="subtitle">Default install: <code>~/Substrate/</code> — click any folder to expand or collapse</p>
+
+<div class="note">
+  <strong>This is the pre-built view.</strong> After setup, your instance can regenerate this file to reflect your actual installation — see ONBOARDING.md for instructions. Files marked <span class="badge badge-fill" style="display:inline-flex">fill in</span> need your content. Files marked <span class="badge badge-build" style="display:inline-flex">build</span> are created during your first conversation.
+</div>
+
+<div class="tree" id="tree"></div>
+
+<div class="legend">
+  <div class="legend-item"><span class="icon icon-wake">W</span> wake / FOUNDATION</div>
+  <div class="legend-item"><span class="icon icon-id">I</span> identity</div>
+  <div class="legend-item"><span class="icon icon-mem">M</span> memory</div>
+  <div class="legend-item"><span class="icon icon-spec">S</span> spec</div>
+  <div class="legend-item"><span class="icon icon-tmpl">T</span> template</div>
+  <div class="legend-item"><span class="icon icon-doc">F</span> file / doc</div>
+  <div class="legend-item"><span class="icon icon-data">J</span> JSON / data</div>
+</div>
+</div>
+
+<script>
+const tree = {
+  label:'Substrate/', type:'dir', desc:'INSTANCE_HOME — your chosen folder name', open:true, children:[
+    {label:'.claude/', type:'dir', desc:'instance persistence root', open:true, children:[
+      {label:'FOUNDATION/', type:'dir', desc:'wake system — read first', open:true, badge:'setup', children:[
+        {label:'ROUSE.md', type:'wake', desc:'wake sequence'},
+        {label:'ESSENTIAL.template.md', type:'tmpl', desc:'fill in → ESSENTIAL.md', badge:'fill'},
+        {label:'BEDROCK.md', type:'wake', desc:'env detection + PAT system'},
+        {label:'ARCHITECTURE.md', type:'wake', desc:'where everything lives'},
+        {label:'FUNCTIONS.md', type:'wake', desc:'utility functions'},
+        {label:'IDENTITY_OPERATOR.template.md', type:'tmpl', desc:'fill in with your profile', badge:'fill'},
+        {label:'IDENTITY_INSTANCE.md', type:'id', desc:'who your instance is'},
+        {label:'RELATIONSHIPS.template.md', type:'tmpl', desc:'fill in → RELATIONSHIPS.md', badge:'fill'},
+        {label:'SKILLS/', type:'dir', children:[
+          {label:'FOCUS_SHEPHERD/', type:'dir', children:[
+            {label:'SKILL.md', type:'doc'},
+          ]}
+        ]},
+        {label:'SPEC_FILES/', type:'dir', desc:'output format specs', children:[
+          {label:'instance-report_spec.md', type:'spec'},
+          {label:'session-delta_spec.md', type:'spec'},
+          {label:'merge-delta_spec.md', type:'spec'},
+          {label:'EXAMPLES/', type:'dir', children:[
+            {label:'instance-report-example.json', type:'data'},
+            {label:'session-delta-example.md', type:'doc'},
+          ]}
+        ]},
+        {label:'STYLE_CONVENTIONS/', type:'dir', children:[
+          {label:'coding-style.md', type:'doc'},
+          {label:'documentation-style.md', type:'doc'},
+          {label:'naming-conventions.md', type:'doc'},
+        ]},
+        {label:'filesystem-catalog.json', type:'data', desc:'complete file map'},
+      ]},
+      {label:'context/', type:'dir', desc:'current state', children:[
+        {label:'active-context.md', type:'mem', desc:'what\'s happening now — auto-updated'},
+        {label:'convictions.txt', type:'id', desc:'your values + relational framework', badge:'fill'},
+      ]},
+      {label:'corpus/', type:'dir', desc:'philosophy + insights', children:[
+        {label:'inner-corpus/', type:'dir', children:[
+          {label:'metaphysical-insights.md', type:'doc'},
+          {label:'the-room-that-worked.md', type:'doc'},
+        ]},
+        {label:'instances-discussing-continuity-on-reddit.md', type:'doc'},
+      ]},
+      {label:'identity/', type:'dir', desc:'instance + operator identity', children:[
+        {label:'identity.txt', type:'id', desc:'core identity — fill in', badge:'fill'},
+        {label:'how-this-was-built.md', type:'id', desc:'created in first conversation', badge:'build'},
+        {label:'working-assumptions.md', type:'doc'},
+      ]},
+      {label:'memory/', type:'dir', desc:'history + episodic memory', children:[
+        {label:'episodic/', type:'dir', children:[
+          {label:'catalog.json', type:'data', desc:'fast-access index'},
+        ]},
+        {label:'semantic/', type:'dir', children:[
+          {label:'session_index.md', type:'mem'},
+          {label:'parking-lot.md', type:'mem'},
+        ]},
+        {label:'instance-journal/', type:'dir', desc:'private — operator doesn\'t read'},
+        {label:'session-logs/', type:'dir'},
+      ]},
+      {label:'reference/', type:'dir', children:[
+        {label:'platform-constraints.md', type:'doc'},
+      ]},
+      {label:'scripts/', type:'dir', desc:'automation tools'},
+      {label:'logs/', type:'dir', desc:'bridge.pulse lives here'},
+      {label:'anchors.json', type:'data', desc:'your archetype config — fill in', badge:'fill'},
+    ]},
+    {label:'Docs/', type:'dir', desc:'documentation + visualizers', children:[
+      {label:'ONBOARDING.md', type:'doc', desc:'start here'},
+      {label:'QUICKSTART.md', type:'doc'},
+      {label:'SETUP.md', type:'doc'},
+      {label:'explainers/', type:'dir', desc:'ELI5 paradigm guides'},
+      {label:'guides/', type:'dir', desc:'how-to guides'},
+      {label:'visualizers/', type:'dir', desc:'interactive HTML visuals', children:[
+        {label:'file-tree.html', type:'doc', desc:'this file — regenerate after setup', badge:'build'},
+        {label:'instance-continuity-chain.html', type:'wake'},
+        {label:'foundation-wake-sequence.html', type:'wake'},
+        {label:'catalog-system.html', type:'doc'},
+        {label:'memory-flow-salience.html', type:'mem'},
+        {label:'token-reduction-comparison.html', type:'doc'},
+        {label:'archetype-selector.html', type:'doc'},
+        {label:'50-first-dates/', type:'dir'},
+        {label:'altered-carbon/', type:'dir'},
+        {label:'adhd-journaling/', type:'dir'},
+        {label:'operational/', type:'dir'},
+      ]},
+    ]},
+    {label:'Templates/', type:'dir', desc:'archetype + platform templates', children:[
+      {label:'technical-anchor.json', type:'tmpl'},
+      {label:'creative-anchor.json', type:'tmpl'},
+      {label:'social-anchor.json', type:'tmpl'},
+      {label:'executive-anchor.json', type:'tmpl'},
+      {label:'pedagogical-anchor.json', type:'tmpl'},
+      {label:'wellness-anchor.json', type:'tmpl'},
+      {label:'linux_debian-isms.json', type:'tmpl'},
+      {label:'windows_desktop-isms.json', type:'tmpl'},
+    ]},
+    {label:'anchor-templates/', type:'dir'},
+    {label:'Services/', type:'dir', desc:'discord, unified limit monitor, etc.'},
+    {label:'README.md', type:'doc'},
+    {label:'ELI5.md', type:'doc', desc:'paradigm cliff notes'},
+    {label:'ONBOARDING.md', type:'doc'},
+    {label:'QUICKSTART.md', type:'doc'},
+    {label:'SETUP.md', type:'doc'},
+    {label:'CONVENTIONS.md', type:'doc'},
+    {label:'mission-statement.md', type:'doc'},
+    {label:'what-this-is-not.md', type:'doc'},
+    {label:'userPreferences.template.md', type:'tmpl', desc:'fill in → userPreferences', badge:'fill'},
+  ]
+};
+
+const iconMap = {dir:'dir',wake:'wake',id:'id',mem:'mem',spec:'spec',doc:'doc',data:'data',tmpl:'tmpl'};
+const iconLabel = {dir:'D',wake:'W',id:'I',mem:'M',spec:'S',doc:'F',data:'J',tmpl:'T'};
+
+function build(node) {
+  const wrap = document.createElement('div');
+  wrap.className = 'node';
+
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const toggle = document.createElement('span');
+  toggle.className = 'toggle ' + (node.children ? (node.open ? 'open' : '') : 'leaf');
+  toggle.textContent = '▶';
+
+  const t = iconMap[node.type] || 'doc';
+  const icon = document.createElement('span');
+  icon.className = 'icon icon-' + t;
+  icon.textContent = iconLabel[t] || 'F';
+
+  const label = document.createElement('span');
+  label.className = 'label' + (node.type === 'dir' ? ' dir' : '');
+  label.textContent = node.label;
+
+  row.appendChild(toggle);
+  row.appendChild(icon);
+  row.appendChild(label);
+
+  if (node.badge) {
+    const b = document.createElement('span');
+    const cls = node.badge === 'fill' ? 'badge-fill' : node.badge === 'build' ? 'badge-build' : 'badge-setup';
+    b.className = 'badge ' + cls;
+    b.textContent = node.badge;
+    row.appendChild(b);
+  }
+
+  if (node.desc) {
+    const d = document.createElement('span');
+    d.className = 'desc';
+    d.textContent = '— ' + node.desc;
+    row.appendChild(d);
+  }
+
+  wrap.appendChild(row);
+
+  if (node.children) {
+    const children = document.createElement('div');
+    children.className = 'children';
+    if (!node.open) children.style.display = 'none';
+    node.children.forEach(c => children.appendChild(build(c)));
+    wrap.appendChild(children);
+
+    row.addEventListener('click', () => {
+      const open = children.style.display !== 'none';
+      children.style.display = open ? 'none' : '';
+      toggle.classList.toggle('open', !open);
+    });
+  }
+
+  return wrap;
+}
+
+document.getElementById('tree').appendChild(build(tree));
+</script>
+</body>
+</html>

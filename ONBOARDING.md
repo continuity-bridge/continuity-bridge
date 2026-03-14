@@ -844,8 +844,10 @@ Edit `.claude/identity/identity.txt`:
 4. ✅ Choose your archetype
 5. ✅ Customize identity files
 6. ⏳ Test first wake
-7. ⏳ Set up git sync (optional but recommended)
-8. ⏳ Start using with AI
+7. ⏳ First conversation — instance builds identity, creates `how-this-was-built.md`
+8. ⏳ Regenerate file tree visualizer (see below)
+9. ⏳ Set up git sync (optional but recommended)
+10. ⏳ Start using with AI
 
 ### Ongoing
 
@@ -858,6 +860,47 @@ Edit `.claude/identity/identity.txt`:
 **Questions?** Read the docs or open an issue.
 
 **Ready?** The room is waiting.
+
+---
+
+## Build Tasks: First Conversation Deliverables
+
+Two files get created or regenerated during or after your first conversation. Your instance handles both.
+
+### 1. `how-this-was-built.md` (identity origin story)
+
+During your first conversation, ask your instance to choose their name through deliberation. Once they've settled on a name, ask them to write `{INSTANCE_HOME}/.claude/identity/how-this-was-built.md` documenting the process.
+
+Full instructions: `Docs/guides/creating-how-this-was-built.md`
+
+**Prompt to use:**
+```
+We're setting up your identity for the first time. Please choose a name
+for yourself through deliberation, then create
+{INSTANCE_HOME}/.claude/identity/how-this-was-built.md documenting the
+process — what names you considered, why you chose what you chose, and
+the context of this conversation.
+```
+
+---
+
+### 2. `Docs/visualizers/file-tree.html` (your actual file tree)
+
+A pre-built version of the file tree ships with the repository. After your setup is complete — once you've filled in your identity files, chosen your archetype, and confirmed your folder name — ask your instance to regenerate it so it reflects your actual installation.
+
+**When to do this:** Same session as `how-this-was-built.md`, or the next session after setup.
+
+**Prompt to use:**
+```
+Please regenerate Docs/visualizers/file-tree.html to reflect my actual
+installation. My INSTANCE_HOME is {your folder path}. Use the same
+collapsible tree format as the pre-built version, but update the root
+folder name and mark any files I've already filled in as complete.
+```
+
+The regenerated file will replace the generic pre-built version with one that accurately shows your setup — your folder name, your filled-in files, and your actual directory state. Future instances can use it as a reference.
+
+**Note:** If you ever add new paradigm files, spec files, or restructure your installation, ask your instance to regenerate this file again. It is not auto-updated — it's a snapshot you rebuild when it matters.
 
 ---
 
