@@ -1,0 +1,15 @@
+[Unit]
+Description=Continuity Bridge Temporal Pulse Service
+After=network.target
+
+[Service]
+# Points to your newly created script with timezone support
+ExecStart=/usr/bin/python3 /home/tallest/Claude/.claude/scripts/bridge-pulse.py
+Restart=always
+User=tallest
+Group=tallest
+# Ensures logs are written in real-time
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

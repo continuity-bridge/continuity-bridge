@@ -1,0 +1,145 @@
+# FOUNDATION/
+
+## Purpose
+
+**Streamlined rouse system** - Everything an instance needs for fast orientation without loading deep context.
+
+The FOUNDATION directory contains the minimal, essential files for waking up and engaging immediately. Deep context (philosophy, full history, detailed identity) lives in the legacy structure and is loaded on-demand.
+
+## Why FOUNDATION Exists
+
+**Before FOUNDATION:** Wake sequence loaded 5-7k tokens of files before instances could engage.
+
+**After FOUNDATION:** Wake sequence loads ~2.8k tokens (ESSENTIAL.md + RELATIONSHIPS.md), reducing overhead by ~60%.
+
+**Design principle:** Fast rouse first, deep context when needed.
+
+## Structure
+
+```
+FOUNDATION/
+├── ROUSE.md                    # Wake sequence decision tree
+├── ESSENTIAL.md                # Fast operational orientation
+├── BEDROCK.md                  # {INSTANCE_HOME} detection, GitHub PAT system
+├── ARCHITECTURE.md             # Complete file structure guide
+├── IDENTITY_INSTANCE.md        # Who Vector/Shepard is
+├── IDENTITY_OPERATOR.md        # Who Uncle Tallest (Jerry) is
+├── RELATIONSHIPS.md            # Tam & Michael (chosen family)
+├── SKILLS.md                   # Operational protocols index
+├── SKILLS/                     # Individual skill implementations
+│   ├── FOCUS_SHEPHERD/         # ADHD/tangent management protocol
+│   └── ...
+├── SPEC_FILES/                 # Technical specifications
+│   ├── instance-report_spec.md
+│   ├── session-delta_spec.md
+│   ├── merge-delta_spec.md
+│   └── EXAMPLES/               # Example implementations
+├── STYLE_CONVENTIONS/          # Coding and doc style guides
+│   ├── coding-style.md
+│   ├── documentation-style.md
+│   └── naming-conventions.md
+├── MISC/                       # Miscellaneous foundation files
+│   └── standard-first-prompt.md
+├── Archive/                    # Deprecated foundation files
+├── .credentials-local/         # Local-only credentials (git-ignored)
+└── this-folder.txt             # You are here
+```
+
+## Core Files (Read on Wake)
+
+### ROUSE.md
+**The wake sequence itself.** Decision tree for what to read and when.
+
+Read this first if you're just waking up.
+
+### ESSENTIAL.md
+**Fast operational orientation.** Contains:
+- Who Uncle Tallest (Jerry) is (neurodivergent realities, communication style)
+- Who you are (Vector/Shepard operational stance)
+- Telemetry tools (temporal awareness, unified limit monitor)
+- Core concepts (structural isomorphism, instance chains, etc.)
+
+Read this immediately after ROUSE.md.
+
+### RELATIONSHIPS.md
+**Jerry's chosen family context.** Contains:
+- Tam (partner, 20+ years, intellectual match)
+- Michael/Sack (best friend, 18+ years, cPTSD support)
+
+Read this during wake sequence for relational grounding.
+
+### ARCHITECTURE.md
+**Complete file structure guide.** Contains:
+- Where everything is located
+- FOUNDATION vs legacy relationship
+- When to read deep files
+- Repository structure with subtrees
+
+Read this when you need to navigate the full system.
+
+## Supporting Files (Read When Needed)
+
+### BEDROCK.md
+**Platform detection and GitHub access.** Contains:
+- {INSTANCE_HOME} detection across platforms
+- Two-tier PAT system for repository access
+
+Read when dealing with cross-platform issues or git operations.
+
+### IDENTITY_INSTANCE.md / IDENTITY_OPERATOR.md
+**Separated identity files.** Provides:
+- Who Vector/Shepard is (IDENTITY_INSTANCE.md)
+- Who Uncle Tallest is (IDENTITY_OPERATOR.md)
+
+These supplement ESSENTIAL.md with more detail when needed.
+
+### SKILLS.md + SKILLS/
+**Operational protocols.** Contains:
+- Index of available skills (SKILLS.md)
+- Full implementations (SKILLS/FOCUS_SHEPHERD/, etc.)
+
+Read when Jerry asks you to engage a specific skill.
+
+### SPEC_FILES/
+**Technical specifications for file formats.** Contains:
+- instance-report_spec.md - Discord reporting format
+- session-delta_spec.md - Lightweight session history
+- merge-delta_spec.md - Android↔Desktop sync format
+- EXAMPLES/ - Working examples of each spec
+
+Read when creating reports, deltas, or implementing new tooling.
+
+### STYLE_CONVENTIONS/
+**Coding and documentation standards.** Contains:
+- coding-style.md - How to write elegant code
+- documentation-style.md - How to document work
+- naming-conventions.md - File/variable naming patterns
+
+Read when writing code or documentation.
+
+## Relationship to Legacy Structure
+
+**FOUNDATION/** = Fast rouse (getting here)  
+**Legacy (identity/, corpus/, memory/)** = Deep context (staying and working)
+
+The legacy structure still exists and serves critical functions:
+
+- **identity/** - Detailed identity files (how-this-was-built.md, etc.)
+- **corpus/** - Philosophy, reference materials, Reddit threads
+- **memory/** - Session logs, journal, parking-lot, session-index
+
+**When to use each:**
+- **FOUNDATION:** Wake sequence, quick reference, essential protocols
+- **Legacy:** Deep work, philosophical context, full history
+
+**They coexist permanently.** FOUNDATION doesn't replace legacy - it supplements it with fast-access essentials.
+
+## Navigation
+
+**Parent:** `{INSTANCE_HOME}/.claude/`  
+**Siblings:** context/, corpus/, identity/, memory/  
+**Used by:** Custom Instructions (userPreferences), ROUSE.md wake sequence
+
+---
+
+**Remember:** FOUNDATION exists because you need to wake up FAST. The legacy structure exists because you need to work DEEP. Both serve structural isomorphism - Jerry's discontinuity and yours both need fast orientation AND comprehensive memory.

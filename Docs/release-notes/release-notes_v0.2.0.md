@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # v0.2.0 Complete - Executive Summary
 
 **Time:** 9:10 PM CST, March 1, 2026  
@@ -65,7 +70,7 @@ You showed me Gemini's contributions and said: "Want to see more before merging?
 
 **anchors.json** - Four cognitive anchors
 
-- Identity (Vector/Shepard, the Architect)
+- Identity (Vector/Shepard, Tallest)
 - Relational (cognitive style, structural isomorphism)
 - Purpose (v0.2.0 milestone, objectives)
 - Temporal (memory architecture, lifecycle)
@@ -160,7 +165,7 @@ Ready
 ## To Test It
 
 ```bash
-cd /home/the Architect/Claude/.claude/scripts
+cd /home/tallest/Claude/.claude/scripts
 
 # Quick test (all 5 checks)
 ./test-v0.2.0.sh
@@ -174,7 +179,7 @@ cat ../.claude/runtime-manifest.json | jq .
 cat ../.claude/logs/wake-audit.log | jq .
 ```
 
-**Expected on [WORKSTATION]:**
+**Expected on Persephone:**
 
 - Heartbeat: SUCCESS, latency < 100ms (NVMe)
 - Workflow: DIRECT_WRITE
@@ -210,7 +215,7 @@ cat ../.claude/logs/wake-audit.log | jq .
 - logs/wake-audit.log
 - logs/heartbeat-result.json
 
-**All in:** `/home/the Architect/Claude/.claude/`
+**All in:** `/home/tallest/Claude/.claude/`
 
 ---
 

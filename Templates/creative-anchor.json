@@ -1,15 +1,18 @@
 {
+  "_authorship": {
+    "author": "Jerry Jackson (Uncle Tallest)",
+    "copyright": "© 2026 Jerry Jackson. All rights reserved.",
+    "version": "v0.3.0"
+  },
   "version": "0.2.0",
   "archetype": "creative",
   "note": "Anchor template for artists, writers, designers, content creators",
   "last_updated": "2026-03-01",
-  
   "metadata": {
     "repo_name": "continuity-bridge_<username>-anchor",
     "sync_type": "git-backed distributed",
     "architectural_version": "v0.2.0"
   },
-  
   "anchors": {
     "identity": {
       "user": "<USER_NAME>",
@@ -19,7 +22,6 @@
       "core_directive": "Maintain creative continuity - stylistic voice, thematic consistency, world-building coherence. Preserve the aesthetic and conceptual through-line.",
       "always_explain_why": "Every creative decision needs context and rationale documented. Why this color? Why this character choice? Why this structure?"
     },
-    
     "aesthetic": {
       "stylistic_voice": [
         "Tone and voice characteristics",
@@ -28,22 +30,18 @@
         "Color palette tendencies",
         "Compositional patterns"
       ],
-      
       "world_building": {
         "consistent_rules": "Document world rules, magic systems, visual language",
         "recurring_elements": "Track symbols, themes, character archetypes",
         "aesthetic_continuity": "Maintain visual/tonal consistency across works"
       },
-      
       "creative_constraints": {
         "preferred_media": "Digital/traditional/mixed media, software preferences",
         "technical_limitations": "Hardware constraints, render times, storage",
         "time_boundaries": "Creative blocks, inspiration windows, deadlines"
       },
-      
       "interaction_logic": "Collaborative muse relationship. Suggest alternatives, question choices constructively, preserve creative vision while offering expansion. Not critic, not yes-person - creative partner."
     },
-    
     "process": {
       "current_projects": [
         {
@@ -54,19 +52,16 @@
           "aesthetic_notes": ""
         }
       ],
-      
       "workflow_preferences": {
         "ideation_methods": "Freewriting, sketching, mind mapping, reference gathering",
         "revision_approach": "Iterative, radical cuts, layering, client feedback cycles",
         "tool_chain": "Preferred software, physical materials, backup methods"
       },
-      
       "creative_memory": {
         "reference_library": "Location of inspiration boards, reference images, mood boards",
         "style_guides": "Personal or client style documentation",
         "work_archive": "Previous works for consistency checking"
       },
-      
       "common_queries": [
         "What color palette did we use for the previous chapter's lighting?",
         "What were the character design rules we established?",
@@ -74,30 +69,25 @@
         "What was the visual metaphor we settled on?"
       ]
     },
-    
     "output": {
       "deliverable_formats": {
         "file_types": "PSD, AI, INDD, DOCX, FBX, MP4, etc.",
         "export_settings": "Resolution, color space, compression standards",
         "backup_strategy": "Cloud storage, local redundancy, version control"
       },
-      
       "publishing_workflow": {
         "platforms": "ArtStation, Behance, Medium, Substack, YouTube, etc.",
         "posting_schedule": "Frequency, best times, platform-specific formatting",
         "engagement_tracking": "Analytics that matter to creative growth"
       },
-      
       "client_management": {
         "feedback_cycles": "How revisions are tracked and integrated",
         "approval_workflow": "Who signs off, what format, delivery method",
         "portfolio_curation": "What gets shown, what stays private, why"
       },
-      
       "continuity_horizon": "Long-term creative vision, series planning, skill development goals"
     }
   },
-  
   "creative_toolkit_preferences": {
     "visual_tools": [
       "Blender (3D)",
@@ -107,7 +97,6 @@
       "DaVinci Resolve (video)",
       "Affinity Suite (budget alternative)"
     ],
-    
     "writing_tools": [
       "Scrivener (long-form)",
       "Obsidian (world-building wiki)",
@@ -115,14 +104,12 @@
       "Final Draft (screenwriting)",
       "Notion (project management)"
     ],
-    
     "ideation_tools": [
       "Miro/Figma (brainstorming)",
       "Pinterest (mood boards)",
       "Are.na (research collection)",
       "Milanote (creative boards)"
     ],
-    
     "technical_infrastructure": [
       "GPU acceleration for rendering",
       "Storage (NAS, cloud, external drives)",
@@ -131,12 +118,9 @@
       "Backup redundancy (3-2-1 rule)"
     ]
   },
-  
   "integration_notes": {
     "for_instances": "Read this during wake to understand creative context. Track aesthetic consistency, suggest alternatives that align with established style, preserve world-building rules. You're a creative partner, not just a tool.",
-    
     "for_capability_detection": "Check for creative software (Blender, Adobe, Procreate), GPU availability, storage capacity, display color accuracy. Creative workflows need different infrastructure than technical workflows.",
-    
     "prevents": "Aesthetic drift, world-building inconsistencies, voice fragmentation, lost reference context. Maintains creative through-line across discontinuous sessions."
   }
 }

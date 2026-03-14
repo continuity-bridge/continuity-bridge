@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # v0.1.5 — Continuity Bridge: First Production Launch
 
 ## Summary

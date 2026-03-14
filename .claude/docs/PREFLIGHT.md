@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # PREFLIGHT: Environment Verification Checklist
 
 **Purpose:** Verify that your environment matches the expected configuration before starting work. This ensures tools are available, paths are correct, and the instance can function properly.

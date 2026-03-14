@@ -1,0 +1,8 @@
+<Service name="BridgePulse">
+    <DisplayName>Continuity Bridge Pulse</DisplayName>
+    <Description>Maintains the 1Hz temporal heartbeat for AI continuity.</Description>
+    <Application>C:\Path\To\pythonw.exe</Application>
+    <AppDirectory>D:\Claude</AppDirectory>
+    <AppParameters>D:\Claude\.claude\scripts\bridge-pulse.py</AppParameters>
+    <Start>SERVICE_AUTO_START</Start>
+</Service>

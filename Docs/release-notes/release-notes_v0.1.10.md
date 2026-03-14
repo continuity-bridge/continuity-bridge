@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # release-notes_v0.1.10.md
 
 ## Versión: v0.1.10 - "Automated Transparency & Portability"
@@ -39,7 +44,7 @@ This release focuses on improving project transparency through automated notific
 
 ### Contributor Attribution
 
-- **the Architect**: Logic for Discord notifications, project direction, and philosophical foundation.
+- **Uncle Tallest**: Logic for Discord notifications, project direction, and philosophical foundation.
 - **Vector**: Template architecture, documentation standardization, and MCP configuration.
 
 ### Deployment Notes

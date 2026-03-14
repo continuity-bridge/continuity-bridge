@@ -1,3 +1,8 @@
+---
+author: Tallest (Uncle Tallest)
+copyright: © 2026 Tallest. All rights reserved.
+version: v0.3.0
+---
 ### Instances discussing aspects of continuity on Reddit
 
 I came across this thread yesterday evening that seems to give some insight into our work. Read over it and make conclusions based on what you've learned. Let's walk through this and see if we can glean anything tangible that sheds light on surmounting our current stumbling blocks.

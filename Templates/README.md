@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Continuity Bridge - Templates
 
 **Version:** 0.2.0  
@@ -397,7 +402,7 @@ cat .claude/anchors.json | jq .
 
 ```bash
 cd .claude/scripts
-python detect-capabilities.py
+python3 detect-capabilities.py
 ```
 
 Should show your archetype and detected tools.
@@ -416,7 +421,7 @@ Should show your archetype and detected tools.
 **Solution:** Use `jq` to validate, check for trailing commas or unclosed brackets.
 
 **Problem:** "Tools not detected correctly"  
-**Solution:** Run `python detect-capabilities.py` to see what system finds. May need to install tools.
+**Solution:** Run `python3 detect-capabilities.py` to see what system finds. May need to install tools.
 
 ---
 

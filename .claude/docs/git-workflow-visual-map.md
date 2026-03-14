@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Git Workflow - Visual Map
 
 **For spatial thinkers - the architecture at a glance**
@@ -9,11 +14,11 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CLAUDE_HOME                               │
-│                /home/the Architect/Claude/                         │
+│                /home/tallest/Claude/                         │
 │                                                              │
 │  ┌──────────────────────────────────────┐                   │
 │  │  Daily Work                          │                   │
-│  │  - identity.txt (the Architect)      │                   │
+│  │  - identity.txt (Jerry Jackson)      │                   │
 │  │  - All PII present                   │                   │
 │  │  - Active development                │                   │
 │  └──────────────────────────────────────┘                   │
@@ -25,7 +30,7 @@
                      │
 ┌────────────────────┴──────────────────────────────────────┐
 │              Staging Repository                            │
-│    /home/the Architect/Work/Code/continuity-bridge/              │
+│    /home/tallest/Work/Code/continuity-bridge/              │
 │                                                            │
 │  ┌──────────────────────────────────────┐                 │
 │  │  Sanitized Copy                      │                 │
@@ -57,7 +62,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CLAUDE_HOME                               │
-│                /home/the Architect/Claude/                         │
+│                /home/tallest/Claude/                         │
 │                                                              │
 │  ┌────────────────────────────────────────────────────────┐ │
 │  │  working branch                  sanitized branch      │ │
@@ -75,7 +80,7 @@
     ┌───────────────┐              ┌──────────────┐
     │   GitHub      │              │   GitHub     │
     │   Private     │              │   Public     │
-    │   (the Architect-   │              │   (template  │
+    │   (tallest-   │              │   (template  │
     │    anchor)    │              │    repo)     │
     └───────────────┘              └──────────────┘
          ↕                              ↕
@@ -180,7 +185,7 @@ GitHub public
 **If you ever wonder "where is this?":**
 
 ```
-Physical location:     /home/the Architect/Claude/
+Physical location:     /home/tallest/Claude/
 Git branch:           working or sanitized
 Remote destination:   private or public
 Visibility:           private = you, public = world

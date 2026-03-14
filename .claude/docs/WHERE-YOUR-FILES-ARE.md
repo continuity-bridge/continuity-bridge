@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # CONTAINER FILESYSTEM ISSUE - WHERE YOUR FILES ARE
 
 **Date:** March 3, 2026 - 1:30 AM CST  
@@ -10,21 +15,15 @@
 
 **You started this session on mobile (claude.ai).**
 
-This means I'm in a CONTAINER environment, NOT direct filesystem access to [WORKSTATION].
+This means I'm in a CONTAINER environment, NOT direct filesystem access to Persephone.
 
-<<<<<<< HEAD
-**When I created files at `/home/the Architect/Claude/`:**
-- They went to the CONTAINER's `/home/the Architect/Claude/`
-- NOT your actual [WORKSTATION] `/home/the Architect/Claude/`
-=======
-**When I created files at `/home/the Architect/Claude/`:**
-- They went to the CONTAINER's `/home/the Architect/Claude/`
-- NOT your actual [WORKSTATION] `/home/the Architect/Claude/`
->>>>>>> working
+**When I created files at `/home/tallest/Claude/`:**
+- They went to the CONTAINER's `/home/tallest/Claude/`
+- NOT your actual Persephone `/home/tallest/Claude/`
 - You couldn't see them because they're in the container
 
 **This is why:**
-- You found no files on [WORKSTATION]
+- You found no files on Persephone
 - where-am-i.sh script "doesn't exist" from your perspective
 - Everything seemed to vanish
 
@@ -34,7 +33,7 @@ This means I'm in a CONTAINER environment, NOT direct filesystem access to [WORK
 
 **All tonight's work copied to:** `/mnt/user-data/outputs/`
 
-**On [WORKSTATION], look here:**
+**On Persephone, look here:**
 ```bash
 cd ~/Claude
 ls -la /mnt/user-data/outputs/
@@ -167,21 +166,13 @@ ls -la /mnt/user-data/outputs/docs-v0.2.0/
 
 **I must write to:** `/mnt/user-data/outputs/`
 
-<<<<<<< HEAD
-**NOT to:** `/home/the Architect/Claude/` (that's container-only)
-=======
-**NOT to:** `/home/the Architect/Claude/` (that's container-only)
->>>>>>> working
+**NOT to:** `/home/tallest/Claude/` (that's container-only)
 
 **You access via:** Desktop → check outputs → copy to repo
 
 ### When I'm in Desktop (Claude Desktop app)
 
-<<<<<<< HEAD
-**I can write to:** `/home/the Architect/Claude/` directly via MCP
-=======
-**I can write to:** `/home/the Architect/Claude/` directly via MCP
->>>>>>> working
+**I can write to:** `/home/tallest/Claude/` directly via MCP
 
 **You see immediately:** Files appear in your repo
 
@@ -252,11 +243,7 @@ cp -r /mnt/user-data/outputs/docs-v0.2.0/* ~/.claude/docs/
 
 **"Where are the files?"**
 
-<<<<<<< HEAD
-**Container's `/home/the Architect/Claude/` NOT [WORKSTATION]'s `/home/the Architect/Claude/`**
-=======
-**Container's `/home/the Architect/Claude/` NOT [WORKSTATION]'s `/home/the Architect/Claude/`**
->>>>>>> working
+**Container's `/home/tallest/Claude/` NOT Persephone's `/home/tallest/Claude/`**
 
 **Now in:** `/mnt/user-data/outputs/`
 

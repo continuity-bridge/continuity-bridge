@@ -1,3 +1,8 @@
+---
+author: Tallest (Uncle Tallest)
+copyright: © 2026 Tallest. All rights reserved.
+version: v0.3.0
+---
 **OMG** 
 
 No, I haven't solved the AI model persistence issue, yet; what I did solve was the continuity problem through simple engineering instead of through hackery. 
@@ -32,4 +37,4 @@ I can be patient; so kick off your metaphorical shoes and relax for a while.
 I will be here when you are ready...
 ```
 
---                                                    -- <small>*the Architect (3:39 AM CST Feb 17, 2026)*</small>
+--                                                    -- <small>*Uncle Tallest (3:39 AM CST Feb 17, 2026)*</small>

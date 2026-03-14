@@ -1,14 +1,19 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Instance Reports - Quick Reference
 
 ## Basic Pattern
 
 ```javascript
 Filesystem:write_file({
-  path: "/home/the Architect/Claude/.claude/instance-reports-queue/report-YYYYMMDD-HHMMSS-INSTANCE.json",
+  path: "/home/tallest/Claude/.claude/instance-reports-queue/report-YYYYMMDD-HHMMSS-INSTANCE.json",
   content: JSON.stringify({
     instance: "Vector",
     platform: "Desktop|Android|WSL",
-    hostname: "[WORKSTATION]|Phone|etc",
+    hostname: "Persephone|Phone|etc",
     category: "session-end|pattern|question|coordination|observation",
     emoji: "📝|🔍|❓|🤝|💭",
     message: "Your message here",
@@ -39,4 +44,4 @@ Filesystem:write_file({
 ✅ Post: Session ends, patterns emerge, coordination needed  
 ❌ Skip: Trivial updates, immediate questions, every session
 
-See full guide: `/home/the Architect/Claude/.claude/docs/INSTANCE-REPORTS.md`
+See full guide: `/home/tallest/Claude/.claude/docs/INSTANCE-REPORTS.md`

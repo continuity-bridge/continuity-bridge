@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # v0.1.6 — Continuity Bridge: Wake Check + Setup Documentation
 
 ## Summary

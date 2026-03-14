@@ -1,3 +1,8 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # CLAUDE.md Examples
 
 This file provides **actual examples** of CLAUDE.md files for different use cases, not just guidelines.
@@ -258,7 +263,7 @@ ta = ot - bm
 
 ```bash
 # Setup
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
@@ -267,9 +272,9 @@ jupyter lab                    # Start notebook server
 jupyter nbconvert --to html    # Export to HTML
 
 # Analysis
-python scripts/01_download_data.py
-python scripts/02_clean_data.py
-python scripts/03_analyze.py
+python3 scripts/01_download_data.py
+python3 scripts/02_clean_data.py
+python3 scripts/03_analyze.py
 ```
 
 ## Current Status

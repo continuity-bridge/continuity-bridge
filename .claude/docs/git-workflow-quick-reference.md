@@ -1,6 +1,11 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Git Workflow Quick Reference
 
-**Updated:** 2026-03-08
+**Updated:** 2026-03-01  
 **Keep this handy - the new workflow after reconfiguration**
 
 ---
@@ -31,17 +36,14 @@ git push private working
 git checkout sanitized
 
 # Run sanitization (script coming soon)
-python .claude/scripts/sanitize-for-public.py
+python3 .claude/scripts/sanitize-for-public.py
 
 # Verify no PII
 git diff working..sanitized  # Review changes
 # Check for: names, emails, locations, private project names
 
-# Push to public GitHub
-git push public public
-
-# Push to Codeberg mirror
-git push codeberg public:main
+# Push to public
+git push public main
 ```
 
 ---
@@ -59,10 +61,6 @@ git push codeberg public:main
 - No PII
 - Example files
 - World can see this
-
-**codeberg** = `git@codeberg.org:continuity-bridge/continuity-bridge.git`
-- Mirror of `public`
-- Push after every GitHub public push: `git push codeberg public:main`
 
 ---
 
@@ -161,7 +159,7 @@ These are in `.gitignore` for `public` remote:
 If reconfiguration fails:
 
 ```bash
-cd /home/the Architect/Claude
+cd /home/tallest/Claude
 ls -la .git/config.backup-*  # Find backup
 cp .git/config.backup-YYYYMMDD-HHMMSS .git/config
 git remote -v  # Verify restoration

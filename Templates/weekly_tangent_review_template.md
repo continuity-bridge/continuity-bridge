@@ -1,5 +1,10 @@
+---
+author: Jerry Jackson (Uncle Tallest)
+copyright: © 2026 Jerry Jackson. All rights reserved.
+version: v0.3.0
+---
 # Weekly Tangent Review Template
-**For:** the Architect (the Architect) & Claude
+**For:** Jerry Jackson (Uncle Tallest) & Claude
 **Schedule:** [User to decide - recommend same day/time weekly]
 **Duration:** 15-30 minutes
 
